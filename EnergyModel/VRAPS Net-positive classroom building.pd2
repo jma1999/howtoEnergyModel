@@ -1,0 +1,493 @@
+Proj   "VRAPS Net-positive classroom building"  
+   ProgramVersion = "eQUEST 3.65.7175"
+   BDBaseVersion = 25
+   ProductCode = "eQUEST"
+   WeatherFile = "TMY2\ATLANTGA.bin"
+   CreateDate = 1778985544
+   ModDate = 1780158033
+   LibraryFile = "eQ_Lib.dat"
+   ActiveMode = 0
+   InputModule = 0
+   InterfaceMode = 0
+   AllowWizard = 1
+   InputUnitsType = "English"
+   OutputUnitsType = "English"
+   ProjTreeType[1] = 0
+   ProjTreeID[1] = 10000
+   ProjTreeLabel[1] = "Project:  'VRAPS Net-positive classroom building'"
+   ..
+
+MainWiz   "VRAPS Net-positive classroom building"  
+   ProductCode = "eQUEST"
+   WizardType = "Design Development"
+   DebugID = 0
+   AllowCustWinDoor = 1
+   ScreenIDArrIdx = 6
+   ScreenIDArrID = 250
+   Coverage = "All eQUEST Locations"
+   State = "Georgia"
+   Location = "Atlanta"
+   BldgType = "School, College/University"
+   BldgSeasons = "Full Nine Months, Reduced Summer Session"
+   HVACDefaulted = 1
+   ..
+
+ShellWiz   "Bldg Envelope & Loads 1"  
+   ModelEnduse[4] = 0
+   ModelEnduse[5] = 0
+   ModelEnduse[12] = 0
+   ScreenIDArrIdx = 25
+   ScreenIDArrID = 87
+   BldgType = "School, College/University"
+   GrossArea = 41000
+   FlrsAboveGrade = 2
+   Daylighting = "Yes"
+   Footprint = "Rectangular Atrium"
+   X[1] = 205
+   Y[1] = 100
+   FlrToFlr = 14
+   ZoningPattern = "Perimeter / Core"
+   PerimDepth = 15
+   NumMCZnGrps = 0
+   MCZnGrpAAIdx = ( 1, 2, 3, 0, 0, 0, 0 )
+   MCZnGrpName[1] = "EL1 Core 1 - Corridor"
+   MCZnGrpName[2] = "EL1 Core 2 - Restrooms"
+   MCZnGrpName[3] = "EL1 Core 3 - Kitchen and Food Prep"
+   DiagLink = "Bldg Envelope & Loads 1 Diag Data"
+   RoofConsType = "Wood Advanced Frame, 24 in. o.c."
+   RoofBrdInsType = "6 in. polyisocyanurate (R-42)"
+   RoofColor = "'Light' (abs=0.4)"
+   VertExtBrdInsType = "3 in. polyisocyanurate (R-21)"
+   VertExtColor = "'Light' (abs=0.4)"
+   VertIntConsType = "Frame"
+   GrndFlrInsType = "vert int bd, R-10, 2ft deep"
+   ZoningCurrent = 1
+   AdiabaticCurrent = 1
+   ZoneGroupsOK = 1
+   DfltZnGrpName[1] = "EL1 Underground Areas"
+   DfltZnGrpName[2] = "EL1 Ground Floor Core"
+   DfltZnGrpName[3] = "EL1 Ground Floor Perimeter"
+   DfltZnGrpName[4] = "EL1 Typical Floor(s) Core"
+   DfltZnGrpName[5] = "EL1 Typical Floor(s) Perimeter"
+   DfltZnGrpName[6] = "EL1 Top Floor Core"
+   DfltZnGrpName[7] = "EL1 Top Floor Perimeter"
+   DfltZnGrpName[8] = "EL1 Data Center"
+   CustomFootprint = 0
+   CustomZoning = 0
+   ActiveZoneIndex = 1
+   CustomRoofZoning = -1
+   LastFootprint = 9
+   LastX[1] = 205
+   LastY[1] = 100
+   OverhangDepth[2] = 5
+   OverhangDepth[3] = 3
+   OverhangDepth[4] = 3
+   GTCCategory[1] = "Double Low-E"
+   GTCCategory[2] = "Triple Low-E"
+   GlassTypeCode[1] = "Dbl Low-E (e3=.2) Clear 1/4in, 1/2in Argon (2615)"
+   GlassTypeCode[2] = "Trpl Low-E (e2=e5=.1) Clr 1/8in, 1/2in Argon (3623)"
+   WinFrameType[1] = "Ins Fibergls/Vinyl, Fixed, Ins Spacer"
+   WinFrameType[2] = "Ins Fibergls/Vinyl, Fixed, Ins Spacer"
+   WinShadeType = "Roller Shade - Translucent"
+   WShdUnoccPctClsd[1] = 100
+   WShdUnoccPctClsd[2] = 100
+   DoorWidth[1] = 3
+   OpaqueDoorType[1] = "Steel, Polyurethane core w/ Brk"
+   SkyltOption[1] = 4
+   GlazingCategory[1] = "Domed, Wood or Vinyl Frame"
+   GlazingType[1] = "Dbl Acrylic White (Translucent)"
+   SkyZonesCurrent = 1
+   SkyltZones[1] = 1
+   SkyltZones[2] = 1
+   SkyltZones[3] = 1
+   SkyltZones[4] = 1
+   SkyltZones[5] = 1
+   SkyltZones[6] = 2
+   SkyltZones[7] = 2
+   SkyltZones[8] = 1
+   SkyltZones[9] = 1
+   SkyltZones[10] = 1
+   SkyltZones[11] = 1
+   SkyPosCurrent = 1
+   DayltOption[1] = 2
+   DayltOption[3] = 2
+   LtgControlMethod[1] = "Fluorescent: Dimming: down to 5% Light (21% pwr)"
+   DayZonesCurrent[1] = 1
+   DayZonesCurrent[3] = 1
+   DayltZones[1] = 2
+   DayltZones[2] = 2
+   DayltZones[3] = 2
+   DayltZones[4] = 2
+   DayltZones[5] = 2
+   DayltZones[6] = 2
+   DayltZones[7] = 2
+   DayltZones[8] = 2
+   DayltZones[9] = 2
+   DayltZones[10] = 0
+   DayltZones[11] = 2
+   DayltZones[201] = 1
+   DayltZones[202] = 1
+   DayltZones[203] = 1
+   DayltZones[204] = 1
+   DayltZones[205] = 0
+   DayltZones[401] = 2
+   DayltZones[402] = 2
+   DayltZones[403] = 2
+   DayltZones[404] = 2
+   DayltZones[405] = 2
+   DayltZones[406] = 2
+   DayltZones[407] = 2
+   DayltZones[408] = 2
+   DayltZones[409] = 2
+   DayltZones[410] = 0
+   DayltZones[411] = 2
+   WinDoorCurrent = 1
+   DetailsCurrent = ( 1, 1, 1 )
+   BDLNumDayltCtrls[10] = 0
+   BDLNumDayltCtrls[201] = 0
+   BDLNumDayltCtrls[202] = 0
+   BDLNumDayltCtrls[203] = 0
+   BDLNumDayltCtrls[204] = 0
+   BDLNumDayltCtrls[205] = 0
+   BDLNumDayltCtrls[410] = 0
+   ActAreaType[4] = "Restrooms"
+   ActAreaType[5] = "Mechanical/Electrical Room"
+   ActAreaType[6] = "- select another -"
+   ActAreaType[7] = "- select another -"
+   ActAreaType[8] = "- select another -"
+   PercentArea[1] = 60
+   PercentArea[2] = 10
+   PercentArea[3] = 20
+   PercentArea[4] = 5
+   PrimarilyCore[4] = 1
+   PrimarilyCore[5] = 1
+   PerformZBAZoning = 0
+   OccShape = ( "EL1 Occup Profile (S1)", "EL1 Occup Profile (S2)", 
+                "EL1 Occup Profile (S3)" )
+   ILShape = ( "EL1 InsLtg Profile (S1)", "EL1 InsLtg Profile (S2)", 
+               "EL1 InsLtg Profile (S3)" )
+   ILElecIntens[1] = 0.45
+   ILElecIntens[2] = 0.4
+   ILElecIntens[3] = 0.3
+   ILElecIntens[4] = 0.4
+   ILElecIntens[5] = 0.4
+   ELElecIntens = 0.02
+   ELDayShapes = ( "EL1 ExtLtg DayShape (Jan)", 
+                   "EL1 ExtLtg DayShape (Feb)", 
+                   "EL1 ExtLtg DayShape (Mar)", 
+                   "EL1 ExtLtg DayShape (Apr)", 
+                   "EL1 ExtLtg DayShape (May)", 
+                   "EL1 ExtLtg DayShape (Jun)", 
+                   "EL1 ExtLtg DayShape (Jul)", 
+                   "EL1 ExtLtg DayShape (Aug)", 
+                   "EL1 ExtLtg DayShape (Sep)", 
+                   "EL1 ExtLtg DayShape (Oct)", 
+                   "EL1 ExtLtg DayShape (Nov)", 
+                   "EL1 ExtLtg DayShape (Dec)" )
+   OEShape = ( "EL1 OffEq Profile (S1)", "EL1 OffEq Profile (S2)", 
+               "EL1 OffEq Profile (S3)" )
+   OEElecIntens[2] = 0.5
+   CEShape = ( "EL1 CookEq Profile (S1)", "EL1 CookEq Profile (S2)", 
+               "EL1 CookEq Profile (S3)" )
+   MiscShape = ( "EL1 Misc Profile (S1)", "EL1 Misc Profile (S2)", 
+                 "EL1 Misc Profile (S3)" )
+   MiscDivEIntens[1] = 0.4
+   MiscDivEIntens[2] = 0.1
+   RFDayShapes = ( "EL1 Refrig DayShape (Jan)", 
+                   "EL1 Refrig DayShape (Feb)", 
+                   "EL1 Refrig DayShape (Mar)", 
+                   "EL1 Refrig DayShape (Apr)", 
+                   "EL1 Refrig DayShape (May)", 
+                   "EL1 Refrig DayShape (Jun)", 
+                   "EL1 Refrig DayShape (Jul)", 
+                   "EL1 Refrig DayShape (Aug)", 
+                   "EL1 Refrig DayShape (Sep)", 
+                   "EL1 Refrig DayShape (Oct)", 
+                   "EL1 Refrig DayShape (Nov)", 
+                   "EL1 Refrig DayShape (Dec)" )
+   DHWShape = ( "EL1 DHW Profile (S1)", "EL1 DHW Profile (S2)", 
+                "EL1 DHW Profile (S3)" )
+   SCRShape = ( "EL1 S-C Refrig Profile (S1)", 
+                "EL1 S-C Refrig Profile (S2)", 
+                "EL1 S-C Refrig Profile (S3)" )
+   DaylitAreaCurrent[1] = 1
+   DaylitAreaCurrent[3] = 1
+   RoofZoneErrorCode = 4
+   ..
+
+ShapeWiz   "EL1 InsLtg Profile (S1)"  
+   ..
+
+DayShape   "EL1 ExtLtg DayShape (Jan)"  
+   ..
+
+DayShape   "EL1 ExtLtg DayShape (Feb)"  
+   ..
+
+DayShape   "EL1 ExtLtg DayShape (Mar)"  
+   ..
+
+DayShape   "EL1 ExtLtg DayShape (Apr)"  
+   ..
+
+DayShape   "EL1 ExtLtg DayShape (May)"  
+   ..
+
+DayShape   "EL1 ExtLtg DayShape (Jun)"  
+   ..
+
+DayShape   "EL1 ExtLtg DayShape (Jul)"  
+   ..
+
+DayShape   "EL1 ExtLtg DayShape (Aug)"  
+   ..
+
+DayShape   "EL1 ExtLtg DayShape (Sep)"  
+   ..
+
+DayShape   "EL1 ExtLtg DayShape (Oct)"  
+   ..
+
+DayShape   "EL1 ExtLtg DayShape (Nov)"  
+   ..
+
+DayShape   "EL1 ExtLtg DayShape (Dec)"  
+   ..
+
+ShapeWiz   "EL1 OffEq Profile (S1)"  
+   ..
+
+ShapeWiz   "EL1 Misc Profile (S1)"  
+   ..
+
+ShapeWiz   "EL1 DHW Profile (S1)"  
+   ..
+
+ShapeWiz   "EL1 Occup Profile (S1)"  
+   ..
+
+ShapeWiz   "EL1 InsLtg Profile (S2)"  
+   ..
+
+ShapeWiz   "EL1 InsLtg Profile (S3)"  
+   ..
+
+ShapeWiz   "EL1 OffEq Profile (S2)"  
+   ..
+
+ShapeWiz   "EL1 OffEq Profile (S3)"  
+   ..
+
+ShapeWiz   "EL1 CookEq Profile (S1)"  
+   ..
+
+ShapeWiz   "EL1 CookEq Profile (S2)"  
+   ..
+
+ShapeWiz   "EL1 CookEq Profile (S3)"  
+   ..
+
+DayShape   "EL1 Refrig DayShape (Jan)"  
+   ..
+
+DayShape   "EL1 Refrig DayShape (Feb)"  
+   ..
+
+DayShape   "EL1 Refrig DayShape (Mar)"  
+   ..
+
+DayShape   "EL1 Refrig DayShape (Apr)"  
+   ..
+
+DayShape   "EL1 Refrig DayShape (May)"  
+   ..
+
+DayShape   "EL1 Refrig DayShape (Jun)"  
+   ..
+
+DayShape   "EL1 Refrig DayShape (Jul)"  
+   ..
+
+DayShape   "EL1 Refrig DayShape (Aug)"  
+   ..
+
+DayShape   "EL1 Refrig DayShape (Sep)"  
+   ..
+
+DayShape   "EL1 Refrig DayShape (Oct)"  
+   ..
+
+DayShape   "EL1 Refrig DayShape (Nov)"  
+   ..
+
+DayShape   "EL1 Refrig DayShape (Dec)"  
+   ..
+
+ShapeWiz   "EL1 Misc Profile (S2)"  
+   ..
+
+ShapeWiz   "EL1 Misc Profile (S3)"  
+   ..
+
+ShapeWiz   "EL1 DHW Profile (S2)"  
+   ..
+
+ShapeWiz   "EL1 DHW Profile (S3)"  
+   ..
+
+ShapeWiz   "EL1 Occup Profile (S2)"  
+   ..
+
+ShapeWiz   "EL1 Occup Profile (S3)"  
+   ..
+
+ShapeWiz   "EL1 S-C Refrig Profile (S1)"  
+   ..
+
+ShapeWiz   "EL1 S-C Refrig Profile (S2)"  
+   ..
+
+ShapeWiz   "EL1 S-C Refrig Profile (S3)"  
+   ..
+
+CustomZone   "Custom Zone 1"  
+   NumVerts = 10
+   X[1] = 0
+   X[2] = 205
+   X[3] = 205
+   X[4] = 0
+   X[5] = 0
+   X[6] = 50
+   X[7] = 50
+   X[8] = 155
+   X[9] = 155
+   X[10] = 0
+   Y[1] = 0
+   Y[2] = 0
+   Y[3] = 100
+   Y[4] = 100
+   Y[5] = 49.5
+   Y[6] = 49.5
+   Y[7] = 51
+   Y[8] = 51
+   Y[9] = 49
+   Y[10] = 49
+   ..
+
+ZnGrpWiz   "EL1 Ground Floor Core"  
+   ShortName = "GndCor"
+   ..
+
+ZnGrpWiz   "EL1 Ground Floor Perimeter"  
+   ShortName = "GndPrm"
+   ..
+
+ZnGrpWiz   "EL1 Top Floor Core"  
+   ShortName = "TopCor"
+   ..
+
+ZnGrpWiz   "EL1 Top Floor Perimeter"  
+   ShortName = "TopPrm"
+   ..
+
+DiagData   "Bldg Envelope & Loads 1 Diag Data"  
+   PolyWndShowGrid = 1
+   PolyWndGridRes = 0.9
+   PolyWndLwrLeftX = -149
+   PolyWndLwrLeftY = -39
+   PolyWndWidth = 658.5
+   ..
+
+HVACWiz   "HVAC System 1"  
+   ScreenIDArrIdx = 6
+   ScreenIDArrID = 180
+   HeatSource[1] = "Electric Resistance"
+   HVACSysType[1] = "Packaged VAV with Elec Reheat"
+   ReturnAirPath[1] = "Plenum"
+   BBDHeatSource[1] = "- none -"
+   SFanPower[1] = 1.25
+   EconomizerType[1] = "Dual Enthalpy"
+   EconCompressor[1] = "Can Run with Economizer"
+   ColdDeckTemps[1] = 75
+   ColdDeckTemps[2] = 55
+   DesCoolEff[1] = 12.5
+   AllowCrankcaseHt[1] = 0
+   CoolUnoccTemp[1] = 85
+   HeatOccTemp[1] = 68
+   HeatUnoccTemp[1] = 58
+   DesignHeatTemp[1] = 68
+   MinAllowedAirflow[1] = 0.3
+   CoreVAVMinFlow[1] = 20
+   PerimVAVMinFlow[1] = 20
+   FanNightCycleOpt[1] = "Cycle Fans (no OA at night)"
+   ..
+
+DXCWWiz   "Water-Cooled DX System"  
+   ..
+
+WSECWWiz   "Wtr-Side Econo System"  
+   ..
+
+WLHPWiz   "WSHP System"  
+   ..
+
+GSHPWiz   "GSHP System"  
+   ..
+
+PrimWiz   "Primary HVAC Plant"  
+   ..
+
+DHWWiz   "DHW Plant 1"  
+   ScreenIDArrIdx = 0
+   DHWFuel = "Electricity"
+   DHWSupplyTemp = 120
+   DHWUsage = 0.4
+   DHWType = "Heat Pump"
+   ..
+
+FacetColor   "By Wall Type"  
+   FacetType = "Walls"
+   ColorOption = "By Wall Type"
+   ..
+
+FacetColor   "By Construction"  
+   FacetType = "Walls"
+   ColorOption = "By Construction"
+   ..
+
+FacetColor   "Uniform"  
+   FacetType = "Windows"
+   ColorOption = "Uniform"
+   ..
+
+FacetColor   "By Glass Type"  
+   FacetType = "Windows"
+   ColorOption = "By Glass Type"
+   ..
+
+Light3D   "Light3D - Default"  
+   Type = "Default"
+   ..
+
+Light3D   "Light3D - User1"  
+   Type = "User Defined 1"
+   ..
+
+Light3D   "Light3D - User2"  
+   Type = "User Defined 2"
+   ..
+
+Light3D   "Light3D - User3"  
+   Type = "User Defined 3"
+   ..
+
+Light3D   "Light3D - User4"  
+   Type = "User Defined 4"
+   ..
+
+Light3D   "Light3D - User5"  
+   Type = "User Defined 5"
+   ..
+
+
+END_OF_FILE

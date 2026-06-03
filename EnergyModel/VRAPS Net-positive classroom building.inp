@@ -1,0 +1,3800 @@
+INPUT ..
+
+
+$ ---------------------------------------------------------
+$              Abort, Diagnostics
+$ ---------------------------------------------------------
+
+
+
+
+$ ---------------------------------------------------------
+$              Global Parameters
+$ ---------------------------------------------------------
+
+
+
+$ ---------------------------------------------------------
+$              Title, Run Periods, Design Days, Holidays
+$ ---------------------------------------------------------
+
+TITLE           
+   LINE-1           = *VRAPS Net-positive classroom building*
+   ..
+
+"Entire Year" = RUN-PERIOD-PD
+   BEGIN-MONTH      = 1
+   BEGIN-DAY        = 1
+   BEGIN-YEAR       = 2026
+   END-MONTH        = 12
+   END-DAY          = 31
+   END-YEAR         = 2026
+   ..
+
+
+"Standard US Holidays" = HOLIDAYS        
+   LIBRARY-ENTRY "US"
+   ..
+
+
+$ ---------------------------------------------------------
+$              Compliance Data
+$ ---------------------------------------------------------
+
+
+
+$ ---------------------------------------------------------
+$              Site and Building Data
+$ ---------------------------------------------------------
+
+"Site Data" = SITE-PARAMETERS 
+   ALTITUDE         = 1010
+   ..
+
+"Building Data" = BUILD-PARAMETERS
+   HOLIDAYS         = "Standard US Holidays"
+   ..
+
+
+
+PROJECT-DATA    
+   ..
+
+
+$ ---------------------------------------------------------
+$              Materials / Layers / Constructions
+$ ---------------------------------------------------------
+
+"EL1 EWall Cons Mat 2 (16.34)" = MATERIAL        
+   TYPE             = RESISTANCE
+   RESISTANCE       = 16.34
+   ..
+"EL1 Roof Cons Mat 4 (28.05)" = MATERIAL        
+   TYPE             = RESISTANCE
+   RESISTANCE       = 28.05
+   ..
+"EL1 IWall Cons Mat 2 (0.91)" = MATERIAL        
+   TYPE             = RESISTANCE
+   RESISTANCE       = 0.91
+   ..
+"EL1 UFMat (G.S1.U2.M1)" = MATERIAL        
+   TYPE             = RESISTANCE
+   RESISTANCE       = 16.1006
+   ..
+"EL1 UFMat (G.E2.U3.M1)" = MATERIAL        
+   TYPE             = RESISTANCE
+   RESISTANCE       = 14.4543
+   ..
+"EL1 UFMat (G.W4.U5.M1)" = MATERIAL        
+   TYPE             = RESISTANCE
+   RESISTANCE       = 11.3036
+   ..
+"EL1 UFMat (G.S5.U6.M1)" = MATERIAL        
+   TYPE             = RESISTANCE
+   RESISTANCE       = 11.4272
+   ..
+"EL1 UFMat (G.S6.U7.M1)" = MATERIAL        
+   TYPE             = RESISTANCE
+   RESISTANCE       = 20.7298
+   ..
+"EL1 UFMat (G.N7.U8.M1)" = MATERIAL        
+   TYPE             = RESISTANCE
+   RESISTANCE       = 22.1746
+   ..
+"EL1 UFMat (G.W9.U10.M1)" = MATERIAL        
+   TYPE             = RESISTANCE
+   RESISTANCE       = 11.1088
+   ..
+"EL1 UFMat (G.C10.U11.M1)" = MATERIAL        
+   TYPE             = RESISTANCE
+   RESISTANCE       = 100
+   ..
+
+"EL1 EWall Cons Layers" = LAYERS          
+   MATERIAL         = ( "Stucco 1in (SC01)", "Polyisocyanurate 3in", 
+         "EL1 EWall Cons Mat 2 (16.34)", "GypBd 1/2in (GP01)" )
+   ..
+"EL1 Roof Cons Layers" = LAYERS          
+   MATERIAL         = ( "Blt-Up Roof 3/8in (BR01)", "Polyisocyanurate 6in", 
+         "Plywd 5/8in (PW04)", "EL1 Roof Cons Mat 4 (28.05)" )
+   ..
+"EL1 Ceilg Cons Layers" = LAYERS          
+   MATERIAL         = ( "AcousTile 1/2in (AC02)" )
+   ..
+"EL1 IWall Cons Layers" = LAYERS          
+   MATERIAL         = ( "GypBd 1/2in (GP01)", "EL1 IWall Cons Mat 2 (0.91)", 
+         "GypBd 1/2in (GP01)" )
+   ..
+"EL1 IFlr Cons Layers" = LAYERS          
+   MATERIAL         = ( "Conc HW 140lb 6in (HF-C13)" )
+   ..
+"EL1 UFLyrs (G.S1.U2)" = LAYERS          
+   MATERIAL         = ( "EL1 UFMat (G.S1.U2.M1)", "Light Soil, Damp 12in", 
+         "Conc HW 140lb 12in (HF-C11)" )
+   ..
+"EL1 UFLyrs (G.E2.U3)" = LAYERS          
+   MATERIAL         = ( "EL1 UFMat (G.E2.U3.M1)", "Light Soil, Damp 12in", 
+         "Conc HW 140lb 12in (HF-C11)" )
+   ..
+"EL1 UFLyrs (G.W4.U5)" = LAYERS          
+   MATERIAL         = ( "EL1 UFMat (G.W4.U5.M1)", "Light Soil, Damp 12in", 
+         "Conc HW 140lb 12in (HF-C11)" )
+   ..
+"EL1 UFLyrs (G.S5.U6)" = LAYERS          
+   MATERIAL         = ( "EL1 UFMat (G.S5.U6.M1)", "Light Soil, Damp 12in", 
+         "Conc HW 140lb 12in (HF-C11)" )
+   ..
+"EL1 UFLyrs (G.S6.U7)" = LAYERS          
+   MATERIAL         = ( "EL1 UFMat (G.S6.U7.M1)", "Light Soil, Damp 12in", 
+         "Conc HW 140lb 12in (HF-C11)" )
+   ..
+"EL1 UFLyrs (G.N7.U8)" = LAYERS          
+   MATERIAL         = ( "EL1 UFMat (G.N7.U8.M1)", "Light Soil, Damp 12in", 
+         "Conc HW 140lb 12in (HF-C11)" )
+   ..
+"EL1 UFLyrs (G.W9.U10)" = LAYERS          
+   MATERIAL         = ( "EL1 UFMat (G.W9.U10.M1)", "Light Soil, Damp 12in", 
+         "Conc HW 140lb 12in (HF-C11)" )
+   ..
+"EL1 UFLyrs (G.C10.U11)" = LAYERS          
+   MATERIAL         = ( "EL1 UFMat (G.C10.U11.M1)", "Light Soil, Damp 12in", 
+         "Conc HW 140lb 12in (HF-C11)" )
+   ..
+
+"EL1 EWall Construction" = CONSTRUCTION    
+   TYPE             = LAYERS
+   ABSORPTANCE      = 0.4
+   ROUGHNESS        = 1
+   LAYERS           = "EL1 EWall Cons Layers"
+   ..
+"EL1 Roof Construction" = CONSTRUCTION    
+   TYPE             = LAYERS
+   ABSORPTANCE      = 0.4
+   ROUGHNESS        = 1
+   LAYERS           = "EL1 Roof Cons Layers"
+   ..
+"EL1 Ceilg Construction" = CONSTRUCTION    
+   TYPE             = LAYERS
+   LAYERS           = "EL1 Ceilg Cons Layers"
+   ..
+"EL1 IWall Construction" = CONSTRUCTION    
+   TYPE             = LAYERS
+   LAYERS           = "EL1 IWall Cons Layers"
+   ..
+"EL1 IFlr Construction" = CONSTRUCTION    
+   TYPE             = LAYERS
+   LAYERS           = "EL1 IFlr Cons Layers"
+   ..
+"EL1 IFlSP Construction" = CONSTRUCTION    
+   TYPE             = LAYERS
+   LAYERS           = "EL1 IFlr Cons Layers"
+   ..
+"EL1 UFCons (G.S1.U2)" = CONSTRUCTION    
+   TYPE             = LAYERS
+   LAYERS           = "EL1 UFLyrs (G.S1.U2)"
+   ..
+"EL1 UFCons (G.E2.U3)" = CONSTRUCTION    
+   TYPE             = LAYERS
+   LAYERS           = "EL1 UFLyrs (G.E2.U3)"
+   ..
+"EL1 UFCons (G.W4.U5)" = CONSTRUCTION    
+   TYPE             = LAYERS
+   LAYERS           = "EL1 UFLyrs (G.W4.U5)"
+   ..
+"EL1 UFCons (G.S5.U6)" = CONSTRUCTION    
+   TYPE             = LAYERS
+   LAYERS           = "EL1 UFLyrs (G.S5.U6)"
+   ..
+"EL1 UFCons (G.S6.U7)" = CONSTRUCTION    
+   TYPE             = LAYERS
+   LAYERS           = "EL1 UFLyrs (G.S6.U7)"
+   ..
+"EL1 UFCons (G.N7.U8)" = CONSTRUCTION    
+   TYPE             = LAYERS
+   LAYERS           = "EL1 UFLyrs (G.N7.U8)"
+   ..
+"EL1 UFCons (G.W9.U10)" = CONSTRUCTION    
+   TYPE             = LAYERS
+   LAYERS           = "EL1 UFLyrs (G.W9.U10)"
+   ..
+"EL1 UFCons (G.C10.U11)" = CONSTRUCTION    
+   TYPE             = LAYERS
+   LAYERS           = "EL1 UFLyrs (G.C10.U11)"
+   ..
+
+
+$ ---------------------------------------------------------
+$              Glass Type Codes
+$ ---------------------------------------------------------
+
+
+
+$ ---------------------------------------------------------
+$              Glass Types
+$ ---------------------------------------------------------
+
+"EL1 Window Type #1 GT" = GLASS-TYPE      
+   TYPE             = GLASS-TYPE-CODE
+   GLASS-TYPE-CODE  = "2615"
+   ..
+"EL1 Window Type #2 GT" = GLASS-TYPE      
+   TYPE             = GLASS-TYPE-CODE
+   GLASS-TYPE-CODE  = "3623"
+   ..
+
+
+$ ---------------------------------------------------------
+$              Window Layers
+$ ---------------------------------------------------------
+
+
+
+$ ---------------------------------------------------------
+$              Lamps / Luminaries / Lighting Systems
+$ ---------------------------------------------------------
+
+
+
+
+
+$ ---------------------------------------------------------
+$              Day Schedules
+$ ---------------------------------------------------------
+
+"EL1 Bldg Occup S1 All" = DAY-SCHEDULE-PD
+   TYPE             = FRACTION
+   VALUES           = ( 0, &D, &D, &D, &D, &D, 0.00055, 0.0039, 0.005, &D, &D, 
+         0.0028, &D, 0.005, &D, &D, 0.0039, 0.00165, 0.00055, &D, &D, &D, 0 )
+   ..
+"EL1 Bldg Occup S2 WD" = DAY-SCHEDULE-PD
+   TYPE             = FRACTION
+   VALUES           = ( 0, &D, &D, &D, &D, &D, 0.054, 0.225, 0.9, &D, &D, 
+         0.783, &D, 0.801, &D, 0.711, 0.414, 0.207, 0.387, &D, 0.288, 0.099, 
+         0.045, 0 )
+   ..
+"EL1 Bldg Occup S2 HDD" = DAY-SCHEDULE-PD
+   TYPE             = FRACTION
+   VALUES           = ( 0 )
+   ..
+"EL1 Bldg InsLt S1 All" = DAY-SCHEDULE-PD
+   TYPE             = FRACTION
+   VALUES           = ( 0.05, &D, &D, &D, &D, &D, 0.05116, 0.05352, 0.054, &D, 
+         &D, &D, &D, &D, &D, &D, 0.05352, 0.05212, 0.05116, &D, 0.05024, &D, 
+         0.05 )
+   ..
+"EL1 Bldg InsLt S2 WD" = DAY-SCHEDULE-PD
+   TYPE             = FRACTION
+   VALUES           = ( 0.05, &D, &D, &D, &D, &D, 0.1605, 0.424, 0.9, &D, &D, 
+         &D, &D, &D, &D, 0.713, 0.611, 0.5005, 0.679, &D, 0.6705, 0.288, 
+         0.101, 0.05 )
+   ..
+"EL1 Bldg InsLt S2 HDD" = DAY-SCHEDULE-PD
+   TYPE             = FRACTION
+   VALUES           = ( 0 )
+   ..
+"EL1 Bldg OffEq S1 All" = DAY-SCHEDULE-PD
+   TYPE             = FRACTION
+   VALUES           = ( 0.05 )
+   ..
+"EL1 Bldg OffEq S2 WD" = DAY-SCHEDULE-PD
+   TYPE             = FRACTION
+   VALUES           = ( 0.05, &D, &D, &D, &D, &D, 0.1355, 0.6143, 0.905, &D, 
+         &D, 0.58865, &D, 0.8879, &D, 0.86225, 0.65705, 0.31505, 0.2039, &D, 
+         0.1868, 0.14405, 0.05855, 0.05 )
+   ..
+"EL1 Bldg OffEq S2 HDD" = DAY-SCHEDULE-PD
+   TYPE             = FRACTION
+   VALUES           = ( 0 )
+   ..
+"EL1 Bldg Misc S1 All" = DAY-SCHEDULE-PD
+   TYPE             = FRACTION
+   VALUES           = ( 0.051, &D, &D, &D, &D, &D, 0.05142, 0.05358, 0.054, 
+         &D, &D, &D, &D, &D, &D, &D, &D, 0.05229, 0.05142, &D, 0.051 )
+   ..
+"EL1 Bldg Misc S2 WD" = DAY-SCHEDULE-PD
+   TYPE             = FRACTION
+   VALUES           = ( 0.058, &D, &D, &D, &D, &D, 0.10852, 0.42006, 0.9, &D, 
+         &D, &D, &D, &D, &D, 0.70634, 0.61372, 0.50426, 0.68108, &D, 0.67266, 
+         0.29376, 0.10852, 0.058 )
+   ..
+"EL1 Bldg Misc S2 HDD" = DAY-SCHEDULE-PD
+   TYPE             = FRACTION
+   VALUES           = ( 0 )
+   ..
+"EL1 WinShade Day 1" = DAY-SCHEDULE-PD
+   TYPE             = MULTIPLIER
+   VALUES           = ( 0.6, &D, &D, &D, &D, &D, &D, 0.601, 0.602, &D, &D, 
+         0.601, &D, 0.602, &D, &D, 0.601, &D, 0.6 )
+   ..
+"EL1 WinShade Day 2" = DAY-SCHEDULE-PD
+   TYPE             = MULTIPLIER
+   VALUES           = ( 0.6 )
+   ..
+"EL1 WinShade Day 3" = DAY-SCHEDULE-PD
+   TYPE             = MULTIPLIER
+   VALUES           = ( 1 )
+   ..
+"EL1 WinShade Day 4" = DAY-SCHEDULE-PD
+   TYPE             = MULTIPLIER
+   VALUES           = ( 0.6, &D, &D, &D, &D, &D, 0.619, 0.68, 0.92, &D, &D, 
+         0.878, &D, 0.885, &D, 0.853, 0.747, 0.674, 0.738, &D, 0.702, 0.635, 
+         0.616, 0.6 )
+   ..
+"Ext Lighting W1 All" = DAY-SCHEDULE-PD
+   TYPE             = FRACTION
+   VALUES           = ( 0.6, &D, &D, &D, &D, &D, 0.3, 0.1, 0, &D, &D, &D, &D, 
+         &D, &D, &D, 0.15, 0.6, 0.9, &D, &D, &D, 0.8, 0.7 )
+   ..
+"Ext Lighting W2 All" = DAY-SCHEDULE-PD
+   TYPE             = FRACTION
+   VALUES           = ( 0.6, &D, &D, &D, &D, 0.45, 0.15, 0, &D, &D, &D, &D, 
+         &D, &D, &D, &D, &D, 0.25, 0.7, 0.9, &D, &D, 0.8, 0.7 )
+   ..
+"Ext Lighting W5 All" = DAY-SCHEDULE-PD
+   TYPE             = FRACTION
+   VALUES           = ( 0.6, &D, &D, &D, &D, 0.4, 0.1, 0, &D, &D, &D, &D, &D, 
+         &D, &D, &D, &D, &D, &D, 0.4, 0.75, 0.9, 0.8, 0.7 )
+   ..
+"DHW Eqp NRes W1 All" = DAY-SCHEDULE-PD
+   TYPE             = FRACTION
+   VALUES           = ( 0.03 )
+   ..
+"DHW Eqp NRes W2 WD" = DAY-SCHEDULE-PD
+   TYPE             = FRACTION
+   VALUES           = ( 0.05, &D, &D, &D, &D, &D, 0.2, 0.5975, 0.7025, 0.8, 
+         &D, &D, &D, &D, &D, &D, 0.7025, 0.5, &D, &D, 0.4025, 0.2, 0.1025, 
+         0.05 )
+   ..
+"DHW Eqp NRes W2 HDD" = DAY-SCHEDULE-PD
+   TYPE             = FRACTION
+   VALUES           = ( 0 )
+   ..
+"ZG0-S1 (PVAVS) P-Inf S1 All" = DAY-SCHEDULE-PD
+   TYPE             = MULTIPLIER
+   VALUES           = ( 1 )
+   ..
+"ZG0-S1 (PVAVS) P-Inf S2 WD" = DAY-SCHEDULE-PD
+   TYPE             = MULTIPLIER
+   VALUES           = ( 1, &D, &D, &D, &D, 1.004, 1.175, 1.25, &D, 0.5, 0.701, 
+         &D, 0.5, &D, 0.62, 1.25, &D, 0.971, 1.13, 1.049, 1.238, 1.193, 
+         1.049, 1 )
+   ..
+"ZG0-S1 (PVAVS) P-Inf S2 HDD" = DAY-SCHEDULE-PD
+   TYPE             = MULTIPLIER
+   VALUES           = ( 1, &D, &D, &D, &D, &D, &D, 0.5, &D, &D, &D, &D, &D, 
+         &D, &D, &D, &D, &D, 1 )
+   ..
+"ZG0-S1 (PVAVS) P-Inf S3 WD" = DAY-SCHEDULE-PD
+   TYPE             = MULTIPLIER
+   VALUES           = ( 1, &D, &D, &D, &D, 1.004, 1.175, 1.25, &D, 0.5, 0.701, 
+         &D, 0.5, &D, 0.62, 1.25, &D, 1.157, 1.13, 1.049, 1.238, 1.193, 
+         1.049, 1 )
+   ..
+"ZG0-S1 (PVAVS) P-Inf S3 HDD" = DAY-SCHEDULE-PD
+   TYPE             = MULTIPLIER
+   VALUES           = ( 1, &D, &D, &D, &D, &D, &D, &D, 0.5, &D, &D, &D, &D, 
+         &D, &D, &D, &D, 1 )
+   ..
+"ZG0-S1 (PVAVS) C-Inf S1 All" = DAY-SCHEDULE-PD
+   TYPE             = FRACTION
+   VALUES           = ( 1 )
+   ..
+"ZG0-S1 (PVAVS) C-Inf S2 WD" = DAY-SCHEDULE-PD
+   TYPE             = FRACTION
+   VALUES           = ( 1, &D, &D, &D, &D, &D, &D, 0.5, &D, &D, &D, &D, &D, 
+         &D, &D, &D, &D, &D, 1 )
+   ..
+"ZG0-S1 (PVAVS) C-Inf S3 WD" = DAY-SCHEDULE-PD
+   TYPE             = FRACTION
+   VALUES           = ( 1, &D, &D, &D, &D, &D, &D, &D, 0.5, &D, &D, &D, &D, 
+         &D, &D, &D, &D, 1 )
+   ..
+"S1 Sys1 (PVAVS) Fan S1 All" = DAY-SCHEDULE-PD
+   TYPE             = ON/OFF/FLAG
+   VALUES           = ( 0 )
+   ..
+"S1 Sys1 (PVAVS) Fan S2 WD" = DAY-SCHEDULE-PD
+   TYPE             = ON/OFF/FLAG
+   VALUES           = ( 0, &D, &D, &D, &D, &D, &D, 1, &D, &D, &D, &D, &D, &D, 
+         &D, &D, &D, &D, 0 )
+   ..
+"S1 Sys1 (PVAVS) Fan S3 WD" = DAY-SCHEDULE-PD
+   TYPE             = ON/OFF/FLAG
+   VALUES           = ( 0, &D, &D, &D, &D, &D, &D, &D, 1, &D, &D, &D, &D, &D, 
+         &D, &D, &D, 0 )
+   ..
+"S1 Sys1 (PVAVS) MinOA S1 All" = DAY-SCHEDULE-PD
+   TYPE             = FRAC/DESIGN
+   VALUES           = ( 0 )
+   ..
+"S1 Sys1 (PVAVS) MinOA S2 WD" = DAY-SCHEDULE-PD
+   TYPE             = FRAC/DESIGN
+   VALUES           = ( 0, &D, &D, &D, &D, &D, &D, -999, &D, &D, &D, &D, &D, 
+         &D, &D, &D, &D, &D, 0 )
+   ..
+"S1 Sys1 (PVAVS) MinOA S3 WD" = DAY-SCHEDULE-PD
+   TYPE             = FRAC/DESIGN
+   VALUES           = ( 0, &D, &D, &D, &D, &D, &D, &D, -999, &D, &D, &D, &D, 
+         &D, &D, &D, &D, 0 )
+   ..
+"S1 Sys1 (PVAVS) Cool S1 All" = DAY-SCHEDULE-PD
+   TYPE             = TEMPERATURE
+   VALUES           = ( 85 )
+   ..
+"S1 Sys1 (PVAVS) Cool S2 WD" = DAY-SCHEDULE-PD
+   TYPE             = TEMPERATURE
+   VALUES           = ( 85, &D, &D, &D, &D, &D, &D, 76, &D, &D, &D, &D, &D, 
+         &D, &D, &D, &D, &D, 85 )
+   ..
+"S1 Sys1 (PVAVS) Cool S3 WD" = DAY-SCHEDULE-PD
+   TYPE             = TEMPERATURE
+   VALUES           = ( 85, &D, &D, &D, &D, &D, &D, &D, 76, &D, &D, &D, &D, 
+         &D, &D, &D, &D, 85 )
+   ..
+"S1 Sys1 (PVAVS) Heat S1 All" = DAY-SCHEDULE-PD
+   TYPE             = TEMPERATURE
+   VALUES           = ( 58 )
+   ..
+"S1 Sys1 (PVAVS) Heat S2 WD" = DAY-SCHEDULE-PD
+   TYPE             = TEMPERATURE
+   VALUES           = ( 58, &D, &D, &D, &D, &D, &D, 68, &D, &D, &D, &D, &D, 
+         &D, &D, &D, &D, &D, 58 )
+   ..
+"S1 Sys1 (PVAVS) Heat S3 WD" = DAY-SCHEDULE-PD
+   TYPE             = TEMPERATURE
+   VALUES           = ( 58, &D, &D, &D, &D, &D, &D, &D, 68, &D, &D, &D, &D, 
+         &D, &D, &D, &D, 58 )
+   ..
+"S1 EL1 Sys1 (PVAVS) (G) CRS-D" = DAY-SCHEDULE-PD
+   TYPE             = RESET-TEMP
+   OUTSIDE-HI       = 75
+   OUTSIDE-LO       = 55
+   SUPPLY-HI        = 65
+   SUPPLY-LO        = 55
+   ..
+"S1 EL1 Sys1 (PVAVS) (T) CRS-D" = DAY-SCHEDULE-PD
+   TYPE             = RESET-TEMP
+   OUTSIDE-HI       = 75
+   OUTSIDE-LO       = 55
+   SUPPLY-HI        = 65
+   SUPPLY-LO        = 55
+   ..
+
+$ ---------------------------------------------------------
+$              Week Schedules
+$ ---------------------------------------------------------
+
+"EL1 Bldg Occup S1 Wk" = WEEK-SCHEDULE-PD
+   TYPE             = FRACTION
+   DAY-SCHEDULES    = ( "EL1 Bldg Occup S1 All" )
+   ..
+"EL1 Bldg Occup S2 Wk" = WEEK-SCHEDULE-PD
+   TYPE             = FRACTION
+   DAY-SCHEDULES    = ( "EL1 Bldg Occup S2 WD", &D, &D, &D, &D, 
+         "EL1 Bldg Occup S1 All", &D, &D, "EL1 Bldg Occup S2 HDD" )
+   ..
+"EL1 Bldg InsLt S1 Wk" = WEEK-SCHEDULE-PD
+   TYPE             = FRACTION
+   DAY-SCHEDULES    = ( "EL1 Bldg InsLt S1 All" )
+   ..
+"EL1 Bldg InsLt S2 Wk" = WEEK-SCHEDULE-PD
+   TYPE             = FRACTION
+   DAY-SCHEDULES    = ( "EL1 Bldg InsLt S2 WD", &D, &D, &D, &D, 
+         "EL1 Bldg InsLt S1 All", &D, &D, "EL1 Bldg InsLt S2 HDD" )
+   ..
+"EL1 Bldg OffEq S1 Wk" = WEEK-SCHEDULE-PD
+   TYPE             = FRACTION
+   DAY-SCHEDULES    = ( "EL1 Bldg OffEq S1 All" )
+   ..
+"EL1 Bldg OffEq S2 Wk" = WEEK-SCHEDULE-PD
+   TYPE             = FRACTION
+   DAY-SCHEDULES    = ( "EL1 Bldg OffEq S2 WD", &D, &D, &D, &D, 
+         "EL1 Bldg OffEq S1 All", &D, &D, "EL1 Bldg OffEq S2 HDD" )
+   ..
+"EL1 Bldg Misc S1 Wk" = WEEK-SCHEDULE-PD
+   TYPE             = FRACTION
+   DAY-SCHEDULES    = ( "EL1 Bldg Misc S1 All" )
+   ..
+"EL1 Bldg Misc S2 Wk" = WEEK-SCHEDULE-PD
+   TYPE             = FRACTION
+   DAY-SCHEDULES    = ( "EL1 Bldg Misc S2 WD", &D, &D, &D, &D, 
+         "EL1 Bldg Misc S1 All", &D, &D, "EL1 Bldg Misc S2 HDD" )
+   ..
+"EL1 WinShade Week 1" = WEEK-SCHEDULE-PD
+   TYPE             = MULTIPLIER
+   DAY-SCHEDULES    = ( "EL1 WinShade Day 1", &D, &D, &D, &D, &D, &D, &D, 
+         "EL1 WinShade Day 2", "EL1 WinShade Day 3" )
+   ..
+"EL1 WinShade Week 2" = WEEK-SCHEDULE-PD
+   TYPE             = MULTIPLIER
+   DAY-SCHEDULES    = ( "EL1 WinShade Day 4", &D, &D, &D, &D, 
+         "EL1 WinShade Day 1", &D, &D, "EL1 WinShade Day 2", 
+         "EL1 WinShade Day 3" )
+   ..
+"EL1 WinShade Week 3" = WEEK-SCHEDULE-PD
+   TYPE             = MULTIPLIER
+   DAY-SCHEDULES    = ( "EL1 WinShade Day 4", &D, &D, &D, &D, 
+         "EL1 WinShade Day 1", &D, &D, "EL1 WinShade Day 2", 
+         "EL1 WinShade Day 3" )
+   ..
+"Ext Lighting Wk1" = WEEK-SCHEDULE-PD
+   TYPE             = FRACTION
+   DAY-SCHEDULES    = ( "Ext Lighting W1 All" )
+   ..
+"Ext Lighting Wk2" = WEEK-SCHEDULE-PD
+   TYPE             = FRACTION
+   DAY-SCHEDULES    = ( "Ext Lighting W2 All" )
+   ..
+"Ext Lighting Wk5" = WEEK-SCHEDULE-PD
+   TYPE             = FRACTION
+   DAY-SCHEDULES    = ( "Ext Lighting W5 All" )
+   ..
+"DHW Eqp NRes Wk1" = WEEK-SCHEDULE-PD
+   TYPE             = FRACTION
+   DAY-SCHEDULES    = ( "DHW Eqp NRes W1 All" )
+   ..
+"DHW Eqp NRes Wk2" = WEEK-SCHEDULE-PD
+   TYPE             = FRACTION
+   DAY-SCHEDULES    = ( "DHW Eqp NRes W2 WD", &D, &D, &D, &D, 
+         "DHW Eqp NRes W1 All", &D, &D, "DHW Eqp NRes W2 HDD" )
+   ..
+"ZG0-S1 (PVAVS) P-Inf S1 Wk" = WEEK-SCHEDULE-PD
+   TYPE             = MULTIPLIER
+   DAY-SCHEDULES    = ( "ZG0-S1 (PVAVS) P-Inf S1 All" )
+   ..
+"ZG0-S1 (PVAVS) P-Inf S2 Wk" = WEEK-SCHEDULE-PD
+   TYPE             = MULTIPLIER
+   DAY-SCHEDULES    = ( "ZG0-S1 (PVAVS) P-Inf S2 WD", &D, &D, &D, &D, 
+         "ZG0-S1 (PVAVS) P-Inf S1 All", &D, &D, 
+         "ZG0-S1 (PVAVS) P-Inf S2 HDD" )
+   ..
+"ZG0-S1 (PVAVS) P-Inf S3 Wk" = WEEK-SCHEDULE-PD
+   TYPE             = MULTIPLIER
+   DAY-SCHEDULES    = ( "ZG0-S1 (PVAVS) P-Inf S3 WD", &D, &D, &D, &D, 
+         "ZG0-S1 (PVAVS) P-Inf S1 All", &D, &D, 
+         "ZG0-S1 (PVAVS) P-Inf S3 HDD" )
+   ..
+"ZG0-S1 (PVAVS) C-Inf S1 Wk" = WEEK-SCHEDULE-PD
+   TYPE             = FRACTION
+   DAY-SCHEDULES    = ( "ZG0-S1 (PVAVS) C-Inf S1 All" )
+   ..
+"ZG0-S1 (PVAVS) C-Inf S2 Wk" = WEEK-SCHEDULE-PD
+   TYPE             = FRACTION
+   DAY-SCHEDULES    = ( "ZG0-S1 (PVAVS) C-Inf S2 WD", &D, &D, &D, &D, 
+         "ZG0-S1 (PVAVS) C-Inf S1 All" )
+   ..
+"ZG0-S1 (PVAVS) C-Inf S3 Wk" = WEEK-SCHEDULE-PD
+   TYPE             = FRACTION
+   DAY-SCHEDULES    = ( "ZG0-S1 (PVAVS) C-Inf S3 WD", &D, &D, &D, &D, 
+         "ZG0-S1 (PVAVS) C-Inf S1 All" )
+   ..
+"S1 Sys1 (PVAVS) Fan S1 Wk" = WEEK-SCHEDULE-PD
+   TYPE             = ON/OFF/FLAG
+   DAY-SCHEDULES    = ( "S1 Sys1 (PVAVS) Fan S1 All" )
+   ..
+"S1 Sys1 (PVAVS) Fan S2 Wk" = WEEK-SCHEDULE-PD
+   TYPE             = ON/OFF/FLAG
+   DAY-SCHEDULES    = ( "S1 Sys1 (PVAVS) Fan S2 WD", &D, &D, &D, &D, 
+         "S1 Sys1 (PVAVS) Fan S1 All" )
+   ..
+"S1 Sys1 (PVAVS) Fan S3 Wk" = WEEK-SCHEDULE-PD
+   TYPE             = ON/OFF/FLAG
+   DAY-SCHEDULES    = ( "S1 Sys1 (PVAVS) Fan S3 WD", &D, &D, &D, &D, 
+         "S1 Sys1 (PVAVS) Fan S1 All" )
+   ..
+"S1 Sys1 (PVAVS) MinOA S1 Wk" = WEEK-SCHEDULE-PD
+   TYPE             = FRAC/DESIGN
+   DAY-SCHEDULES    = ( "S1 Sys1 (PVAVS) MinOA S1 All" )
+   ..
+"S1 Sys1 (PVAVS) MinOA S2 Wk" = WEEK-SCHEDULE-PD
+   TYPE             = FRAC/DESIGN
+   DAY-SCHEDULES    = ( "S1 Sys1 (PVAVS) MinOA S2 WD", &D, &D, &D, &D, 
+         "S1 Sys1 (PVAVS) MinOA S1 All" )
+   ..
+"S1 Sys1 (PVAVS) MinOA S3 Wk" = WEEK-SCHEDULE-PD
+   TYPE             = FRAC/DESIGN
+   DAY-SCHEDULES    = ( "S1 Sys1 (PVAVS) MinOA S3 WD", &D, &D, &D, &D, 
+         "S1 Sys1 (PVAVS) MinOA S1 All" )
+   ..
+"S1 Sys1 (PVAVS) Cool S1 Wk" = WEEK-SCHEDULE-PD
+   TYPE             = TEMPERATURE
+   DAY-SCHEDULES    = ( "S1 Sys1 (PVAVS) Cool S1 All" )
+   ..
+"S1 Sys1 (PVAVS) Cool S2 Wk" = WEEK-SCHEDULE-PD
+   TYPE             = TEMPERATURE
+   DAY-SCHEDULES    = ( "S1 Sys1 (PVAVS) Cool S2 WD", &D, &D, &D, &D, 
+         "S1 Sys1 (PVAVS) Cool S1 All" )
+   ..
+"S1 Sys1 (PVAVS) Cool S3 Wk" = WEEK-SCHEDULE-PD
+   TYPE             = TEMPERATURE
+   DAY-SCHEDULES    = ( "S1 Sys1 (PVAVS) Cool S3 WD", &D, &D, &D, &D, 
+         "S1 Sys1 (PVAVS) Cool S1 All" )
+   ..
+"S1 Sys1 (PVAVS) Heat S1 Wk" = WEEK-SCHEDULE-PD
+   TYPE             = TEMPERATURE
+   DAY-SCHEDULES    = ( "S1 Sys1 (PVAVS) Heat S1 All" )
+   ..
+"S1 Sys1 (PVAVS) Heat S2 Wk" = WEEK-SCHEDULE-PD
+   TYPE             = TEMPERATURE
+   DAY-SCHEDULES    = ( "S1 Sys1 (PVAVS) Heat S2 WD", &D, &D, &D, &D, 
+         "S1 Sys1 (PVAVS) Heat S1 All" )
+   ..
+"S1 Sys1 (PVAVS) Heat S3 Wk" = WEEK-SCHEDULE-PD
+   TYPE             = TEMPERATURE
+   DAY-SCHEDULES    = ( "S1 Sys1 (PVAVS) Heat S3 WD", &D, &D, &D, &D, 
+         "S1 Sys1 (PVAVS) Heat S1 All" )
+   ..
+"S1 EL1 Sys1 (PVAVS) (G) CRS-W" = WEEK-SCHEDULE-PD
+   TYPE             = RESET-TEMP
+   DAY-SCHEDULES    = ( "S1 EL1 Sys1 (PVAVS) (G) CRS-D" )
+   ..
+"S1 EL1 Sys1 (PVAVS) (T) CRS-W" = WEEK-SCHEDULE-PD
+   TYPE             = RESET-TEMP
+   DAY-SCHEDULES    = ( "S1 EL1 Sys1 (PVAVS) (T) CRS-D" )
+   ..
+
+$ ---------------------------------------------------------
+$              Annual Schedules
+$ ---------------------------------------------------------
+
+"EL1 Bldg Occup Sch" = SCHEDULE-PD
+   TYPE             = FRACTION
+   MONTH            = ( 1, 3, 4, 6, 9, 12, 12 )
+   DAY              = ( 6, 22, 7, 14, 8, 13, 31 )
+   WEEK-SCHEDULES   = ( "EL1 Bldg Occup S1 Wk", "EL1 Bldg Occup S2 Wk", 
+         "EL1 Bldg Occup S1 Wk", "EL1 Bldg Occup S2 Wk", 
+         "EL1 Bldg Occup S2 Wk", "EL1 Bldg Occup S2 Wk", 
+         "EL1 Bldg Occup S1 Wk" )
+   ..
+"EL1 Bldg InsLt Sch" = SCHEDULE-PD
+   TYPE             = FRACTION
+   MONTH            = ( 1, 3, 4, 6, 9, 12, 12 )
+   DAY              = ( 6, 22, 7, 14, 8, 13, 31 )
+   WEEK-SCHEDULES   = ( "EL1 Bldg InsLt S1 Wk", "EL1 Bldg InsLt S2 Wk", 
+         "EL1 Bldg InsLt S1 Wk", "EL1 Bldg InsLt S2 Wk", 
+         "EL1 Bldg InsLt S2 Wk", "EL1 Bldg InsLt S2 Wk", 
+         "EL1 Bldg InsLt S1 Wk" )
+   ..
+"EL1 Bldg OffEq Sch" = SCHEDULE-PD
+   TYPE             = FRACTION
+   MONTH            = ( 1, 3, 4, 6, 9, 12, 12 )
+   DAY              = ( 6, 22, 7, 14, 8, 13, 31 )
+   WEEK-SCHEDULES   = ( "EL1 Bldg OffEq S1 Wk", "EL1 Bldg OffEq S2 Wk", 
+         "EL1 Bldg OffEq S1 Wk", "EL1 Bldg OffEq S2 Wk", 
+         "EL1 Bldg OffEq S2 Wk", "EL1 Bldg OffEq S2 Wk", 
+         "EL1 Bldg OffEq S1 Wk" )
+   ..
+"EL1 Bldg Misc Sch" = SCHEDULE-PD
+   TYPE             = FRACTION
+   MONTH            = ( 1, 3, 4, 6, 9, 12, 12 )
+   DAY              = ( 6, 22, 7, 14, 8, 13, 31 )
+   WEEK-SCHEDULES   = ( "EL1 Bldg Misc S1 Wk", "EL1 Bldg Misc S2 Wk", 
+         "EL1 Bldg Misc S1 Wk", "EL1 Bldg Misc S2 Wk", "EL1 Bldg Misc S2 Wk", 
+         "EL1 Bldg Misc S2 Wk", "EL1 Bldg Misc S1 Wk" )
+   ..
+"EL1 WinShade Year 1" = SCHEDULE-PD
+   TYPE             = MULTIPLIER
+   MONTH            = ( 1, 3, 4, 6, 9, 12, 12 )
+   DAY              = ( 6, 22, 7, 14, 8, 13, 31 )
+   WEEK-SCHEDULES   = ( "EL1 WinShade Week 1", "EL1 WinShade Week 2", 
+         "EL1 WinShade Week 1", "EL1 WinShade Week 2", "EL1 WinShade Week 3", 
+         "EL1 WinShade Week 2", "EL1 WinShade Week 1" )
+   ..
+"Ext Lighting Sch" = SCHEDULE-PD
+   TYPE             = FRACTION
+   MONTH            = ( 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 )
+   DAY              = ( 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 )
+   WEEK-SCHEDULES   = ( "Ext Lighting Wk1", "Ext Lighting Wk2", 
+         "Ext Lighting Wk2", "Ext Lighting Wk2", "Ext Lighting Wk5", 
+         "Ext Lighting Wk5", "Ext Lighting Wk5", "Ext Lighting Wk1", 
+         "Ext Lighting Wk1", "Ext Lighting Wk1", "Ext Lighting Wk1", 
+         "Ext Lighting Wk1" )
+   ..
+"DHW Eqp NRes Sch" = SCHEDULE-PD
+   TYPE             = FRACTION
+   MONTH            = ( 1, 3, 4, 6, 9, 12, 12 )
+   DAY              = ( 6, 22, 7, 14, 8, 13, 31 )
+   WEEK-SCHEDULES   = ( "DHW Eqp NRes Wk1", "DHW Eqp NRes Wk2", 
+         "DHW Eqp NRes Wk1", "DHW Eqp NRes Wk2", "DHW Eqp NRes Wk2", 
+         "DHW Eqp NRes Wk2", "DHW Eqp NRes Wk1" )
+   ..
+"ZG0-S1 (PVAVS) P-Inf Sch" = SCHEDULE-PD
+   TYPE             = MULTIPLIER
+   MONTH            = ( 1, 3, 4, 6, 9, 12, 12 )
+   DAY              = ( 6, 22, 7, 14, 8, 13, 31 )
+   WEEK-SCHEDULES   = ( "ZG0-S1 (PVAVS) P-Inf S1 Wk", 
+         "ZG0-S1 (PVAVS) P-Inf S2 Wk", "ZG0-S1 (PVAVS) P-Inf S1 Wk", 
+         "ZG0-S1 (PVAVS) P-Inf S2 Wk", "ZG0-S1 (PVAVS) P-Inf S3 Wk", 
+         "ZG0-S1 (PVAVS) P-Inf S2 Wk", "ZG0-S1 (PVAVS) P-Inf S1 Wk" )
+   ..
+"ZG0-S1 (PVAVS) C-Inf Sch" = SCHEDULE-PD
+   TYPE             = FRACTION
+   MONTH            = ( 1, 3, 4, 6, 9, 12, 12 )
+   DAY              = ( 6, 22, 7, 14, 8, 13, 31 )
+   WEEK-SCHEDULES   = ( "ZG0-S1 (PVAVS) C-Inf S1 Wk", 
+         "ZG0-S1 (PVAVS) C-Inf S2 Wk", "ZG0-S1 (PVAVS) C-Inf S1 Wk", 
+         "ZG0-S1 (PVAVS) C-Inf S2 Wk", "ZG0-S1 (PVAVS) C-Inf S3 Wk", 
+         "ZG0-S1 (PVAVS) C-Inf S2 Wk", "ZG0-S1 (PVAVS) C-Inf S1 Wk" )
+   ..
+"S1 Sys1 (PVAVS) Fan Sch" = SCHEDULE-PD
+   TYPE             = ON/OFF/FLAG
+   MONTH            = ( 1, 3, 4, 6, 9, 12, 12 )
+   DAY              = ( 6, 22, 7, 14, 8, 13, 31 )
+   WEEK-SCHEDULES   = ( "S1 Sys1 (PVAVS) Fan S1 Wk", 
+         "S1 Sys1 (PVAVS) Fan S2 Wk", "S1 Sys1 (PVAVS) Fan S1 Wk", 
+         "S1 Sys1 (PVAVS) Fan S2 Wk", "S1 Sys1 (PVAVS) Fan S3 Wk", 
+         "S1 Sys1 (PVAVS) Fan S2 Wk", "S1 Sys1 (PVAVS) Fan S1 Wk" )
+   ..
+"S1 Sys1 (PVAVS) MinOA Sch" = SCHEDULE-PD
+   TYPE             = FRAC/DESIGN
+   MONTH            = ( 1, 3, 4, 6, 9, 12, 12 )
+   DAY              = ( 6, 22, 7, 14, 8, 13, 31 )
+   WEEK-SCHEDULES   = ( "S1 Sys1 (PVAVS) MinOA S1 Wk", 
+         "S1 Sys1 (PVAVS) MinOA S2 Wk", "S1 Sys1 (PVAVS) MinOA S1 Wk", 
+         "S1 Sys1 (PVAVS) MinOA S2 Wk", "S1 Sys1 (PVAVS) MinOA S3 Wk", 
+         "S1 Sys1 (PVAVS) MinOA S2 Wk", "S1 Sys1 (PVAVS) MinOA S1 Wk" )
+   ..
+"S1 Sys1 (PVAVS) Cool Sch" = SCHEDULE-PD
+   TYPE             = TEMPERATURE
+   MONTH            = ( 1, 3, 4, 6, 9, 12, 12 )
+   DAY              = ( 6, 22, 7, 14, 8, 13, 31 )
+   WEEK-SCHEDULES   = ( "S1 Sys1 (PVAVS) Cool S1 Wk", 
+         "S1 Sys1 (PVAVS) Cool S2 Wk", "S1 Sys1 (PVAVS) Cool S1 Wk", 
+         "S1 Sys1 (PVAVS) Cool S2 Wk", "S1 Sys1 (PVAVS) Cool S3 Wk", 
+         "S1 Sys1 (PVAVS) Cool S2 Wk", "S1 Sys1 (PVAVS) Cool S1 Wk" )
+   ..
+"S1 Sys1 (PVAVS) Heat Sch" = SCHEDULE-PD
+   TYPE             = TEMPERATURE
+   MONTH            = ( 1, 3, 4, 6, 9, 12, 12 )
+   DAY              = ( 6, 22, 7, 14, 8, 13, 31 )
+   WEEK-SCHEDULES   = ( "S1 Sys1 (PVAVS) Heat S1 Wk", 
+         "S1 Sys1 (PVAVS) Heat S2 Wk", "S1 Sys1 (PVAVS) Heat S1 Wk", 
+         "S1 Sys1 (PVAVS) Heat S2 Wk", "S1 Sys1 (PVAVS) Heat S3 Wk", 
+         "S1 Sys1 (PVAVS) Heat S2 Wk", "S1 Sys1 (PVAVS) Heat S1 Wk" )
+   ..
+"S1 EL1 Sys1 (PVAVS) (G) CRS" = SCHEDULE-PD
+   TYPE             = RESET-TEMP
+   MONTH            = ( 12 )
+   DAY              = ( 31 )
+   WEEK-SCHEDULES   = ( "S1 EL1 Sys1 (PVAVS) (G) CRS-W" )
+   ..
+"S1 EL1 Sys1 (PVAVS) (T) CRS" = SCHEDULE-PD
+   TYPE             = RESET-TEMP
+   MONTH            = ( 12 )
+   DAY              = ( 31 )
+   WEEK-SCHEDULES   = ( "S1 EL1 Sys1 (PVAVS) (T) CRS-W" )
+   ..
+
+
+$ ---------------------------------------------------------
+$              Polygons
+$ ---------------------------------------------------------
+
+"EL1 Floor Polygon" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( 205, 0 )
+   V3               = ( 205, 100 )
+   V4               = ( 0, 100 )
+   V5               = ( 0, 49.5 )
+   V6               = ( 50, 49.5 )
+   V7               = ( 50, 51 )
+   V8               = ( 155, 51 )
+   V9               = ( 155, 49 )
+   V10              = ( 50, 49 )
+   V11              = ( 0, 49 )
+   ..
+"EL1 Space Polygon 1" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( 205, 0 )
+   V3               = ( 190, 15 )
+   V4               = ( 15, 15 )
+   ..
+"EL1 Space Polygon 2" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( 100, -0 )
+   V3               = ( 85, 15 )
+   V4               = ( 15, 15 )
+   ..
+"EL1 Space Polygon 3" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( 205, 0 )
+   V3               = ( 190, 15 )
+   V4               = ( 15, 15 )
+   ..
+"EL1 Space Polygon 4" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( 50.5, 0 )
+   V3               = ( 35.5, 15 )
+   V4               = ( 15, 15 )
+   ..
+"EL1 Space Polygon 5" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( 50, 0 )
+   V3               = ( 50, 1.5 )
+   V4               = ( 35, 16.5 )
+   V5               = ( 35, 15 )
+   V6               = ( 15, 15 )
+   ..
+"EL1 Space Polygon 6" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( 105, 0 )
+   V3               = ( 120, 15 )
+   V4               = ( -15, 15 )
+   ..
+"EL1 Space Polygon 7" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( 2, 0 )
+   V3               = ( 2, -105 )
+   V4               = ( 17, -105 )
+   V5               = ( 17, 15 )
+   V6               = ( -15, 15 )
+   ..
+"EL1 Space Polygon 8" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( 50, 0 )
+   V3               = ( 35, 15 )
+   V4               = ( 0, 15 )
+   ..
+"EL1 Space Polygon 9" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( 49, 0 )
+   V3               = ( 34, 15 )
+   V4               = ( 15, 15 )
+   ..
+"EL1 Space Polygon 10" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( 175, 0 )
+   V3               = ( 175, 70 )
+   V4               = ( 0, 70 )
+   V5               = ( 0, 49.5 )
+   V6               = ( 20, 49.5 )
+   V7               = ( 20, 51 )
+   V8               = ( 155, 51 )
+   V9               = ( 155, 19 )
+   V10              = ( 35, 19 )
+   V11              = ( 0, 19 )
+   ..
+"EL1 Space Polygon 1 - SMirro" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( 15, 15 )
+   V3               = ( 15, 190 )
+   V4               = ( 0, 205 )
+   ..
+"EL1 Space Polygon 2 - SMirro" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( 15, 15 )
+   V3               = ( 15, 85 )
+   V4               = ( -0, 100 )
+   ..
+"EL1 Space Polygon 4 - SMirro" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( 15, 15 )
+   V3               = ( 15, 35.5 )
+   V4               = ( 0, 50.5 )
+   ..
+"EL1 Space Polygon 5 - SMirro" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( 15, 15 )
+   V3               = ( 15, 35 )
+   V4               = ( 16.5, 35 )
+   V5               = ( 1.5, 50 )
+   V6               = ( 0, 50 )
+   ..
+"EL1 Space Polygon 6 - SMirro" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( 15, -15 )
+   V3               = ( 15, 120 )
+   V4               = ( 0, 105 )
+   ..
+"EL1 Space Polygon 7 - SMirro" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( 15, -15 )
+   V3               = ( 15, 17 )
+   V4               = ( -105, 17 )
+   V5               = ( -105, 2 )
+   V6               = ( 0, 2 )
+   ..
+"EL1 Space Polygon 8 - SMirro" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( 15, 0 )
+   V3               = ( 15, 35 )
+   V4               = ( 0, 50 )
+   ..
+"EL1 Space Polygon 9 - SMirro" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( 15, 15 )
+   V3               = ( 15, 34 )
+   V4               = ( 0, 49 )
+   ..
+"EL1 Space Polygon 10 - SMirro" = POLYGON         
+   V1               = ( 0, 0 )
+   V2               = ( 19, 0 )
+   V3               = ( 19, 35 )
+   V4               = ( 19, 155 )
+   V5               = ( 51, 155 )
+   V6               = ( 51, 20 )
+   V7               = ( 49.5, 20 )
+   V8               = ( 49.5, 0 )
+   V9               = ( 70, 0 )
+   V10              = ( 70, 175 )
+   V11              = ( 0, 175 )
+   ..
+
+
+$ ---------------------------------------------------------
+$              Wall Parameters
+$ ---------------------------------------------------------
+
+
+
+$ ---------------------------------------------------------
+$              Fixed and Building Shades
+$ ---------------------------------------------------------
+
+
+
+
+$ ---------------------------------------------------------
+$              Misc Cost Related Objects
+$ ---------------------------------------------------------
+
+
+
+"Baseline Data" = BASELINE        
+   ..
+
+
+$ *********************************************************
+$ **                                                     **
+$ **                Performance Curves                   **
+$ **                                                     **
+$ *********************************************************
+
+
+$ *********************************************************
+$ **                                                     **
+$ **      Floors / Spaces / Walls / Windows / Doors      **
+$ **                                                     **
+$ *********************************************************
+
+"EL1 Ground Flr" = FLOOR           
+   AZIMUTH          = 360
+   POLYGON          = "EL1 Floor Polygon"
+   SHAPE            = POLYGON
+   FLOOR-HEIGHT     = 14
+   SPACE-HEIGHT     = 10
+   C-DIAGRAM-DATA   = *Bldg Envelope & Loads 1 Diag Data*
+   ..
+"EL1 South Perim Spc (G.S1)" = SPACE           
+   SHAPE            = POLYGON
+   ZONE-TYPE        = CONDITIONED
+   PEOPLE-SCHEDULE  = "EL1 Bldg Occup Sch"
+   LIGHTING-SCHEDUL = ( "EL1 Bldg InsLt Sch" )
+   EQUIP-SCHEDULE   = ( "EL1 Bldg Misc Sch", "EL1 Bldg OffEq Sch", 
+         "EL1 Bldg OffEq Sch", "EL1 Bldg OffEq Sch", "EL1 Bldg OffEq Sch" )
+   INF-SCHEDULE     = "ZG0-S1 (PVAVS) P-Inf Sch"
+   INF-METHOD       = AIR-CHANGE
+   INF-FLOW/AREA    = 0.0273333
+   PEOPLE-HG-LAT    = 156.044
+   PEOPLE-HG-SENS   = 245.116
+   EQUIP-LATENT     = ( 0, 0, 0, 0, 0 )
+   EQUIP-SENSIBLE   = ( 1, 1, 1, 1, 1 )
+   LIGHTING-W/AREA  = ( 0.447022 )
+   EQUIPMENT-W/AREA = ( 0.382, 0, 0, 0, 0.03 )
+   DAYLIGHTING      = YES
+   LIGHT-REF-POINT1 = ( 57.86, 10, 2.5 )
+   ZONE-FRACTION1   = 0.911
+   LIGHT-SET-POINT1 = 50
+   VIEW-AZIMUTH     = 90
+   AREA/PERSON      = 77.8998
+   POLYGON          = "EL1 Space Polygon 1"
+   LTG-CTRL-METHOD1 = Fluor:Dimming:5%Light
+   LOCATION         = FLOOR-V1
+   C-SUB-SRC-BTUH   = ( 0, 0, 0 )
+   C-SUB-SRC-KW     = ( 0, 0, 0 )
+   C-ACTIVITY-DESC  = *Classroom / Lecture (94%)*
+   ..
+"EL1 South Wall (G.S1.E1)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "EL1 EWall Construction"
+   LOCATION         = SPACE-V1
+   ..
+"EL1 South Win (G.S1.E1.W1)" = WINDOW          
+   GLASS-TYPE       = "EL1 Window Type #2 GT"
+   SHADING-SCHEDULE = "EL1 WinShade Year 1"
+   FRAME-WIDTH      = 0.108333
+   X                = 16.5633
+   Y                = 3.10833
+   HEIGHT           = 5.00333
+   WIDTH            = 82.5884
+   VIS-TRANS-SCH    = "EL1 WinShade Year 1"
+   OVERHANG-D       = 5
+   FRAME-CONDUCT    = 0.274
+   SPACER-TYPE      = INSULATED
+   ..
+"EL1 South Win (G.S1.E1.W2)" = WINDOW          
+   GLASS-TYPE       = "EL1 Window Type #2 GT"
+   SHADING-SCHEDULE = "EL1 WinShade Year 1"
+   FRAME-WIDTH      = 0.108333
+   X                = 105.848
+   Y                = 3.10833
+   HEIGHT           = 5.00333
+   WIDTH            = 82.5884
+   VIS-TRANS-SCH    = "EL1 WinShade Year 1"
+   OVERHANG-D       = 5
+   FRAME-CONDUCT    = 0.274
+   SPACER-TYPE      = INSULATED
+   ..
+"EL1 South Door (G.S1.E1.D1)" = DOOR            
+   CONSTRUCTION     = "Dbl Lyr Unins Mtl Door"
+   X                = 101
+   HEIGHT           = 7
+   WIDTH            = 3
+   ..
+"EL1 NE Wall (G.S1.I1)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 East Perim Spc (G.E2)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V2
+   ..
+"EL1 NW Wall (G.S1.I2)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 West Perim Spc (G.W9)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V4
+   ..
+"EL1 Ceiling (G.S1.I3)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 South Perim Plnm (G.S11)"
+   CONSTRUCTION     = "EL1 Ceilg Construction"
+   LOCATION         = TOP
+   ..
+"EL1 Flr (G.S1.U1)" = UNDERGROUND-WALL
+   CONSTRUCTION     = "EL1 UFCons (G.S1.U2)"
+   LOCATION         = BOTTOM
+   ..
+"EL1 East Perim Spc (G.E2)" = SPACE           
+   SHAPE            = POLYGON
+   ZONE-TYPE        = CONDITIONED
+   PEOPLE-SCHEDULE  = "EL1 Bldg Occup Sch"
+   LIGHTING-SCHEDUL = ( "EL1 Bldg InsLt Sch" )
+   EQUIP-SCHEDULE   = ( "EL1 Bldg Misc Sch", "EL1 Bldg OffEq Sch", 
+         "EL1 Bldg OffEq Sch", "EL1 Bldg OffEq Sch", "EL1 Bldg OffEq Sch" )
+   INF-SCHEDULE     = "ZG0-S1 (PVAVS) P-Inf Sch"
+   INF-METHOD       = AIR-CHANGE
+   INF-FLOW/AREA    = 0.0298039
+   PEOPLE-HG-LAT    = 156.044
+   PEOPLE-HG-SENS   = 245.116
+   EQUIP-LATENT     = ( 0, 0, 0, 0, 0 )
+   EQUIP-SENSIBLE   = ( 1, 1, 1, 1, 1 )
+   LIGHTING-W/AREA  = ( 0.447022 )
+   EQUIPMENT-W/AREA = ( 0.382, 0, 0, 0, 0.03 )
+   DAYLIGHTING      = YES
+   LIGHT-REF-POINT1 = ( 73.35, 10, 2.5 )
+   ZONE-FRACTION1   = 0.903
+   LIGHT-SET-POINT1 = 50
+   VIEW-AZIMUTH     = 270
+   AREA/PERSON      = 77.8998
+   POLYGON          = "EL1 Space Polygon 2"
+   LTG-CTRL-METHOD1 = Fluor:Dimming:5%Light
+   LOCATION         = FLOOR-V2
+   C-SUB-SRC-BTUH   = ( 0, 0, 0 )
+   C-SUB-SRC-KW     = ( 0, 0, 0 )
+   C-ACTIVITY-DESC  = *Classroom / Lecture (94%)*
+   ..
+"EL1 East Wall (G.E2.E2)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "EL1 EWall Construction"
+   LOCATION         = SPACE-V1
+   ..
+"EL1 East Win (G.E2.E2.W1)" = WINDOW          
+   GLASS-TYPE       = "EL1 Window Type #2 GT"
+   SHADING-SCHEDULE = "EL1 WinShade Year 1"
+   FRAME-WIDTH      = 0.108333
+   X                = 8.13515
+   Y                = 3.10833
+   HEIGHT           = 5.00333
+   WIDTH            = 37.0165
+   VIS-TRANS-SCH    = "EL1 WinShade Year 1"
+   OVERHANG-D       = 3
+   FRAME-CONDUCT    = 0.274
+   SPACER-TYPE      = INSULATED
+   ..
+"EL1 East Win (G.E2.E2.W2)" = WINDOW          
+   GLASS-TYPE       = "EL1 Window Type #2 GT"
+   SHADING-SCHEDULE = "EL1 WinShade Year 1"
+   FRAME-WIDTH      = 0.108333
+   X                = 54.8483
+   Y                = 3.10833
+   HEIGHT           = 5.00333
+   WIDTH            = 37.0165
+   VIS-TRANS-SCH    = "EL1 WinShade Year 1"
+   OVERHANG-D       = 3
+   FRAME-CONDUCT    = 0.274
+   SPACER-TYPE      = INSULATED
+   ..
+"EL1 East Door (G.E2.E2.D1)" = DOOR            
+   CONSTRUCTION     = "Dbl Lyr Unins Mtl Door"
+   X                = 47
+   HEIGHT           = 7
+   WIDTH            = 3
+   ..
+"EL1 East Door (G.E2.E2.D2)" = DOOR            
+   CONSTRUCTION     = "Dbl Lyr Unins Mtl Door"
+   X                = 50
+   HEIGHT           = 7
+   WIDTH            = 3
+   ..
+"EL1 NW Wall (G.E2.I4)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 North Perim Spc (G.N3)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V2
+   ..
+"EL1 Ceiling (G.E2.I5)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 East Perim Plnm (G.E12)"
+   CONSTRUCTION     = "EL1 Ceilg Construction"
+   LOCATION         = TOP
+   ..
+"EL1 Flr (G.E2.U2)" = UNDERGROUND-WALL
+   CONSTRUCTION     = "EL1 UFCons (G.E2.U3)"
+   LOCATION         = BOTTOM
+   ..
+"EL1 North Perim Spc (G.N3)" = SPACE           
+   SHAPE            = POLYGON
+   ZONE-TYPE        = CONDITIONED
+   PEOPLE-SCHEDULE  = "EL1 Bldg Occup Sch"
+   LIGHTING-SCHEDUL = ( "EL1 Bldg InsLt Sch" )
+   EQUIP-SCHEDULE   = ( "EL1 Bldg Misc Sch", "EL1 Bldg OffEq Sch", 
+         "EL1 Bldg OffEq Sch", "EL1 Bldg OffEq Sch", "EL1 Bldg OffEq Sch" )
+   INF-SCHEDULE     = "ZG0-S1 (PVAVS) P-Inf Sch"
+   INF-METHOD       = AIR-CHANGE
+   INF-FLOW/AREA    = 0.0273333
+   PEOPLE-HG-LAT    = 156.044
+   PEOPLE-HG-SENS   = 245.116
+   EQUIP-LATENT     = ( 0, 0, 0, 0, 0 )
+   EQUIP-SENSIBLE   = ( 1, 1, 1, 1, 1 )
+   LIGHTING-W/AREA  = ( 0.447022 )
+   EQUIPMENT-W/AREA = ( 0.382, 0, 0, 0, 0.03 )
+   DAYLIGHTING      = YES
+   LIGHT-REF-POINT1 = ( 147.14, 10, 2.5 )
+   ZONE-FRACTION1   = 0.911
+   LIGHT-SET-POINT1 = 50
+   VIEW-AZIMUTH     = -90
+   AREA/PERSON      = 77.8998
+   POLYGON          = "EL1 Space Polygon 3"
+   LTG-CTRL-METHOD1 = Fluor:Dimming:5%Light
+   LOCATION         = FLOOR-V3
+   C-SUB-SRC-BTUH   = ( 0, 0, 0 )
+   C-SUB-SRC-KW     = ( 0, 0, 0 )
+   C-ACTIVITY-DESC  = *Classroom / Lecture (94%)*
+   ..
+"EL1 North Wall (G.N3.E3)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "EL1 EWall Construction"
+   LOCATION         = SPACE-V1
+   ..
+"EL1 North Win (G.N3.E3.W1)" = WINDOW          
+   GLASS-TYPE       = "EL1 Window Type #1 GT"
+   SHADING-SCHEDULE = "EL1 WinShade Year 1"
+   FRAME-WIDTH      = 0.108333
+   X                = 16.5633
+   Y                = 3.10833
+   HEIGHT           = 5.00333
+   WIDTH            = 82.5884
+   VIS-TRANS-SCH    = "EL1 WinShade Year 1"
+   FRAME-CONDUCT    = 0.341
+   SPACER-TYPE      = INSULATED
+   ..
+"EL1 North Win (G.N3.E3.W2)" = WINDOW          
+   GLASS-TYPE       = "EL1 Window Type #1 GT"
+   SHADING-SCHEDULE = "EL1 WinShade Year 1"
+   FRAME-WIDTH      = 0.108333
+   X                = 105.848
+   Y                = 3.10833
+   HEIGHT           = 5.00333
+   WIDTH            = 82.5884
+   VIS-TRANS-SCH    = "EL1 WinShade Year 1"
+   FRAME-CONDUCT    = 0.341
+   SPACER-TYPE      = INSULATED
+   ..
+"EL1 North Door (G.N3.E3.D1)" = DOOR            
+   CONSTRUCTION     = "Dbl Lyr Unins Mtl Door"
+   X                = 101
+   HEIGHT           = 7
+   WIDTH            = 3
+   ..
+"EL1 SW Wall (G.N3.I6)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 West Perim Spc (G.W4)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V2
+   ..
+"EL1 Ceiling (G.N3.I7)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 North Perim Plnm (G.N13)"
+   CONSTRUCTION     = "EL1 Ceilg Construction"
+   LOCATION         = TOP
+   ..
+"EL1 Flr (G.N3.U3)" = UNDERGROUND-WALL
+   CONSTRUCTION     = "EL1 UFCons (G.S1.U2)"
+   LOCATION         = BOTTOM
+   ..
+"EL1 West Perim Spc (G.W4)" = SPACE           
+   SHAPE            = POLYGON
+   ZONE-TYPE        = CONDITIONED
+   PEOPLE-SCHEDULE  = "EL1 Bldg Occup Sch"
+   LIGHTING-SCHEDUL = ( "EL1 Bldg InsLt Sch" )
+   EQUIP-SCHEDULE   = ( "EL1 Bldg Misc Sch", "EL1 Bldg OffEq Sch", 
+         "EL1 Bldg OffEq Sch", "EL1 Bldg OffEq Sch", "EL1 Bldg OffEq Sch" )
+   INF-SCHEDULE     = "ZG0-S1 (PVAVS) P-Inf Sch"
+   INF-METHOD       = AIR-CHANGE
+   INF-FLOW/AREA    = 0.0360376
+   PEOPLE-HG-LAT    = 156.044
+   PEOPLE-HG-SENS   = 245.116
+   EQUIP-LATENT     = ( 0, 0, 0, 0, 0 )
+   EQUIP-SENSIBLE   = ( 1, 1, 1, 1, 1 )
+   LIGHTING-W/AREA  = ( 0.447022 )
+   EQUIPMENT-W/AREA = ( 0.382, 0, 0, 0, 0.03 )
+   DAYLIGHTING      = YES
+   LIGHT-REF-POINT1 = ( 13.03, 10, 2.5 )
+   ZONE-FRACTION1   = 0.915
+   LIGHT-SET-POINT1 = 50
+   VIEW-AZIMUTH     = 90
+   AREA/PERSON      = 77.8998
+   POLYGON          = "EL1 Space Polygon 4"
+   LTG-CTRL-METHOD1 = Fluor:Dimming:5%Light
+   LOCATION         = FLOOR-V4
+   C-SUB-SRC-BTUH   = ( 0, 0, 0 )
+   C-SUB-SRC-KW     = ( 0, 0, 0 )
+   C-ACTIVITY-DESC  = *Classroom / Lecture (94%)*
+   ..
+"EL1 West Wall (G.W4.E4)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "EL1 EWall Construction"
+   LOCATION         = SPACE-V1
+   ..
+"EL1 West Win (G.W4.E4.W1)" = WINDOW          
+   GLASS-TYPE       = "EL1 Window Type #2 GT"
+   SHADING-SCHEDULE = "EL1 WinShade Year 1"
+   FRAME-WIDTH      = 0.108333
+   X                = 4.16188
+   Y                = 3.10833
+   HEIGHT           = 5.00333
+   WIDTH            = 17.7398
+   VIS-TRANS-SCH    = "EL1 WinShade Year 1"
+   OVERHANG-D       = 3
+   FRAME-CONDUCT    = 0.274
+   SPACER-TYPE      = INSULATED
+   ..
+"EL1 West Win (G.W4.E4.W2)" = WINDOW          
+   GLASS-TYPE       = "EL1 Window Type #2 GT"
+   SHADING-SCHEDULE = "EL1 WinShade Year 1"
+   FRAME-WIDTH      = 0.108333
+   X                = 28.5983
+   Y                = 3.10833
+   HEIGHT           = 5.00333
+   WIDTH            = 17.7398
+   VIS-TRANS-SCH    = "EL1 WinShade Year 1"
+   OVERHANG-D       = 3
+   FRAME-CONDUCT    = 0.274
+   SPACER-TYPE      = INSULATED
+   ..
+"EL1 West Door (G.W4.E4.D1)" = DOOR            
+   CONSTRUCTION     = "Dbl Lyr Unins Mtl Door"
+   X                = 23.75
+   HEIGHT           = 7
+   WIDTH            = 3
+   ..
+"EL1 Ceiling (G.W4.I8)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 West Perim Plnm (G.W14)"
+   CONSTRUCTION     = "EL1 Ceilg Construction"
+   LOCATION         = TOP
+   ..
+"EL1 Flr (G.W4.U4)" = UNDERGROUND-WALL
+   CONSTRUCTION     = "EL1 UFCons (G.W4.U5)"
+   LOCATION         = BOTTOM
+   ..
+"EL1 South Perim Spc (G.S5)" = SPACE           
+   SHAPE            = POLYGON
+   ZONE-TYPE        = CONDITIONED
+   PEOPLE-SCHEDULE  = "EL1 Bldg Occup Sch"
+   LIGHTING-SCHEDUL = ( "EL1 Bldg InsLt Sch" )
+   EQUIP-SCHEDULE   = ( "EL1 Bldg Misc Sch", "EL1 Bldg OffEq Sch", 
+         "EL1 Bldg OffEq Sch", "EL1 Bldg OffEq Sch", "EL1 Bldg OffEq Sch" )
+   INF-SCHEDULE     = "ZG0-S1 (PVAVS) P-Inf Sch"
+   INF-METHOD       = AIR-CHANGE
+   INF-FLOW/AREA    = 0.0357443
+   PEOPLE-HG-LAT    = 156.044
+   PEOPLE-HG-SENS   = 245.116
+   EQUIP-LATENT     = ( 0, 0, 0, 0, 0 )
+   EQUIP-SENSIBLE   = ( 1, 1, 1, 1, 1 )
+   LIGHTING-W/AREA  = ( 0.447022 )
+   EQUIPMENT-W/AREA = ( 0.382, 0, 0, 0, 0.03 )
+   DAYLIGHTING      = YES
+   LIGHT-REF-POINT1 = ( 25, 10, 2.5 )
+   ZONE-FRACTION1   = 0.986
+   LIGHT-SET-POINT1 = 50
+   VIEW-AZIMUTH     = 270
+   AREA/PERSON      = 77.8998
+   POLYGON          = "EL1 Space Polygon 5"
+   LTG-CTRL-METHOD1 = Fluor:Dimming:5%Light
+   LOCATION         = FLOOR-V5
+   C-SUB-SRC-BTUH   = ( 0, 0, 0 )
+   C-SUB-SRC-KW     = ( 0, 0, 0 )
+   C-ACTIVITY-DESC  = *Classroom / Lecture (94%)*
+   ..
+"EL1 East Wall (G.S5.E5)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "EL1 EWall Construction"
+   LOCATION         = SPACE-V2
+   SHADING-SURFACE  = YES
+   ..
+"EL1 East Win (G.S5.E5.W1)" = WINDOW          
+   GLASS-TYPE       = "EL1 Window Type #2 GT"
+   SHADING-SCHEDULE = "EL1 WinShade Year 1"
+   FRAME-WIDTH      = 0.108333
+   X                = 0.228736
+   Y                = 3.10833
+   HEIGHT           = 5.00333
+   WIDTH            = 1.04253
+   VIS-TRANS-SCH    = "EL1 WinShade Year 1"
+   OVERHANG-D       = 3
+   FRAME-CONDUCT    = 0.274
+   SPACER-TYPE      = INSULATED
+   ..
+"EL1 South Wall (G.S5.I9)" = INTERIOR-WALL   
+   CONSTRUCTION     = "EL1 EWall Construction"
+   INT-WALL-TYPE    = ADIABATIC
+   X                = 0
+   Y                = 0
+   Z                = 0
+   HEIGHT           = 10
+   WIDTH            = 50
+   AZIMUTH          = 180
+   ..
+"EL1 NE Wall (G.S5.I10)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 South Perim Spc (G.S6)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V3
+   ..
+"EL1 NW Wall (G.S5.I11)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 West Perim Spc (G.W4)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V6
+   ..
+"EL1 Ceiling (G.S5.I12)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 South Perim Plnm (G.S15)"
+   CONSTRUCTION     = "EL1 Ceilg Construction"
+   LOCATION         = TOP
+   ..
+"EL1 Flr (G.S5.U5)" = UNDERGROUND-WALL
+   CONSTRUCTION     = "EL1 UFCons (G.S5.U6)"
+   LOCATION         = BOTTOM
+   ..
+"EL1 South Perim Spc (G.S6)" = SPACE           
+   SHAPE            = POLYGON
+   ZONE-TYPE        = CONDITIONED
+   PEOPLE-SCHEDULE  = "EL1 Bldg Occup Sch"
+   LIGHTING-SCHEDUL = ( "EL1 Bldg InsLt Sch" )
+   EQUIP-SCHEDULE   = ( "EL1 Bldg Misc Sch", "EL1 Bldg OffEq Sch", 
+         "EL1 Bldg OffEq Sch", "EL1 Bldg OffEq Sch", "EL1 Bldg OffEq Sch" )
+   INF-SCHEDULE     = "ZG0-S1 (PVAVS) P-Inf Sch"
+   INF-METHOD       = AIR-CHANGE
+   INF-FLOW/AREA    = 0.0221667
+   PEOPLE-HG-LAT    = 156.044
+   PEOPLE-HG-SENS   = 245.116
+   EQUIP-LATENT     = ( 0, 0, 0, 0, 0 )
+   EQUIP-SENSIBLE   = ( 1, 1, 1, 1, 1 )
+   LIGHTING-W/AREA  = ( 0.447022 )
+   EQUIPMENT-W/AREA = ( 0.382, 0, 0, 0, 0.03 )
+   DAYLIGHTING      = YES
+   LIGHT-REF-POINT1 = ( 28.85, 10, 2.5 )
+   ZONE-FRACTION1   = 0.743
+   LIGHT-SET-POINT1 = 50
+   VIEW-AZIMUTH     = 90
+   AREA/PERSON      = 77.8998
+   POLYGON          = "EL1 Space Polygon 6"
+   LTG-CTRL-METHOD1 = Fluor:Dimming:5%Light
+   LOCATION         = FLOOR-V7
+   C-SUB-SRC-BTUH   = ( 0, 0, 0 )
+   C-SUB-SRC-KW     = ( 0, 0, 0 )
+   C-ACTIVITY-DESC  = *Classroom / Lecture (94%)*
+   ..
+"EL1 South Wall (G.S6.E6)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "EL1 EWall Construction"
+   LOCATION         = SPACE-V1
+   SHADING-SURFACE  = YES
+   ..
+"EL1 South Win (G.S6.E6.W1)" = WINDOW          
+   GLASS-TYPE       = "EL1 Window Type #2 GT"
+   SHADING-SCHEDULE = "EL1 WinShade Year 1"
+   FRAME-WIDTH      = 0.108333
+   X                = 8.53649
+   Y                = 3.10833
+   HEIGHT           = 5.00333
+   WIDTH            = 40.6152
+   VIS-TRANS-SCH    = "EL1 WinShade Year 1"
+   OVERHANG-D       = 5
+   FRAME-CONDUCT    = 0.274
+   SPACER-TYPE      = INSULATED
+   ..
+"EL1 South Win (G.S6.E6.W2)" = WINDOW          
+   GLASS-TYPE       = "EL1 Window Type #2 GT"
+   SHADING-SCHEDULE = "EL1 WinShade Year 1"
+   FRAME-WIDTH      = 0.108333
+   X                = 55.8483
+   Y                = 3.10833
+   HEIGHT           = 5.00333
+   WIDTH            = 40.6152
+   VIS-TRANS-SCH    = "EL1 WinShade Year 1"
+   OVERHANG-D       = 5
+   FRAME-CONDUCT    = 0.274
+   SPACER-TYPE      = INSULATED
+   ..
+"EL1 South Door (G.S6.E6.D1)" = DOOR            
+   CONSTRUCTION     = "Dbl Lyr Unins Mtl Door"
+   X                = 51
+   HEIGHT           = 7
+   WIDTH            = 3
+   ..
+"EL1 Ceiling (G.S6.I13)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 South Perim Plnm (G.S16)"
+   CONSTRUCTION     = "EL1 Ceilg Construction"
+   LOCATION         = TOP
+   ..
+"EL1 Flr (G.S6.U6)" = UNDERGROUND-WALL
+   CONSTRUCTION     = "EL1 UFCons (G.S6.U7)"
+   LOCATION         = BOTTOM
+   ..
+"EL1 North Perim Spc (G.N7)" = SPACE           
+   SHAPE            = POLYGON
+   ZONE-TYPE        = CONDITIONED
+   PEOPLE-SCHEDULE  = "EL1 Bldg Occup Sch"
+   LIGHTING-SCHEDUL = ( "EL1 Bldg InsLt Sch" )
+   EQUIP-SCHEDULE   = ( "EL1 Bldg Misc Sch", "EL1 Bldg OffEq Sch", 
+         "EL1 Bldg OffEq Sch", "EL1 Bldg OffEq Sch", "EL1 Bldg OffEq Sch" )
+   INF-SCHEDULE     = "ZG0-S1 (PVAVS) P-Inf Sch"
+   INF-METHOD       = AIR-CHANGE
+   INF-FLOW/AREA    = 0.0209318
+   PEOPLE-HG-LAT    = 156.044
+   PEOPLE-HG-SENS   = 245.116
+   EQUIP-LATENT     = ( 0, 0, 0, 0, 0 )
+   EQUIP-SENSIBLE   = ( 1, 1, 1, 1, 1 )
+   LIGHTING-W/AREA  = ( 0.447022 )
+   EQUIPMENT-W/AREA = ( 0.382, 0, 0, 0, 0.03 )
+   DAYLIGHTING      = YES
+   LIGHT-REF-POINT1 = ( 12, -76.14, 2.5 )
+   ZONE-FRACTION1   = 0.689
+   LIGHT-SET-POINT1 = 50
+   VIEW-AZIMUTH     = -7.62939e-006
+   AREA/PERSON      = 77.8998
+   POLYGON          = "EL1 Space Polygon 7"
+   LTG-CTRL-METHOD1 = Fluor:Dimming:5%Light
+   LOCATION         = FLOOR-V8
+   C-SUB-SRC-BTUH   = ( 0, 0, 0 )
+   C-SUB-SRC-KW     = ( 0, 0, 0 )
+   C-ACTIVITY-DESC  = *Classroom / Lecture (94%)*
+   ..
+"EL1 West Wall (G.N7.E7)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "EL1 EWall Construction"
+   LOCATION         = SPACE-V1
+   SHADING-SURFACE  = YES
+   ..
+"EL1 West Win (G.N7.E7.W1)" = WINDOW          
+   GLASS-TYPE       = "EL1 Window Type #2 GT"
+   SHADING-SCHEDULE = "EL1 WinShade Year 1"
+   FRAME-WIDTH      = 0.108333
+   X                = 0.26887
+   Y                = 3.10833
+   HEIGHT           = 5.00333
+   WIDTH            = 1.46226
+   VIS-TRANS-SCH    = "EL1 WinShade Year 1"
+   OVERHANG-D       = 3
+   FRAME-CONDUCT    = 0.274
+   SPACER-TYPE      = INSULATED
+   ..
+"EL1 North Wall (G.N7.E8)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "EL1 EWall Construction"
+   LOCATION         = SPACE-V2
+   SHADING-SURFACE  = YES
+   ..
+"EL1 North Win (G.N7.E8.W1)" = WINDOW          
+   GLASS-TYPE       = "EL1 Window Type #1 GT"
+   SHADING-SCHEDULE = "EL1 WinShade Year 1"
+   FRAME-WIDTH      = 0.108333
+   X                = 8.53649
+   Y                = 3.10833
+   HEIGHT           = 5.00333
+   WIDTH            = 40.6152
+   VIS-TRANS-SCH    = "EL1 WinShade Year 1"
+   FRAME-CONDUCT    = 0.341
+   SPACER-TYPE      = INSULATED
+   ..
+"EL1 North Win (G.N7.E8.W2)" = WINDOW          
+   GLASS-TYPE       = "EL1 Window Type #1 GT"
+   SHADING-SCHEDULE = "EL1 WinShade Year 1"
+   FRAME-WIDTH      = 0.108333
+   X                = 55.8483
+   Y                = 3.10833
+   HEIGHT           = 5.00333
+   WIDTH            = 40.6152
+   VIS-TRANS-SCH    = "EL1 WinShade Year 1"
+   FRAME-CONDUCT    = 0.341
+   SPACER-TYPE      = INSULATED
+   ..
+"EL1 North Door (G.N7.E8.D1)" = DOOR            
+   CONSTRUCTION     = "Dbl Lyr Unins Mtl Door"
+   X                = 51
+   HEIGHT           = 7
+   WIDTH            = 3
+   ..
+"EL1 West Wall (G.N7.I14)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 North Perim Spc (G.N8)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V3
+   ..
+"EL1 NW Wall (G.N7.I15)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 South Perim Spc (G.S6)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V6
+   ..
+"EL1 Ceiling (G.N7.I16)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 North Perim Plnm (G.N17)"
+   CONSTRUCTION     = "EL1 Ceilg Construction"
+   LOCATION         = TOP
+   ..
+"EL1 Flr (G.N7.U7)" = UNDERGROUND-WALL
+   CONSTRUCTION     = "EL1 UFCons (G.N7.U8)"
+   LOCATION         = BOTTOM
+   ..
+"EL1 North Perim Spc (G.N8)" = SPACE           
+   SHAPE            = POLYGON
+   ZONE-TYPE        = CONDITIONED
+   PEOPLE-SCHEDULE  = "EL1 Bldg Occup Sch"
+   LIGHTING-SCHEDUL = ( "EL1 Bldg InsLt Sch" )
+   EQUIP-SCHEDULE   = ( "EL1 Bldg Misc Sch", "EL1 Bldg OffEq Sch", 
+         "EL1 Bldg OffEq Sch", "EL1 Bldg OffEq Sch", "EL1 Bldg OffEq Sch" )
+   INF-SCHEDULE     = "ZG0-S1 (PVAVS) P-Inf Sch"
+   INF-METHOD       = AIR-CHANGE
+   INF-FLOW/AREA    = 0.0298039
+   PEOPLE-HG-LAT    = 156.044
+   PEOPLE-HG-SENS   = 245.116
+   EQUIP-LATENT     = ( 0, 0, 0, 0, 0 )
+   EQUIP-SENSIBLE   = ( 1, 1, 1, 1, 1 )
+   LIGHTING-W/AREA  = ( 0.447022 )
+   EQUIPMENT-W/AREA = ( 0.382, 0, 0, 0, 0.03 )
+   DAYLIGHTING      = YES
+   LIGHT-REF-POINT1 = ( 25, 10, 2.5 )
+   ZONE-FRACTION1   = 0.947
+   LIGHT-SET-POINT1 = 50
+   VIEW-AZIMUTH     = -90
+   AREA/PERSON      = 77.8998
+   POLYGON          = "EL1 Space Polygon 8"
+   LTG-CTRL-METHOD1 = Fluor:Dimming:5%Light
+   LOCATION         = FLOOR-V10
+   C-SUB-SRC-BTUH   = ( 0, 0, 0 )
+   C-SUB-SRC-KW     = ( 0, 0, 0 )
+   C-ACTIVITY-DESC  = *Classroom / Lecture (94%)*
+   ..
+"EL1 North Wall (G.N8.I17)" = INTERIOR-WALL   
+   CONSTRUCTION     = "EL1 EWall Construction"
+   INT-WALL-TYPE    = ADIABATIC
+   X                = 0
+   Y                = 0
+   Z                = 0
+   HEIGHT           = 10
+   WIDTH            = 50
+   AZIMUTH          = -180
+   ..
+"EL1 SW Wall (G.N8.I18)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 West Perim Spc (G.W9)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V2
+   ..
+"EL1 Ceiling (G.N8.I19)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 North Perim Plnm (G.N18)"
+   CONSTRUCTION     = "EL1 Ceilg Construction"
+   LOCATION         = TOP
+   ..
+"EL1 Flr (G.N8.U8)" = UNDERGROUND-WALL
+   CONSTRUCTION     = "EL1 UFCons (G.E2.U3)"
+   LOCATION         = BOTTOM
+   ..
+"EL1 West Perim Spc (G.W9)" = SPACE           
+   SHAPE            = POLYGON
+   ZONE-TYPE        = CONDITIONED
+   PEOPLE-SCHEDULE  = "EL1 Bldg Occup Sch"
+   LIGHTING-SCHEDUL = ( "EL1 Bldg InsLt Sch" )
+   EQUIP-SCHEDULE   = ( "EL1 Bldg Misc Sch", "EL1 Bldg OffEq Sch", 
+         "EL1 Bldg OffEq Sch", "EL1 Bldg OffEq Sch", "EL1 Bldg OffEq Sch" )
+   INF-SCHEDULE     = "ZG0-S1 (PVAVS) P-Inf Sch"
+   INF-METHOD       = AIR-CHANGE
+   INF-FLOW/AREA    = 0.0365098
+   PEOPLE-HG-LAT    = 156.044
+   PEOPLE-HG-SENS   = 245.116
+   EQUIP-LATENT     = ( 0, 0, 0, 0, 0 )
+   EQUIP-SENSIBLE   = ( 1, 1, 1, 1, 1 )
+   LIGHTING-W/AREA  = ( 0.447022 )
+   EQUIPMENT-W/AREA = ( 0.382, 0, 0, 0, 0.03 )
+   DAYLIGHTING      = YES
+   LIGHT-REF-POINT1 = ( 36.4, 10, 2.5 )
+   ZONE-FRACTION1   = 0.912
+   LIGHT-SET-POINT1 = 50
+   VIEW-AZIMUTH     = 270
+   AREA/PERSON      = 77.8998
+   POLYGON          = "EL1 Space Polygon 9"
+   LTG-CTRL-METHOD1 = Fluor:Dimming:5%Light
+   LOCATION         = FLOOR-V11
+   C-SUB-SRC-BTUH   = ( 0, 0, 0 )
+   C-SUB-SRC-KW     = ( 0, 0, 0 )
+   C-ACTIVITY-DESC  = *Classroom / Lecture (94%)*
+   ..
+"EL1 West Wall (G.W9.E9)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "EL1 EWall Construction"
+   LOCATION         = SPACE-V1
+   ..
+"EL1 West Win (G.W9.E9.W1)" = WINDOW          
+   GLASS-TYPE       = "EL1 Window Type #2 GT"
+   SHADING-SCHEDULE = "EL1 WinShade Year 1"
+   FRAME-WIDTH      = 0.108333
+   X                = 4.04147
+   Y                = 3.10833
+   HEIGHT           = 5.00333
+   WIDTH            = 17.1102
+   VIS-TRANS-SCH    = "EL1 WinShade Year 1"
+   OVERHANG-D       = 3
+   FRAME-CONDUCT    = 0.274
+   SPACER-TYPE      = INSULATED
+   ..
+"EL1 West Win (G.W9.E9.W2)" = WINDOW          
+   GLASS-TYPE       = "EL1 Window Type #2 GT"
+   SHADING-SCHEDULE = "EL1 WinShade Year 1"
+   FRAME-WIDTH      = 0.108333
+   X                = 27.8483
+   Y                = 3.10833
+   HEIGHT           = 5.00333
+   WIDTH            = 17.1102
+   VIS-TRANS-SCH    = "EL1 WinShade Year 1"
+   OVERHANG-D       = 3
+   FRAME-CONDUCT    = 0.274
+   SPACER-TYPE      = INSULATED
+   ..
+"EL1 West Door (G.W9.E9.D1)" = DOOR            
+   CONSTRUCTION     = "Dbl Lyr Unins Mtl Door"
+   X                = 23
+   HEIGHT           = 7
+   WIDTH            = 3
+   ..
+"EL1 Ceiling (G.W9.I20)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 West Perim Plnm (G.W19)"
+   CONSTRUCTION     = "EL1 Ceilg Construction"
+   LOCATION         = TOP
+   ..
+"EL1 Flr (G.W9.U9)" = UNDERGROUND-WALL
+   CONSTRUCTION     = "EL1 UFCons (G.W9.U10)"
+   LOCATION         = BOTTOM
+   ..
+"EL1 Core Spc (G.C10)" = SPACE           
+   X                = 15
+   Y                = 15
+   SHAPE            = POLYGON
+   ZONE-TYPE        = CONDITIONED
+   PEOPLE-SCHEDULE  = "EL1 Bldg Occup Sch"
+   LIGHTING-SCHEDUL = ( "EL1 Bldg InsLt Sch" )
+   EQUIP-SCHEDULE   = ( "EL1 Bldg Misc Sch", "EL1 Bldg OffEq Sch", 
+         "EL1 Bldg OffEq Sch", "EL1 Bldg OffEq Sch", "EL1 Bldg OffEq Sch" )
+   INF-SCHEDULE     = "ZG0-S1 (PVAVS) C-Inf Sch"
+   INF-METHOD       = AIR-CHANGE
+   INF-FLOW/AREA    = 0.001
+   PEOPLE-HG-LAT    = 228.157
+   PEOPLE-HG-SENS   = 250
+   EQUIP-LATENT     = ( 0, 0, 0, 0, 0 )
+   EQUIP-SENSIBLE   = ( 1, 1, 1, 1, 1 )
+   LIGHTING-W/AREA  = ( 0.344563 )
+   EQUIPMENT-W/AREA = ( 0.045, 0, 0, 0, 0.084 )
+   AREA/PERSON      = 518.711
+   POLYGON          = "EL1 Space Polygon 10"
+   C-SUB-SRC-BTUH   = ( 0, 0, 0 )
+   C-SUB-SRC-KW     = ( 0, 0, 0 )
+   C-ACTIVITY-DESC  = *Corridor (55%)*
+   ..
+"EL1 South Wall (G.C10.I21)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 South Perim Spc (G.S1)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V1
+   ..
+"EL1 East Wall (G.C10.I22)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 East Perim Spc (G.E2)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V2
+   ..
+"EL1 North Wall (G.C10.I23)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 North Perim Spc (G.N3)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V3
+   ..
+"EL1 West Wall (G.C10.I24)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 West Perim Spc (G.W4)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V4
+   ..
+"EL1 South Wall (G.C10.I25)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 South Perim Spc (G.S5)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V5
+   ..
+"EL1 East Wall (G.C10.I26)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 South Perim Spc (G.S5)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V6
+   ..
+"EL1 South Wall (G.C10.I27)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 South Perim Spc (G.S6)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V7
+   ..
+"EL1 West Wall (G.C10.I28)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 North Perim Spc (G.N7)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V8
+   ..
+"EL1 North Wall (G.C10.I29)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 North Perim Spc (G.N7)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V9
+   ..
+"EL1 North Wall (G.C10.I30)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 North Perim Spc (G.N8)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V10
+   ..
+"EL1 West Wall (G.C10.I31)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 West Perim Spc (G.W9)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V11
+   ..
+"EL1 Ceiling (G.C10.I32)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 Core Plnm (G.C20)"
+   CONSTRUCTION     = "EL1 Ceilg Construction"
+   LOCATION         = TOP
+   ..
+"EL1 Flr (G.C10.U10)" = UNDERGROUND-WALL
+   CONSTRUCTION     = "EL1 UFCons (G.C10.U11)"
+   LOCATION         = BOTTOM
+   ..
+"EL1 South Perim Plnm (G.S11)" = SPACE           
+   SHAPE            = POLYGON
+   ZONE-TYPE        = PLENUM
+   INF-SCHEDULE     = "ZG0-S1 (PVAVS) P-Inf Sch"
+   INF-METHOD       = AIR-CHANGE
+   INF-FLOW/AREA    = 0.0109333
+   POLYGON          = "EL1 Space Polygon 1"
+   LOCATION         = FLOOR-V1
+   ..
+"EL1 South Wall (G.S11.E10)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "EL1 EWall Construction"
+   LOCATION         = SPACE-V1
+   ..
+"EL1 NE Wall (G.S11.I33)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 East Perim Plnm (G.E12)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V2
+   ..
+"EL1 NW Wall (G.S11.I34)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 West Perim Plnm (G.W19)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V4
+   ..
+"EL1 East Perim Plnm (G.E12)" = SPACE           
+   SHAPE            = POLYGON
+   ZONE-TYPE        = PLENUM
+   INF-SCHEDULE     = "ZG0-S1 (PVAVS) P-Inf Sch"
+   INF-METHOD       = AIR-CHANGE
+   INF-FLOW/AREA    = 0.0119216
+   POLYGON          = "EL1 Space Polygon 2"
+   LOCATION         = FLOOR-V2
+   ..
+"EL1 East Wall (G.E12.E11)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "EL1 EWall Construction"
+   LOCATION         = SPACE-V1
+   ..
+"EL1 NW Wall (G.E12.I35)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 North Perim Plnm (G.N13)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V2
+   ..
+"EL1 North Perim Plnm (G.N13)" = SPACE           
+   SHAPE            = POLYGON
+   ZONE-TYPE        = PLENUM
+   INF-SCHEDULE     = "ZG0-S1 (PVAVS) P-Inf Sch"
+   INF-METHOD       = AIR-CHANGE
+   INF-FLOW/AREA    = 0.0109333
+   POLYGON          = "EL1 Space Polygon 3"
+   LOCATION         = FLOOR-V3
+   ..
+"EL1 North Wall (G.N13.E12)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "EL1 EWall Construction"
+   LOCATION         = SPACE-V1
+   ..
+"EL1 SW Wall (G.N13.I36)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 West Perim Plnm (G.W14)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V2
+   ..
+"EL1 West Perim Plnm (G.W14)" = SPACE           
+   SHAPE            = POLYGON
+   ZONE-TYPE        = PLENUM
+   INF-SCHEDULE     = "ZG0-S1 (PVAVS) P-Inf Sch"
+   INF-METHOD       = AIR-CHANGE
+   INF-FLOW/AREA    = 0.014415
+   POLYGON          = "EL1 Space Polygon 4"
+   LOCATION         = FLOOR-V4
+   ..
+"EL1 West Wall (G.W14.E13)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "EL1 EWall Construction"
+   LOCATION         = SPACE-V1
+   ..
+"EL1 South Perim Plnm (G.S15)" = SPACE           
+   SHAPE            = POLYGON
+   ZONE-TYPE        = PLENUM
+   INF-SCHEDULE     = "ZG0-S1 (PVAVS) P-Inf Sch"
+   INF-METHOD       = AIR-CHANGE
+   INF-FLOW/AREA    = 0.0142977
+   POLYGON          = "EL1 Space Polygon 5"
+   LOCATION         = FLOOR-V5
+   ..
+"EL1 East Wall (G.S15.E14)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "EL1 EWall Construction"
+   LOCATION         = SPACE-V2
+   SHADING-SURFACE  = YES
+   ..
+"EL1 South Wall (G.S15.I37)" = INTERIOR-WALL   
+   CONSTRUCTION     = "EL1 EWall Construction"
+   INT-WALL-TYPE    = ADIABATIC
+   X                = 0
+   Y                = 0
+   Z                = 0
+   HEIGHT           = 4
+   WIDTH            = 50
+   AZIMUTH          = 180
+   ..
+"EL1 NE Wall (G.S15.I38)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 South Perim Plnm (G.S16)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V3
+   ..
+"EL1 NW Wall (G.S15.I39)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 West Perim Plnm (G.W14)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V6
+   ..
+"EL1 South Perim Plnm (G.S16)" = SPACE           
+   SHAPE            = POLYGON
+   ZONE-TYPE        = PLENUM
+   INF-SCHEDULE     = "ZG0-S1 (PVAVS) P-Inf Sch"
+   INF-METHOD       = AIR-CHANGE
+   INF-FLOW/AREA    = 0.00886667
+   POLYGON          = "EL1 Space Polygon 6"
+   LOCATION         = FLOOR-V7
+   ..
+"EL1 South Wall (G.S16.E15)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "EL1 EWall Construction"
+   LOCATION         = SPACE-V1
+   SHADING-SURFACE  = YES
+   ..
+"EL1 North Perim Plnm (G.N17)" = SPACE           
+   SHAPE            = POLYGON
+   ZONE-TYPE        = PLENUM
+   INF-SCHEDULE     = "ZG0-S1 (PVAVS) P-Inf Sch"
+   INF-METHOD       = AIR-CHANGE
+   INF-FLOW/AREA    = 0.00837272
+   POLYGON          = "EL1 Space Polygon 7"
+   LOCATION         = FLOOR-V8
+   ..
+"EL1 West Wall (G.N17.E16)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "EL1 EWall Construction"
+   LOCATION         = SPACE-V1
+   SHADING-SURFACE  = YES
+   ..
+"EL1 North Wall (G.N17.E17)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "EL1 EWall Construction"
+   LOCATION         = SPACE-V2
+   SHADING-SURFACE  = YES
+   ..
+"EL1 West Wall (G.N17.I40)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 North Perim Plnm (G.N18)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V3
+   ..
+"EL1 NW Wall (G.N17.I41)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 South Perim Plnm (G.S16)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V6
+   ..
+"EL1 North Perim Plnm (G.N18)" = SPACE           
+   SHAPE            = POLYGON
+   ZONE-TYPE        = PLENUM
+   INF-SCHEDULE     = "ZG0-S1 (PVAVS) P-Inf Sch"
+   INF-METHOD       = AIR-CHANGE
+   INF-FLOW/AREA    = 0.0119216
+   POLYGON          = "EL1 Space Polygon 8"
+   LOCATION         = FLOOR-V10
+   ..
+"EL1 North Wall (G.N18.I42)" = INTERIOR-WALL   
+   CONSTRUCTION     = "EL1 EWall Construction"
+   INT-WALL-TYPE    = ADIABATIC
+   X                = 0
+   Y                = 0
+   Z                = 0
+   HEIGHT           = 4
+   WIDTH            = 50
+   AZIMUTH          = -180
+   ..
+"EL1 SW Wall (G.N18.I43)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 West Perim Plnm (G.W19)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V2
+   ..
+"EL1 West Perim Plnm (G.W19)" = SPACE           
+   SHAPE            = POLYGON
+   ZONE-TYPE        = PLENUM
+   INF-SCHEDULE     = "ZG0-S1 (PVAVS) P-Inf Sch"
+   INF-METHOD       = AIR-CHANGE
+   INF-FLOW/AREA    = 0.0146039
+   POLYGON          = "EL1 Space Polygon 9"
+   LOCATION         = FLOOR-V11
+   ..
+"EL1 West Wall (G.W19.E18)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "EL1 EWall Construction"
+   LOCATION         = SPACE-V1
+   ..
+"EL1 Core Plnm (G.C20)" = SPACE           
+   X                = 15
+   Y                = 15
+   SHAPE            = POLYGON
+   ZONE-TYPE        = PLENUM
+   INF-SCHEDULE     = "ZG0-S1 (PVAVS) C-Inf Sch"
+   INF-METHOD       = AIR-CHANGE
+   INF-FLOW/AREA    = 0.001
+   POLYGON          = "EL1 Space Polygon 10"
+   ..
+"EL1 South Wall (G.C20.I44)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 South Perim Plnm (G.S11)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V1
+   ..
+"EL1 East Wall (G.C20.I45)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 East Perim Plnm (G.E12)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V2
+   ..
+"EL1 North Wall (G.C20.I46)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 North Perim Plnm (G.N13)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V3
+   ..
+"EL1 West Wall (G.C20.I47)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 West Perim Plnm (G.W14)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V4
+   ..
+"EL1 South Wall (G.C20.I48)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 South Perim Plnm (G.S15)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V5
+   ..
+"EL1 East Wall (G.C20.I49)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 South Perim Plnm (G.S15)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V6
+   ..
+"EL1 South Wall (G.C20.I50)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 South Perim Plnm (G.S16)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V7
+   ..
+"EL1 West Wall (G.C20.I51)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 North Perim Plnm (G.N17)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V8
+   ..
+"EL1 North Wall (G.C20.I52)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 North Perim Plnm (G.N17)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V9
+   ..
+"EL1 North Wall (G.C20.I53)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 North Perim Plnm (G.N18)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V10
+   ..
+"EL1 West Wall (G.C20.I54)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 West Perim Plnm (G.W19)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V11
+   ..
+"EL1 Top Flr" = FLOOR           
+   Z                = 14
+   AZIMUTH          = 360
+   POLYGON          = "EL1 Floor Polygon"
+   SHAPE            = POLYGON
+   FLOOR-HEIGHT     = 14
+   SPACE-HEIGHT     = 10
+   C-DIAGRAM-DATA   = *Bldg Envelope & Loads 1 Diag Data*
+   ..
+"EL1 South Perim Spc (T.S21)" = SPACE           
+   SHAPE            = POLYGON
+   ZONE-TYPE        = CONDITIONED
+   PEOPLE-SCHEDULE  = "EL1 Bldg Occup Sch"
+   LIGHTING-SCHEDUL = ( "EL1 Bldg InsLt Sch" )
+   EQUIP-SCHEDULE   = ( "EL1 Bldg Misc Sch", "EL1 Bldg OffEq Sch", 
+         "EL1 Bldg OffEq Sch", "EL1 Bldg OffEq Sch", "EL1 Bldg OffEq Sch" )
+   INF-SCHEDULE     = "ZG0-S1 (PVAVS) P-Inf Sch"
+   INF-METHOD       = AIR-CHANGE
+   INF-FLOW/AREA    = 0.0273333
+   PEOPLE-HG-LAT    = 156.044
+   PEOPLE-HG-SENS   = 245.116
+   EQUIP-LATENT     = ( 0, 0, 0, 0, 0 )
+   EQUIP-SENSIBLE   = ( 1, 1, 1, 1, 1 )
+   LIGHTING-W/AREA  = ( 0.447022 )
+   EQUIPMENT-W/AREA = ( 0.382, 0, 0, 0, 0.03 )
+   DAYLIGHTING      = YES
+   LIGHT-REF-POINT1 = ( 102.5, 10, 2.5 )
+   ZONE-FRACTION1   = 0.926
+   LIGHT-SET-POINT1 = 50
+   VIEW-AZIMUTH     = 270
+   AREA/PERSON      = 77.8998
+   POLYGON          = "EL1 Space Polygon 1"
+   LTG-CTRL-METHOD1 = Fluor:Dimming:5%Light
+   LOCATION         = FLOOR-V1
+   C-SUB-SRC-BTUH   = ( 0, 0, 0 )
+   C-SUB-SRC-KW     = ( 0, 0, 0 )
+   C-ACTIVITY-DESC  = *Classroom / Lecture (94%)*
+   ..
+"EL1 South Wall (T.S21.E19)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "EL1 EWall Construction"
+   LOCATION         = SPACE-V1
+   ..
+"EL1 South Win (T.S21.E19.W1)" = WINDOW          
+   GLASS-TYPE       = "EL1 Window Type #2 GT"
+   SHADING-SCHEDULE = "EL1 WinShade Year 1"
+   FRAME-WIDTH      = 0.108333
+   X                = 16.5633
+   Y                = 3.10833
+   HEIGHT           = 5.00333
+   WIDTH            = 171.873
+   VIS-TRANS-SCH    = "EL1 WinShade Year 1"
+   OVERHANG-D       = 5
+   FRAME-CONDUCT    = 0.274
+   SPACER-TYPE      = INSULATED
+   ..
+"EL1 Flr (T.S21.I55)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 South Perim Plnm (G.S11)"
+   CONSTRUCTION     = "EL1 IFlr Construction"
+   LOCATION         = BOTTOM
+   ..
+"EL1 NE Wall (T.S21.I56)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 East Perim Spc (T.E22)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V2
+   ..
+"EL1 NW Wall (T.S21.I57)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 West Perim Spc (T.W29)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V4
+   ..
+"EL1 Ceiling (T.S21.I58)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 South Perim Plnm (T.S31)"
+   CONSTRUCTION     = "EL1 Ceilg Construction"
+   LOCATION         = TOP
+   ..
+"EL1 East Perim Spc (T.E22)" = SPACE           
+   SHAPE            = POLYGON
+   ZONE-TYPE        = CONDITIONED
+   PEOPLE-SCHEDULE  = "EL1 Bldg Occup Sch"
+   LIGHTING-SCHEDUL = ( "EL1 Bldg InsLt Sch" )
+   EQUIP-SCHEDULE   = ( "EL1 Bldg Misc Sch", "EL1 Bldg OffEq Sch", 
+         "EL1 Bldg OffEq Sch", "EL1 Bldg OffEq Sch", "EL1 Bldg OffEq Sch" )
+   INF-SCHEDULE     = "ZG0-S1 (PVAVS) P-Inf Sch"
+   INF-METHOD       = AIR-CHANGE
+   INF-FLOW/AREA    = 0.0298039
+   PEOPLE-HG-LAT    = 156.044
+   PEOPLE-HG-SENS   = 245.116
+   EQUIP-LATENT     = ( 0, 0, 0, 0, 0 )
+   EQUIP-SENSIBLE   = ( 1, 1, 1, 1, 1 )
+   LIGHTING-W/AREA  = ( 0.447022 )
+   EQUIPMENT-W/AREA = ( 0.382, 0, 0, 0, 0.03 )
+   DAYLIGHTING      = YES
+   LIGHT-REF-POINT1 = ( 50, 10, 2.5 )
+   ZONE-FRACTION1   = 0.97
+   LIGHT-SET-POINT1 = 50
+   VIEW-AZIMUTH     = 270
+   AREA/PERSON      = 77.8998
+   POLYGON          = "EL1 Space Polygon 2"
+   LTG-CTRL-METHOD1 = Fluor:Dimming:5%Light
+   LOCATION         = FLOOR-V2
+   C-SUB-SRC-BTUH   = ( 0, 0, 0 )
+   C-SUB-SRC-KW     = ( 0, 0, 0 )
+   C-ACTIVITY-DESC  = *Classroom / Lecture (94%)*
+   ..
+"EL1 East Wall (T.E22.E20)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "EL1 EWall Construction"
+   LOCATION         = SPACE-V1
+   ..
+"EL1 East Win (T.E22.E20.W1)" = WINDOW          
+   GLASS-TYPE       = "EL1 Window Type #2 GT"
+   SHADING-SCHEDULE = "EL1 WinShade Year 1"
+   FRAME-WIDTH      = 0.108333
+   X                = 8.13515
+   Y                = 3.10833
+   HEIGHT           = 5.00333
+   WIDTH            = 83.7297
+   VIS-TRANS-SCH    = "EL1 WinShade Year 1"
+   OVERHANG-D       = 3
+   FRAME-CONDUCT    = 0.274
+   SPACER-TYPE      = INSULATED
+   ..
+"EL1 Flr (T.E22.I59)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 East Perim Plnm (G.E12)"
+   CONSTRUCTION     = "EL1 IFlr Construction"
+   LOCATION         = BOTTOM
+   ..
+"EL1 NW Wall (T.E22.I60)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 North Perim Spc (T.N23)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V2
+   ..
+"EL1 Ceiling (T.E22.I61)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 East Perim Plnm (T.E32)"
+   CONSTRUCTION     = "EL1 Ceilg Construction"
+   LOCATION         = TOP
+   ..
+"EL1 North Perim Spc (T.N23)" = SPACE           
+   SHAPE            = POLYGON
+   ZONE-TYPE        = CONDITIONED
+   PEOPLE-SCHEDULE  = "EL1 Bldg Occup Sch"
+   LIGHTING-SCHEDUL = ( "EL1 Bldg InsLt Sch" )
+   EQUIP-SCHEDULE   = ( "EL1 Bldg Misc Sch", "EL1 Bldg OffEq Sch", 
+         "EL1 Bldg OffEq Sch", "EL1 Bldg OffEq Sch", "EL1 Bldg OffEq Sch" )
+   INF-SCHEDULE     = "ZG0-S1 (PVAVS) P-Inf Sch"
+   INF-METHOD       = AIR-CHANGE
+   INF-FLOW/AREA    = 0.0273333
+   PEOPLE-HG-LAT    = 156.044
+   PEOPLE-HG-SENS   = 245.116
+   EQUIP-LATENT     = ( 0, 0, 0, 0, 0 )
+   EQUIP-SENSIBLE   = ( 1, 1, 1, 1, 1 )
+   LIGHTING-W/AREA  = ( 0.447022 )
+   EQUIPMENT-W/AREA = ( 0.382, 0, 0, 0, 0.03 )
+   DAYLIGHTING      = YES
+   LIGHT-REF-POINT1 = ( 102.5, 10, 2.5 )
+   ZONE-FRACTION1   = 0.926
+   LIGHT-SET-POINT1 = 50
+   VIEW-AZIMUTH     = -90
+   AREA/PERSON      = 77.8998
+   POLYGON          = "EL1 Space Polygon 3"
+   LTG-CTRL-METHOD1 = Fluor:Dimming:5%Light
+   LOCATION         = FLOOR-V3
+   C-SUB-SRC-BTUH   = ( 0, 0, 0 )
+   C-SUB-SRC-KW     = ( 0, 0, 0 )
+   C-ACTIVITY-DESC  = *Classroom / Lecture (94%)*
+   ..
+"EL1 North Wall (T.N23.E21)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "EL1 EWall Construction"
+   LOCATION         = SPACE-V1
+   ..
+"EL1 North Win (T.N23.E21.W1)" = WINDOW          
+   GLASS-TYPE       = "EL1 Window Type #1 GT"
+   SHADING-SCHEDULE = "EL1 WinShade Year 1"
+   FRAME-WIDTH      = 0.108333
+   X                = 16.5633
+   Y                = 3.10833
+   HEIGHT           = 5.00333
+   WIDTH            = 171.873
+   VIS-TRANS-SCH    = "EL1 WinShade Year 1"
+   FRAME-CONDUCT    = 0.341
+   SPACER-TYPE      = INSULATED
+   ..
+"EL1 Flr (T.N23.I62)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 North Perim Plnm (G.N13)"
+   CONSTRUCTION     = "EL1 IFlr Construction"
+   LOCATION         = BOTTOM
+   ..
+"EL1 SW Wall (T.N23.I63)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 West Perim Spc (T.W24)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V2
+   ..
+"EL1 Ceiling (T.N23.I64)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 North Perim Plnm (T.N33)"
+   CONSTRUCTION     = "EL1 Ceilg Construction"
+   LOCATION         = TOP
+   ..
+"EL1 West Perim Spc (T.W24)" = SPACE           
+   SHAPE            = POLYGON
+   ZONE-TYPE        = CONDITIONED
+   PEOPLE-SCHEDULE  = "EL1 Bldg Occup Sch"
+   LIGHTING-SCHEDUL = ( "EL1 Bldg InsLt Sch" )
+   EQUIP-SCHEDULE   = ( "EL1 Bldg Misc Sch", "EL1 Bldg OffEq Sch", 
+         "EL1 Bldg OffEq Sch", "EL1 Bldg OffEq Sch", "EL1 Bldg OffEq Sch" )
+   INF-SCHEDULE     = "ZG0-S1 (PVAVS) P-Inf Sch"
+   INF-METHOD       = AIR-CHANGE
+   INF-FLOW/AREA    = 0.0360376
+   PEOPLE-HG-LAT    = 156.044
+   PEOPLE-HG-SENS   = 245.116
+   EQUIP-LATENT     = ( 0, 0, 0, 0, 0 )
+   EQUIP-SENSIBLE   = ( 1, 1, 1, 1, 1 )
+   LIGHTING-W/AREA  = ( 0.447022 )
+   EQUIPMENT-W/AREA = ( 0.382, 0, 0, 0, 0.03 )
+   DAYLIGHTING      = YES
+   LIGHT-REF-POINT1 = ( 25.25, 10, 2.5 )
+   ZONE-FRACTION1   = 0.991
+   LIGHT-SET-POINT1 = 50
+   VIEW-AZIMUTH     = 90
+   AREA/PERSON      = 77.8998
+   POLYGON          = "EL1 Space Polygon 4"
+   LTG-CTRL-METHOD1 = Fluor:Dimming:5%Light
+   LOCATION         = FLOOR-V4
+   C-SUB-SRC-BTUH   = ( 0, 0, 0 )
+   C-SUB-SRC-KW     = ( 0, 0, 0 )
+   C-ACTIVITY-DESC  = *Classroom / Lecture (94%)*
+   ..
+"EL1 West Wall (T.W24.E22)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "EL1 EWall Construction"
+   LOCATION         = SPACE-V1
+   ..
+"EL1 West Win (T.W24.E22.W1)" = WINDOW          
+   GLASS-TYPE       = "EL1 Window Type #2 GT"
+   SHADING-SCHEDULE = "EL1 WinShade Year 1"
+   FRAME-WIDTH      = 0.108333
+   X                = 4.16188
+   Y                = 3.10833
+   HEIGHT           = 5.00333
+   WIDTH            = 42.1762
+   VIS-TRANS-SCH    = "EL1 WinShade Year 1"
+   OVERHANG-D       = 3
+   FRAME-CONDUCT    = 0.274
+   SPACER-TYPE      = INSULATED
+   ..
+"EL1 Flr (T.W24.I65)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 West Perim Plnm (G.W14)"
+   CONSTRUCTION     = "EL1 IFlr Construction"
+   LOCATION         = BOTTOM
+   ..
+"EL1 Ceiling (T.W24.I66)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 West Perim Plnm (T.W34)"
+   CONSTRUCTION     = "EL1 Ceilg Construction"
+   LOCATION         = TOP
+   ..
+"EL1 South Perim Spc (T.S25)" = SPACE           
+   SHAPE            = POLYGON
+   ZONE-TYPE        = CONDITIONED
+   PEOPLE-SCHEDULE  = "EL1 Bldg Occup Sch"
+   LIGHTING-SCHEDUL = ( "EL1 Bldg InsLt Sch" )
+   EQUIP-SCHEDULE   = ( "EL1 Bldg Misc Sch", "EL1 Bldg OffEq Sch", 
+         "EL1 Bldg OffEq Sch", "EL1 Bldg OffEq Sch", "EL1 Bldg OffEq Sch" )
+   INF-SCHEDULE     = "ZG0-S1 (PVAVS) P-Inf Sch"
+   INF-METHOD       = AIR-CHANGE
+   INF-FLOW/AREA    = 0.0357443
+   PEOPLE-HG-LAT    = 156.044
+   PEOPLE-HG-SENS   = 245.116
+   EQUIP-LATENT     = ( 0, 0, 0, 0, 0 )
+   EQUIP-SENSIBLE   = ( 1, 1, 1, 1, 1 )
+   LIGHTING-W/AREA  = ( 0.447022 )
+   EQUIPMENT-W/AREA = ( 0.382, 0, 0, 0, 0.03 )
+   DAYLIGHTING      = YES
+   LIGHT-REF-POINT1 = ( 25, 10, 2.5 )
+   ZONE-FRACTION1   = 0.986
+   LIGHT-SET-POINT1 = 50
+   VIEW-AZIMUTH     = 270
+   AREA/PERSON      = 77.8998
+   POLYGON          = "EL1 Space Polygon 5"
+   LTG-CTRL-METHOD1 = Fluor:Dimming:5%Light
+   LOCATION         = FLOOR-V5
+   C-SUB-SRC-BTUH   = ( 0, 0, 0 )
+   C-SUB-SRC-KW     = ( 0, 0, 0 )
+   C-ACTIVITY-DESC  = *Classroom / Lecture (94%)*
+   ..
+"EL1 East Wall (T.S25.E23)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "EL1 EWall Construction"
+   LOCATION         = SPACE-V2
+   SHADING-SURFACE  = YES
+   ..
+"EL1 East Win (T.S25.E23.W1)" = WINDOW          
+   GLASS-TYPE       = "EL1 Window Type #2 GT"
+   SHADING-SCHEDULE = "EL1 WinShade Year 1"
+   FRAME-WIDTH      = 0.108333
+   X                = 0.228736
+   Y                = 3.10833
+   HEIGHT           = 5.00333
+   WIDTH            = 1.04253
+   VIS-TRANS-SCH    = "EL1 WinShade Year 1"
+   OVERHANG-D       = 3
+   FRAME-CONDUCT    = 0.274
+   SPACER-TYPE      = INSULATED
+   ..
+"EL1 Flr (T.S25.I67)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 South Perim Plnm (G.S15)"
+   CONSTRUCTION     = "EL1 IFlr Construction"
+   LOCATION         = BOTTOM
+   ..
+"EL1 South Wall (T.S25.I68)" = INTERIOR-WALL   
+   CONSTRUCTION     = "EL1 EWall Construction"
+   INT-WALL-TYPE    = ADIABATIC
+   X                = 0
+   Y                = 0
+   Z                = 0
+   HEIGHT           = 10
+   WIDTH            = 50
+   AZIMUTH          = 180
+   ..
+"EL1 NE Wall (T.S25.I69)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 South Perim Spc (T.S26)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V3
+   ..
+"EL1 NW Wall (T.S25.I70)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 West Perim Spc (T.W24)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V6
+   ..
+"EL1 Ceiling (T.S25.I71)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 South Perim Plnm (T.S35)"
+   CONSTRUCTION     = "EL1 Ceilg Construction"
+   LOCATION         = TOP
+   ..
+"EL1 South Perim Spc (T.S26)" = SPACE           
+   SHAPE            = POLYGON
+   ZONE-TYPE        = CONDITIONED
+   PEOPLE-SCHEDULE  = "EL1 Bldg Occup Sch"
+   LIGHTING-SCHEDUL = ( "EL1 Bldg InsLt Sch" )
+   EQUIP-SCHEDULE   = ( "EL1 Bldg Misc Sch", "EL1 Bldg OffEq Sch", 
+         "EL1 Bldg OffEq Sch", "EL1 Bldg OffEq Sch", "EL1 Bldg OffEq Sch" )
+   INF-SCHEDULE     = "ZG0-S1 (PVAVS) P-Inf Sch"
+   INF-METHOD       = AIR-CHANGE
+   INF-FLOW/AREA    = 0.0221667
+   PEOPLE-HG-LAT    = 156.044
+   PEOPLE-HG-SENS   = 245.116
+   EQUIP-LATENT     = ( 0, 0, 0, 0, 0 )
+   EQUIP-SENSIBLE   = ( 1, 1, 1, 1, 1 )
+   LIGHTING-W/AREA  = ( 0.447022 )
+   EQUIPMENT-W/AREA = ( 0.382, 0, 0, 0, 0.03 )
+   DAYLIGHTING      = YES
+   LIGHT-REF-POINT1 = ( 52.5, 10, 2.5 )
+   ZONE-FRACTION1   = 0.766
+   LIGHT-SET-POINT1 = 50
+   VIEW-AZIMUTH     = 270
+   AREA/PERSON      = 77.8998
+   POLYGON          = "EL1 Space Polygon 6"
+   LTG-CTRL-METHOD1 = Fluor:Dimming:5%Light
+   LOCATION         = FLOOR-V7
+   C-SUB-SRC-BTUH   = ( 0, 0, 0 )
+   C-SUB-SRC-KW     = ( 0, 0, 0 )
+   C-ACTIVITY-DESC  = *Classroom / Lecture (94%)*
+   ..
+"EL1 South Wall (T.S26.E24)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "EL1 EWall Construction"
+   LOCATION         = SPACE-V1
+   SHADING-SURFACE  = YES
+   ..
+"EL1 South Win (T.S26.E24.W1)" = WINDOW          
+   GLASS-TYPE       = "EL1 Window Type #2 GT"
+   SHADING-SCHEDULE = "EL1 WinShade Year 1"
+   FRAME-WIDTH      = 0.108333
+   X                = 8.53649
+   Y                = 3.10833
+   HEIGHT           = 5.00333
+   WIDTH            = 87.927
+   VIS-TRANS-SCH    = "EL1 WinShade Year 1"
+   OVERHANG-D       = 5
+   FRAME-CONDUCT    = 0.274
+   SPACER-TYPE      = INSULATED
+   ..
+"EL1 Skylt Roof (T.S26.E25)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "Skylt Roof Construction"
+   Z                = 14.1
+   LOCATION         = TOP
+   ..
+"EL1 Skylt (T.S26.I73.S1)" = WINDOW          
+   GLASS-TYPE       = "2Dome Acrylc White, Wood/Vinyl"
+   X                = 39.81
+   Y                = 5.5
+   HEIGHT           = 4
+   WIDTH            = 4
+   WINDOW-TYPE      = SKYLIGHT-DOMED
+   DIFFUSING-GLASS  = YES
+   LIGHT-WELL       = YES
+   C-IS-SKYLIGHT    = 11
+   ..
+"EL1 Skylt (T.S26.I73.S2)" = WINDOW          
+   GLASS-TYPE       = "2Dome Acrylc White, Wood/Vinyl"
+   X                = 61.19
+   Y                = 5.5
+   HEIGHT           = 4
+   WIDTH            = 4
+   WINDOW-TYPE      = SKYLIGHT-DOMED
+   DIFFUSING-GLASS  = YES
+   LIGHT-WELL       = YES
+   C-IS-SKYLIGHT    = 11
+   ..
+"EL1 Skylt (T.S26.I73.S3)" = WINDOW          
+   GLASS-TYPE       = "2Dome Acrylc White, Wood/Vinyl"
+   X                = 18.43
+   Y                = 5.5
+   HEIGHT           = 4
+   WIDTH            = 4
+   WINDOW-TYPE      = SKYLIGHT-DOMED
+   DIFFUSING-GLASS  = YES
+   LIGHT-WELL       = YES
+   C-IS-SKYLIGHT    = 11
+   ..
+"EL1 Skylt (T.S26.I73.S4)" = WINDOW          
+   GLASS-TYPE       = "2Dome Acrylc White, Wood/Vinyl"
+   X                = 82.57
+   Y                = 5.5
+   HEIGHT           = 4
+   WIDTH            = 4
+   WINDOW-TYPE      = SKYLIGHT-DOMED
+   DIFFUSING-GLASS  = YES
+   LIGHT-WELL       = YES
+   C-IS-SKYLIGHT    = 11
+   ..
+"EL1 Flr (T.S26.I72)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 South Perim Plnm (G.S16)"
+   CONSTRUCTION     = "EL1 IFlr Construction"
+   LOCATION         = BOTTOM
+   ..
+"EL1 Ceiling (T.S26.I73)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 South Perim Plnm (T.S36)"
+   CONSTRUCTION     = "EL1 Ceilg Construction"
+   LOCATION         = TOP
+   ..
+"EL1 North Perim Spc (T.N27)" = SPACE           
+   SHAPE            = POLYGON
+   ZONE-TYPE        = CONDITIONED
+   PEOPLE-SCHEDULE  = "EL1 Bldg Occup Sch"
+   LIGHTING-SCHEDUL = ( "EL1 Bldg InsLt Sch" )
+   EQUIP-SCHEDULE   = ( "EL1 Bldg Misc Sch", "EL1 Bldg OffEq Sch", 
+         "EL1 Bldg OffEq Sch", "EL1 Bldg OffEq Sch", "EL1 Bldg OffEq Sch" )
+   INF-SCHEDULE     = "ZG0-S1 (PVAVS) P-Inf Sch"
+   INF-METHOD       = AIR-CHANGE
+   INF-FLOW/AREA    = 0.0209318
+   PEOPLE-HG-LAT    = 156.044
+   PEOPLE-HG-SENS   = 245.116
+   EQUIP-LATENT     = ( 0, 0, 0, 0, 0 )
+   EQUIP-SENSIBLE   = ( 1, 1, 1, 1, 1 )
+   LIGHTING-W/AREA  = ( 0.447022 )
+   EQUIPMENT-W/AREA = ( 0.382, 0, 0, 0, 0.03 )
+   DAYLIGHTING      = YES
+   LIGHT-REF-POINT1 = ( 12, -65.68, 2.5 )
+   LIGHT-REF-POINT2 = ( 3.79, -5.02, 2.5 )
+   ZONE-FRACTION1   = 0.5
+   ZONE-FRACTION2   = 0.22
+   LIGHT-SET-POINT1 = 50
+   LIGHT-SET-POINT2 = 50
+   VIEW-AZIMUTH     = -7.62939e-006
+   AREA/PERSON      = 77.8998
+   POLYGON          = "EL1 Space Polygon 7"
+   VIEW-AZIMUTH2    = 135
+   LTG-CTRL-METHOD1 = Fluor:Dimming:5%Light
+   LTG-CTRL-METHOD2 = Fluor:Dimming:5%Light
+   LOCATION         = FLOOR-V8
+   C-SUB-SRC-BTUH   = ( 0, 0, 0 )
+   C-SUB-SRC-KW     = ( 0, 0, 0 )
+   C-ACTIVITY-DESC  = *Classroom / Lecture (94%)*
+   ..
+"EL1 West Wall (T.N27.E26)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "EL1 EWall Construction"
+   LOCATION         = SPACE-V1
+   SHADING-SURFACE  = YES
+   ..
+"EL1 West Win (T.N27.E26.W1)" = WINDOW          
+   GLASS-TYPE       = "EL1 Window Type #2 GT"
+   SHADING-SCHEDULE = "EL1 WinShade Year 1"
+   FRAME-WIDTH      = 0.108333
+   X                = 0.26887
+   Y                = 3.10833
+   HEIGHT           = 5.00333
+   WIDTH            = 1.46226
+   VIS-TRANS-SCH    = "EL1 WinShade Year 1"
+   OVERHANG-D       = 3
+   FRAME-CONDUCT    = 0.274
+   SPACER-TYPE      = INSULATED
+   ..
+"EL1 North Wall (T.N27.E27)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "EL1 EWall Construction"
+   LOCATION         = SPACE-V2
+   SHADING-SURFACE  = YES
+   ..
+"EL1 North Win (T.N27.E27.W1)" = WINDOW          
+   GLASS-TYPE       = "EL1 Window Type #1 GT"
+   SHADING-SCHEDULE = "EL1 WinShade Year 1"
+   FRAME-WIDTH      = 0.108333
+   X                = 8.53649
+   Y                = 3.10833
+   HEIGHT           = 5.00333
+   WIDTH            = 87.927
+   VIS-TRANS-SCH    = "EL1 WinShade Year 1"
+   FRAME-CONDUCT    = 0.341
+   SPACER-TYPE      = INSULATED
+   ..
+"EL1 Skylt Roof (T.N27.E28)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "Skylt Roof Construction"
+   Z                = 14.1
+   LOCATION         = TOP
+   ..
+"EL1 Skylt (T.N27.I77.S5)" = WINDOW          
+   GLASS-TYPE       = "2Dome Acrylc White, Wood/Vinyl"
+   X                = 9.69
+   Y                = -36.31
+   HEIGHT           = 4
+   WIDTH            = 4
+   WINDOW-TYPE      = SKYLIGHT-DOMED
+   DIFFUSING-GLASS  = YES
+   LIGHT-WELL       = YES
+   C-IS-SKYLIGHT    = 11
+   ..
+"EL1 Skylt (T.N27.I77.S6)" = WINDOW          
+   GLASS-TYPE       = "2Dome Acrylc White, Wood/Vinyl"
+   X                = 9.69
+   Y                = -57.69
+   HEIGHT           = 4
+   WIDTH            = 4
+   WINDOW-TYPE      = SKYLIGHT-DOMED
+   DIFFUSING-GLASS  = YES
+   LIGHT-WELL       = YES
+   C-IS-SKYLIGHT    = 11
+   ..
+"EL1 Skylt (T.N27.I77.S7)" = WINDOW          
+   GLASS-TYPE       = "2Dome Acrylc White, Wood/Vinyl"
+   X                = 9.69
+   Y                = -14.93
+   HEIGHT           = 4
+   WIDTH            = 4
+   WINDOW-TYPE      = SKYLIGHT-DOMED
+   DIFFUSING-GLASS  = YES
+   LIGHT-WELL       = YES
+   C-IS-SKYLIGHT    = 11
+   ..
+"EL1 Skylt (T.N27.I77.S8)" = WINDOW          
+   GLASS-TYPE       = "2Dome Acrylc White, Wood/Vinyl"
+   X                = 9.69
+   Y                = -79.07
+   HEIGHT           = 4
+   WIDTH            = 4
+   WINDOW-TYPE      = SKYLIGHT-DOMED
+   DIFFUSING-GLASS  = YES
+   LIGHT-WELL       = YES
+   C-IS-SKYLIGHT    = 11
+   ..
+"EL1 Flr (T.N27.I74)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 North Perim Plnm (G.N17)"
+   CONSTRUCTION     = "EL1 IFlr Construction"
+   LOCATION         = BOTTOM
+   ..
+"EL1 West Wall (T.N27.I75)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 North Perim Spc (T.N28)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V3
+   ..
+"EL1 NW Wall (T.N27.I76)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 South Perim Spc (T.S26)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V6
+   ..
+"EL1 Ceiling (T.N27.I77)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 North Perim Plnm (T.N37)"
+   CONSTRUCTION     = "EL1 Ceilg Construction"
+   LOCATION         = TOP
+   ..
+"EL1 North Perim Spc (T.N28)" = SPACE           
+   SHAPE            = POLYGON
+   ZONE-TYPE        = CONDITIONED
+   PEOPLE-SCHEDULE  = "EL1 Bldg Occup Sch"
+   LIGHTING-SCHEDUL = ( "EL1 Bldg InsLt Sch" )
+   EQUIP-SCHEDULE   = ( "EL1 Bldg Misc Sch", "EL1 Bldg OffEq Sch", 
+         "EL1 Bldg OffEq Sch", "EL1 Bldg OffEq Sch", "EL1 Bldg OffEq Sch" )
+   INF-SCHEDULE     = "ZG0-S1 (PVAVS) P-Inf Sch"
+   INF-METHOD       = AIR-CHANGE
+   INF-FLOW/AREA    = 0.0298039
+   PEOPLE-HG-LAT    = 156.044
+   PEOPLE-HG-SENS   = 245.116
+   EQUIP-LATENT     = ( 0, 0, 0, 0, 0 )
+   EQUIP-SENSIBLE   = ( 1, 1, 1, 1, 1 )
+   LIGHTING-W/AREA  = ( 0.447022 )
+   EQUIPMENT-W/AREA = ( 0.382, 0, 0, 0, 0.03 )
+   DAYLIGHTING      = YES
+   LIGHT-REF-POINT1 = ( 25, 10, 2.5 )
+   ZONE-FRACTION1   = 0.947
+   LIGHT-SET-POINT1 = 50
+   VIEW-AZIMUTH     = -90
+   AREA/PERSON      = 77.8998
+   POLYGON          = "EL1 Space Polygon 8"
+   LTG-CTRL-METHOD1 = Fluor:Dimming:5%Light
+   LOCATION         = FLOOR-V10
+   C-SUB-SRC-BTUH   = ( 0, 0, 0 )
+   C-SUB-SRC-KW     = ( 0, 0, 0 )
+   C-ACTIVITY-DESC  = *Classroom / Lecture (94%)*
+   ..
+"EL1 Flr (T.N28.I78)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 North Perim Plnm (G.N18)"
+   CONSTRUCTION     = "EL1 IFlr Construction"
+   LOCATION         = BOTTOM
+   ..
+"EL1 North Wall (T.N28.I79)" = INTERIOR-WALL   
+   CONSTRUCTION     = "EL1 EWall Construction"
+   INT-WALL-TYPE    = ADIABATIC
+   X                = 0
+   Y                = 0
+   Z                = 0
+   HEIGHT           = 10
+   WIDTH            = 50
+   AZIMUTH          = -180
+   ..
+"EL1 SW Wall (T.N28.I80)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 West Perim Spc (T.W29)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V2
+   ..
+"EL1 Ceiling (T.N28.I81)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 North Perim Plnm (T.N38)"
+   CONSTRUCTION     = "EL1 Ceilg Construction"
+   LOCATION         = TOP
+   ..
+"EL1 West Perim Spc (T.W29)" = SPACE           
+   SHAPE            = POLYGON
+   ZONE-TYPE        = CONDITIONED
+   PEOPLE-SCHEDULE  = "EL1 Bldg Occup Sch"
+   LIGHTING-SCHEDUL = ( "EL1 Bldg InsLt Sch" )
+   EQUIP-SCHEDULE   = ( "EL1 Bldg Misc Sch", "EL1 Bldg OffEq Sch", 
+         "EL1 Bldg OffEq Sch", "EL1 Bldg OffEq Sch", "EL1 Bldg OffEq Sch" )
+   INF-SCHEDULE     = "ZG0-S1 (PVAVS) P-Inf Sch"
+   INF-METHOD       = AIR-CHANGE
+   INF-FLOW/AREA    = 0.0365098
+   PEOPLE-HG-LAT    = 156.044
+   PEOPLE-HG-SENS   = 245.116
+   EQUIP-LATENT     = ( 0, 0, 0, 0, 0 )
+   EQUIP-SENSIBLE   = ( 1, 1, 1, 1, 1 )
+   LIGHTING-W/AREA  = ( 0.447022 )
+   EQUIPMENT-W/AREA = ( 0.382, 0, 0, 0, 0.03 )
+   DAYLIGHTING      = YES
+   LIGHT-REF-POINT1 = ( 24.5, 10, 2.5 )
+   ZONE-FRACTION1   = 0.992
+   LIGHT-SET-POINT1 = 50
+   VIEW-AZIMUTH     = 90
+   AREA/PERSON      = 77.8998
+   POLYGON          = "EL1 Space Polygon 9"
+   LTG-CTRL-METHOD1 = Fluor:Dimming:5%Light
+   LOCATION         = FLOOR-V11
+   C-SUB-SRC-BTUH   = ( 0, 0, 0 )
+   C-SUB-SRC-KW     = ( 0, 0, 0 )
+   C-ACTIVITY-DESC  = *Classroom / Lecture (94%)*
+   ..
+"EL1 West Wall (T.W29.E29)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "EL1 EWall Construction"
+   LOCATION         = SPACE-V1
+   ..
+"EL1 West Win (T.W29.E29.W1)" = WINDOW          
+   GLASS-TYPE       = "EL1 Window Type #2 GT"
+   SHADING-SCHEDULE = "EL1 WinShade Year 1"
+   FRAME-WIDTH      = 0.108333
+   X                = 4.04147
+   Y                = 3.10833
+   HEIGHT           = 5.00333
+   WIDTH            = 40.917
+   VIS-TRANS-SCH    = "EL1 WinShade Year 1"
+   OVERHANG-D       = 3
+   FRAME-CONDUCT    = 0.274
+   SPACER-TYPE      = INSULATED
+   ..
+"EL1 Flr (T.W29.I82)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 West Perim Plnm (G.W19)"
+   CONSTRUCTION     = "EL1 IFlr Construction"
+   LOCATION         = BOTTOM
+   ..
+"EL1 Ceiling (T.W29.I83)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 West Perim Plnm (T.W39)"
+   CONSTRUCTION     = "EL1 Ceilg Construction"
+   LOCATION         = TOP
+   ..
+"EL1 Core Spc (T.C30)" = SPACE           
+   X                = 15
+   Y                = 15
+   SHAPE            = POLYGON
+   ZONE-TYPE        = CONDITIONED
+   PEOPLE-SCHEDULE  = "EL1 Bldg Occup Sch"
+   LIGHTING-SCHEDUL = ( "EL1 Bldg InsLt Sch" )
+   EQUIP-SCHEDULE   = ( "EL1 Bldg Misc Sch", "EL1 Bldg OffEq Sch", 
+         "EL1 Bldg OffEq Sch", "EL1 Bldg OffEq Sch", "EL1 Bldg OffEq Sch" )
+   INF-SCHEDULE     = "ZG0-S1 (PVAVS) C-Inf Sch"
+   INF-METHOD       = AIR-CHANGE
+   INF-FLOW/AREA    = 0.001
+   PEOPLE-HG-LAT    = 228.157
+   PEOPLE-HG-SENS   = 250
+   EQUIP-LATENT     = ( 0, 0, 0, 0, 0 )
+   EQUIP-SENSIBLE   = ( 1, 1, 1, 1, 1 )
+   LIGHTING-W/AREA  = ( 0.344563 )
+   EQUIPMENT-W/AREA = ( 0.045, 0, 0, 0, 0.084 )
+   AREA/PERSON      = 518.711
+   POLYGON          = "EL1 Space Polygon 10"
+   C-SUB-SRC-BTUH   = ( 0, 0, 0 )
+   C-SUB-SRC-KW     = ( 0, 0, 0 )
+   C-ACTIVITY-DESC  = *Corridor (55%)*
+   ..
+"EL1 Flr (T.C30.I84)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 Core Plnm (G.C20)"
+   CONSTRUCTION     = "EL1 IFlr Construction"
+   LOCATION         = BOTTOM
+   ..
+"EL1 South Wall (T.C30.I85)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 South Perim Spc (T.S21)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V1
+   ..
+"EL1 East Wall (T.C30.I86)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 East Perim Spc (T.E22)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V2
+   ..
+"EL1 North Wall (T.C30.I87)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 North Perim Spc (T.N23)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V3
+   ..
+"EL1 West Wall (T.C30.I88)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 West Perim Spc (T.W24)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V4
+   ..
+"EL1 South Wall (T.C30.I89)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 South Perim Spc (T.S25)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V5
+   ..
+"EL1 East Wall (T.C30.I90)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 South Perim Spc (T.S25)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V6
+   ..
+"EL1 South Wall (T.C30.I91)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 South Perim Spc (T.S26)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V7
+   ..
+"EL1 West Wall (T.C30.I92)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 North Perim Spc (T.N27)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V8
+   ..
+"EL1 North Wall (T.C30.I93)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 North Perim Spc (T.N27)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V9
+   ..
+"EL1 North Wall (T.C30.I94)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 North Perim Spc (T.N28)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V10
+   ..
+"EL1 West Wall (T.C30.I95)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 West Perim Spc (T.W29)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V11
+   ..
+"EL1 Ceiling (T.C30.I96)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 Core Plnm (T.C40)"
+   CONSTRUCTION     = "EL1 Ceilg Construction"
+   LOCATION         = TOP
+   ..
+"EL1 South Perim Plnm (T.S31)" = SPACE           
+   SHAPE            = POLYGON
+   ZONE-TYPE        = PLENUM
+   INF-SCHEDULE     = "ZG0-S1 (PVAVS) P-Inf Sch"
+   INF-METHOD       = AIR-CHANGE
+   INF-FLOW/AREA    = 0.0109333
+   POLYGON          = "EL1 Space Polygon 1"
+   LOCATION         = FLOOR-V1
+   ..
+"EL1 South Wall (T.S31.E30)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "EL1 EWall Construction"
+   LOCATION         = SPACE-V1
+   ..
+"EL1 Roof (T.S31.E31)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "EL1 Roof Construction"
+   LOCATION         = TOP
+   ..
+"EL1 NE Wall (T.S31.I97)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 East Perim Plnm (T.E32)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V2
+   ..
+"EL1 NW Wall (T.S31.I98)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 West Perim Plnm (T.W39)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V4
+   ..
+"EL1 East Perim Plnm (T.E32)" = SPACE           
+   SHAPE            = POLYGON
+   ZONE-TYPE        = PLENUM
+   INF-SCHEDULE     = "ZG0-S1 (PVAVS) P-Inf Sch"
+   INF-METHOD       = AIR-CHANGE
+   INF-FLOW/AREA    = 0.0119216
+   POLYGON          = "EL1 Space Polygon 2"
+   LOCATION         = FLOOR-V2
+   ..
+"EL1 East Wall (T.E32.E32)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "EL1 EWall Construction"
+   LOCATION         = SPACE-V1
+   ..
+"EL1 Roof (T.E32.E33)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "EL1 Roof Construction"
+   LOCATION         = TOP
+   ..
+"EL1 NW Wall (T.E32.I99)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 North Perim Plnm (T.N33)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V2
+   ..
+"EL1 North Perim Plnm (T.N33)" = SPACE           
+   SHAPE            = POLYGON
+   ZONE-TYPE        = PLENUM
+   INF-SCHEDULE     = "ZG0-S1 (PVAVS) P-Inf Sch"
+   INF-METHOD       = AIR-CHANGE
+   INF-FLOW/AREA    = 0.0109333
+   POLYGON          = "EL1 Space Polygon 3"
+   LOCATION         = FLOOR-V3
+   ..
+"EL1 North Wall (T.N33.E34)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "EL1 EWall Construction"
+   LOCATION         = SPACE-V1
+   ..
+"EL1 Roof (T.N33.E35)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "EL1 Roof Construction"
+   LOCATION         = TOP
+   ..
+"EL1 SW Wall (T.N33.I100)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 West Perim Plnm (T.W34)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V2
+   ..
+"EL1 West Perim Plnm (T.W34)" = SPACE           
+   SHAPE            = POLYGON
+   ZONE-TYPE        = PLENUM
+   INF-SCHEDULE     = "ZG0-S1 (PVAVS) P-Inf Sch"
+   INF-METHOD       = AIR-CHANGE
+   INF-FLOW/AREA    = 0.014415
+   POLYGON          = "EL1 Space Polygon 4"
+   LOCATION         = FLOOR-V4
+   ..
+"EL1 West Wall (T.W34.E36)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "EL1 EWall Construction"
+   LOCATION         = SPACE-V1
+   ..
+"EL1 Roof (T.W34.E37)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "EL1 Roof Construction"
+   LOCATION         = TOP
+   ..
+"EL1 South Perim Plnm (T.S35)" = SPACE           
+   SHAPE            = POLYGON
+   ZONE-TYPE        = PLENUM
+   INF-SCHEDULE     = "ZG0-S1 (PVAVS) P-Inf Sch"
+   INF-METHOD       = AIR-CHANGE
+   INF-FLOW/AREA    = 0.0142977
+   POLYGON          = "EL1 Space Polygon 5"
+   LOCATION         = FLOOR-V5
+   ..
+"EL1 East Wall (T.S35.E38)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "EL1 EWall Construction"
+   LOCATION         = SPACE-V2
+   SHADING-SURFACE  = YES
+   ..
+"EL1 Roof (T.S35.E39)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "EL1 Roof Construction"
+   LOCATION         = TOP
+   ..
+"EL1 South Wall (T.S35.I101)" = INTERIOR-WALL   
+   CONSTRUCTION     = "EL1 EWall Construction"
+   INT-WALL-TYPE    = ADIABATIC
+   X                = 0
+   Y                = 0
+   Z                = 0
+   HEIGHT           = 4
+   WIDTH            = 50
+   AZIMUTH          = 180
+   ..
+"EL1 NE Wall (T.S35.I102)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 South Perim Plnm (T.S36)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V3
+   ..
+"EL1 NW Wall (T.S35.I103)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 West Perim Plnm (T.W34)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V6
+   ..
+"EL1 South Perim Plnm (T.S36)" = SPACE           
+   SHAPE            = POLYGON
+   ZONE-TYPE        = PLENUM
+   INF-SCHEDULE     = "ZG0-S1 (PVAVS) P-Inf Sch"
+   INF-METHOD       = AIR-CHANGE
+   INF-FLOW/AREA    = 0.00886667
+   POLYGON          = "EL1 Space Polygon 6"
+   LOCATION         = FLOOR-V7
+   ..
+"EL1 South Wall (T.S36.E40)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "EL1 EWall Construction"
+   LOCATION         = SPACE-V1
+   SHADING-SURFACE  = YES
+   ..
+"EL1 Roof (T.S36.E41)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "EL1 Roof Construction"
+   LOCATION         = TOP
+   ..
+"EL1 North Perim Plnm (T.N37)" = SPACE           
+   SHAPE            = POLYGON
+   ZONE-TYPE        = PLENUM
+   INF-SCHEDULE     = "ZG0-S1 (PVAVS) P-Inf Sch"
+   INF-METHOD       = AIR-CHANGE
+   INF-FLOW/AREA    = 0.00837272
+   POLYGON          = "EL1 Space Polygon 7"
+   LOCATION         = FLOOR-V8
+   ..
+"EL1 West Wall (T.N37.E42)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "EL1 EWall Construction"
+   LOCATION         = SPACE-V1
+   SHADING-SURFACE  = YES
+   ..
+"EL1 North Wall (T.N37.E43)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "EL1 EWall Construction"
+   LOCATION         = SPACE-V2
+   SHADING-SURFACE  = YES
+   ..
+"EL1 Roof (T.N37.E44)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "EL1 Roof Construction"
+   LOCATION         = TOP
+   ..
+"EL1 West Wall (T.N37.I104)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 North Perim Plnm (T.N38)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V3
+   ..
+"EL1 NW Wall (T.N37.I105)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 South Perim Plnm (T.S36)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V6
+   ..
+"EL1 North Perim Plnm (T.N38)" = SPACE           
+   SHAPE            = POLYGON
+   ZONE-TYPE        = PLENUM
+   INF-SCHEDULE     = "ZG0-S1 (PVAVS) P-Inf Sch"
+   INF-METHOD       = AIR-CHANGE
+   INF-FLOW/AREA    = 0.0119216
+   POLYGON          = "EL1 Space Polygon 8"
+   LOCATION         = FLOOR-V10
+   ..
+"EL1 Roof (T.N38.E45)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "EL1 Roof Construction"
+   LOCATION         = TOP
+   ..
+"EL1 North Wall (T.N38.I106)" = INTERIOR-WALL   
+   CONSTRUCTION     = "EL1 EWall Construction"
+   INT-WALL-TYPE    = ADIABATIC
+   X                = 0
+   Y                = 0
+   Z                = 0
+   HEIGHT           = 4
+   WIDTH            = 50
+   AZIMUTH          = -180
+   ..
+"EL1 SW Wall (T.N38.I107)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 West Perim Plnm (T.W39)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V2
+   ..
+"EL1 West Perim Plnm (T.W39)" = SPACE           
+   SHAPE            = POLYGON
+   ZONE-TYPE        = PLENUM
+   INF-SCHEDULE     = "ZG0-S1 (PVAVS) P-Inf Sch"
+   INF-METHOD       = AIR-CHANGE
+   INF-FLOW/AREA    = 0.0146039
+   POLYGON          = "EL1 Space Polygon 9"
+   LOCATION         = FLOOR-V11
+   ..
+"EL1 West Wall (T.W39.E46)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "EL1 EWall Construction"
+   LOCATION         = SPACE-V1
+   ..
+"EL1 Roof (T.W39.E47)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "EL1 Roof Construction"
+   LOCATION         = TOP
+   ..
+"EL1 Core Plnm (T.C40)" = SPACE           
+   X                = 15
+   Y                = 15
+   SHAPE            = POLYGON
+   ZONE-TYPE        = PLENUM
+   INF-SCHEDULE     = "ZG0-S1 (PVAVS) C-Inf Sch"
+   INF-METHOD       = AIR-CHANGE
+   INF-FLOW/AREA    = 0.001
+   POLYGON          = "EL1 Space Polygon 10"
+   ..
+"EL1 Roof (T.C40.E48)" = EXTERIOR-WALL   
+   CONSTRUCTION     = "EL1 Roof Construction"
+   LOCATION         = TOP
+   ..
+"EL1 South Wall (T.C40.I108)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 South Perim Plnm (T.S31)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V1
+   ..
+"EL1 East Wall (T.C40.I109)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 East Perim Plnm (T.E32)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V2
+   ..
+"EL1 North Wall (T.C40.I110)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 North Perim Plnm (T.N33)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V3
+   ..
+"EL1 West Wall (T.C40.I111)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 West Perim Plnm (T.W34)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V4
+   ..
+"EL1 South Wall (T.C40.I112)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 South Perim Plnm (T.S35)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V5
+   ..
+"EL1 East Wall (T.C40.I113)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 South Perim Plnm (T.S35)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V6
+   ..
+"EL1 South Wall (T.C40.I114)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 South Perim Plnm (T.S36)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V7
+   ..
+"EL1 West Wall (T.C40.I115)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 North Perim Plnm (T.N37)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V8
+   ..
+"EL1 North Wall (T.C40.I116)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 North Perim Plnm (T.N37)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V9
+   ..
+"EL1 North Wall (T.C40.I117)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 North Perim Plnm (T.N38)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V10
+   ..
+"EL1 West Wall (T.C40.I118)" = INTERIOR-WALL   
+   NEXT-TO          = "EL1 West Perim Plnm (T.W39)"
+   CONSTRUCTION     = "EL1 IWall Construction"
+   LOCATION         = SPACE-V11
+   ..
+
+
+$ *********************************************************
+$ **                                                     **
+$ **              Electric & Fuel Meters                 **
+$ **                                                     **
+$ *********************************************************
+
+$ ---------------------------------------------------------
+$              Electric Meters
+$ ---------------------------------------------------------
+
+"EM1" = ELEC-METER      
+   TYPE             = UTILITY
+   EXTERIOR-POWER   = ( 0.8116 )
+   EXTERIOR-SCH     = ( "Ext Lighting Sch" )
+   EXTERIOR-EU      = ( EXT-USAGE )
+   ..
+
+
+$ ---------------------------------------------------------
+$              Fuel Meters
+$ ---------------------------------------------------------
+
+
+
+$ ---------------------------------------------------------
+$              Master Meters
+$ ---------------------------------------------------------
+
+"MASTER-METERS 1" = MASTER-METERS   
+   MSTR-ELEC-METER  = "EM1"
+   MSTR-FUEL-METER  = "FM1"
+   ..
+
+
+$ *********************************************************
+$ **                                                     **
+$ **      HVAC Circulation Loops / Plant Equipment       **
+$ **                                                     **
+$ *********************************************************
+
+$ ---------------------------------------------------------
+$              Pumps
+$ ---------------------------------------------------------
+
+
+
+$ ---------------------------------------------------------
+$              Heat Exchangers
+$ ---------------------------------------------------------
+
+
+
+$ ---------------------------------------------------------
+$              Circulation Loops
+$ ---------------------------------------------------------
+
+"DHW Plant 1 Loop (1)" = CIRCULATION-LOOP
+   TYPE             = DHW
+   DESIGN-HEAT-T    = 120
+   PROCESS-FLOW     = ( 0.232086 )
+   PROCESS-SCH      = ( "DHW Eqp NRes Sch" )
+   PROCESS-T        = ( 135 )
+   ..
+
+
+$ ---------------------------------------------------------
+$              Chillers
+$ ---------------------------------------------------------
+
+
+
+$ ---------------------------------------------------------
+$              Boilers
+$ ---------------------------------------------------------
+
+
+
+$ ---------------------------------------------------------
+$              Domestic Water Heaters
+$ ---------------------------------------------------------
+
+"DHW Plant 1 Wtr Htr (1)" = DW-HEATER       
+   TYPE             = HEAT-PUMP
+   TANK-VOLUME      = 72.1148
+   CAPACITY         = 0.0260308
+   ELEC-INPUT-RATIO = 0.142857
+   TANK-UA          = 3.00478
+   LOCATION         = ZONE
+   ZONE-NAME        = "EL1 Core Zn (G.C10)"
+   DHW-LOOP         = "DHW Plant 1 Loop (1)"
+   C-ENERGY-FACTOR  = 0.834809
+   C-TANK-EXT-RVAL  = 12
+   ..
+
+
+$ ---------------------------------------------------------
+$              Heat Rejection
+$ ---------------------------------------------------------
+
+
+
+$ ---------------------------------------------------------
+$              Tower Free Cooling
+$ ---------------------------------------------------------
+
+
+
+$ ---------------------------------------------------------
+$              Photovoltaic Modules
+$ ---------------------------------------------------------
+
+
+
+$ ---------------------------------------------------------
+$              Electric Generators
+$ ---------------------------------------------------------
+
+
+
+$ ---------------------------------------------------------
+$              Thermal Storage
+$ ---------------------------------------------------------
+
+
+
+$ ---------------------------------------------------------
+$              Ground Loop Heat Exchangers
+$ ---------------------------------------------------------
+
+
+
+$ ---------------------------------------------------------
+$              Compliance DHW (residential dwelling units)
+$ ---------------------------------------------------------
+
+
+
+$ *********************************************************
+$ **                                                     **
+$ **            Steam & Chilled Water Meters             **
+$ **                                                     **
+$ *********************************************************
+
+$ ---------------------------------------------------------
+$              Steam Meters
+$ ---------------------------------------------------------
+
+
+
+$ ---------------------------------------------------------
+$              Chilled Water Meters
+$ ---------------------------------------------------------
+
+
+
+$ *********************************************************
+$ **                                                     **
+$ **               HVAC Systems / Zones                  **
+$ **                                                     **
+$ *********************************************************
+
+"EL1 Sys1 (PVAVS) (G)" = SYSTEM          
+   TYPE             = PVAVS
+   HEAT-SOURCE      = NONE
+   ZONE-HEAT-SOURCE = ELECTRIC
+   BASEBOARD-SOURCE = NONE
+   SIZING-RATIO     = 1.15
+   RETURN-AIR-PATH  = PLENUM-ZONES
+   HUMIDIFIER-TYPE  = NONE
+   MAX-SUPPLY-T     = 95
+   MIN-SUPPLY-T     = 55
+   COOL-RESET-SCH   = "S1 EL1 Sys1 (PVAVS) (G) CRS"
+   COOL-CONTROL     = RESET
+   MAX-HUMIDITY     = 100
+   MIN-HUMIDITY     = 0
+   ENTHALPY-LIMIT   = 30
+   ECONO-LOCKOUT    = NO
+   ECONO-LOW-LIMIT  = 45
+   MIN-AIR-SCH      = "S1 Sys1 (PVAVS) MinOA Sch"
+   OA-CONTROL       = DUAL-ENTHALPY
+   FAN-SCHEDULE     = "S1 Sys1 (PVAVS) Fan Sch"
+   FAN-CONTROL      = FAN-EIR-FPLR
+   SUPPLY-STATIC    = 1.25
+   SUPPLY-EFF       = 0.53
+   RETURN-EFF       = 0.53
+   NIGHT-CYCLE-CTRL = CYCLE-ON-ANY
+   FAN-EIR-FPLR     = "Variable Speed Drive FPLR"
+   REHEAT-DELTA-T   = 30
+   COOLING-EIR      = 0.222283
+   CRANKCASE-HEAT   = 0
+   HUMIDIFIER-LOC   = IN-AIR-HANDLER
+   ..
+"EL1 South Perim Zn (G.S1)" = ZONE            
+   TYPE             = CONDITIONED
+   MIN-FLOW-RATIO   = 0.2
+   FLOW/AREA        = 0.3
+   OA-FLOW/PER      = 15.116
+   DESIGN-HEAT-T    = 68
+   HEAT-TEMP-SCH    = "S1 Sys1 (PVAVS) Heat Sch"
+   DESIGN-COOL-T    = 75
+   COOL-TEMP-SCH    = "S1 Sys1 (PVAVS) Cool Sch"
+   SIZING-OPTION    = ADJUST-LOADS
+   SPACE            = "EL1 South Perim Spc (G.S1)"
+   ..
+"EL1 East Perim Zn (G.E2)" = ZONE            
+   TYPE             = CONDITIONED
+   MIN-FLOW-RATIO   = 0.2
+   FLOW/AREA        = 0.3
+   OA-FLOW/PER      = 15.116
+   DESIGN-HEAT-T    = 68
+   HEAT-TEMP-SCH    = "S1 Sys1 (PVAVS) Heat Sch"
+   DESIGN-COOL-T    = 75
+   COOL-TEMP-SCH    = "S1 Sys1 (PVAVS) Cool Sch"
+   SIZING-OPTION    = ADJUST-LOADS
+   SPACE            = "EL1 East Perim Spc (G.E2)"
+   ..
+"EL1 North Perim Zn (G.N3)" = ZONE            
+   TYPE             = CONDITIONED
+   MIN-FLOW-RATIO   = 0.2
+   FLOW/AREA        = 0.3
+   OA-FLOW/PER      = 15.116
+   DESIGN-HEAT-T    = 68
+   HEAT-TEMP-SCH    = "S1 Sys1 (PVAVS) Heat Sch"
+   DESIGN-COOL-T    = 75
+   COOL-TEMP-SCH    = "S1 Sys1 (PVAVS) Cool Sch"
+   SIZING-OPTION    = ADJUST-LOADS
+   SPACE            = "EL1 North Perim Spc (G.N3)"
+   ..
+"EL1 West Perim Zn (G.W4)" = ZONE            
+   TYPE             = CONDITIONED
+   MIN-FLOW-RATIO   = 0.2
+   FLOW/AREA        = 0.3
+   OA-FLOW/PER      = 15.116
+   DESIGN-HEAT-T    = 68
+   HEAT-TEMP-SCH    = "S1 Sys1 (PVAVS) Heat Sch"
+   DESIGN-COOL-T    = 75
+   COOL-TEMP-SCH    = "S1 Sys1 (PVAVS) Cool Sch"
+   SIZING-OPTION    = ADJUST-LOADS
+   SPACE            = "EL1 West Perim Spc (G.W4)"
+   ..
+"EL1 South Perim Zn (G.S5)" = ZONE            
+   TYPE             = CONDITIONED
+   MIN-FLOW-RATIO   = 0.2
+   FLOW/AREA        = 0.3
+   OA-FLOW/PER      = 15.116
+   DESIGN-HEAT-T    = 68
+   HEAT-TEMP-SCH    = "S1 Sys1 (PVAVS) Heat Sch"
+   DESIGN-COOL-T    = 75
+   COOL-TEMP-SCH    = "S1 Sys1 (PVAVS) Cool Sch"
+   SIZING-OPTION    = ADJUST-LOADS
+   SPACE            = "EL1 South Perim Spc (G.S5)"
+   ..
+"EL1 South Perim Zn (G.S6)" = ZONE            
+   TYPE             = CONDITIONED
+   MIN-FLOW-RATIO   = 0.2
+   FLOW/AREA        = 0.3
+   OA-FLOW/PER      = 15.116
+   DESIGN-HEAT-T    = 68
+   HEAT-TEMP-SCH    = "S1 Sys1 (PVAVS) Heat Sch"
+   DESIGN-COOL-T    = 75
+   COOL-TEMP-SCH    = "S1 Sys1 (PVAVS) Cool Sch"
+   SIZING-OPTION    = ADJUST-LOADS
+   SPACE            = "EL1 South Perim Spc (G.S6)"
+   ..
+"EL1 North Perim Zn (G.N7)" = ZONE            
+   TYPE             = CONDITIONED
+   MIN-FLOW-RATIO   = 0.2
+   FLOW/AREA        = 0.3
+   OA-FLOW/PER      = 15.116
+   DESIGN-HEAT-T    = 68
+   HEAT-TEMP-SCH    = "S1 Sys1 (PVAVS) Heat Sch"
+   DESIGN-COOL-T    = 75
+   COOL-TEMP-SCH    = "S1 Sys1 (PVAVS) Cool Sch"
+   SIZING-OPTION    = ADJUST-LOADS
+   SPACE            = "EL1 North Perim Spc (G.N7)"
+   ..
+"EL1 North Perim Zn (G.N8)" = ZONE            
+   TYPE             = CONDITIONED
+   MIN-FLOW-RATIO   = 0.2
+   FLOW/AREA        = 0.3
+   OA-FLOW/PER      = 15.116
+   DESIGN-HEAT-T    = 68
+   HEAT-TEMP-SCH    = "S1 Sys1 (PVAVS) Heat Sch"
+   DESIGN-COOL-T    = 75
+   COOL-TEMP-SCH    = "S1 Sys1 (PVAVS) Cool Sch"
+   SIZING-OPTION    = ADJUST-LOADS
+   SPACE            = "EL1 North Perim Spc (G.N8)"
+   ..
+"EL1 West Perim Zn (G.W9)" = ZONE            
+   TYPE             = CONDITIONED
+   MIN-FLOW-RATIO   = 0.2
+   FLOW/AREA        = 0.3
+   OA-FLOW/PER      = 15.116
+   DESIGN-HEAT-T    = 68
+   HEAT-TEMP-SCH    = "S1 Sys1 (PVAVS) Heat Sch"
+   DESIGN-COOL-T    = 75
+   COOL-TEMP-SCH    = "S1 Sys1 (PVAVS) Cool Sch"
+   SIZING-OPTION    = ADJUST-LOADS
+   SPACE            = "EL1 West Perim Spc (G.W9)"
+   ..
+"EL1 Core Zn (G.C10)" = ZONE            
+   TYPE             = CONDITIONED
+   MIN-FLOW-RATIO   = 0.2
+   FLOW/AREA        = 0.3
+   OA-FLOW/PER      = 38.6913
+   DESIGN-HEAT-T    = 68
+   HEAT-TEMP-SCH    = "S1 Sys1 (PVAVS) Heat Sch"
+   DESIGN-COOL-T    = 75
+   COOL-TEMP-SCH    = "S1 Sys1 (PVAVS) Cool Sch"
+   SIZING-OPTION    = ADJUST-LOADS
+   SPACE            = "EL1 Core Spc (G.C10)"
+   ..
+"EL1 South Perim Pl Zn (G.S11)" = ZONE            
+   TYPE             = PLENUM
+   DESIGN-HEAT-T    = 65
+   DESIGN-COOL-T    = 78
+   SIZING-OPTION    = ADJUST-LOADS
+   SPACE            = "EL1 South Perim Plnm (G.S11)"
+   ..
+"EL1 East Perim Pl Zn (G.E12)" = ZONE            
+   TYPE             = PLENUM
+   DESIGN-HEAT-T    = 65
+   DESIGN-COOL-T    = 78
+   SIZING-OPTION    = ADJUST-LOADS
+   SPACE            = "EL1 East Perim Plnm (G.E12)"
+   ..
+"EL1 North Perim Pl Zn (G.N13)" = ZONE            
+   TYPE             = PLENUM
+   DESIGN-HEAT-T    = 65
+   DESIGN-COOL-T    = 78
+   SIZING-OPTION    = ADJUST-LOADS
+   SPACE            = "EL1 North Perim Plnm (G.N13)"
+   ..
+"EL1 West Perim Pl Zn (G.W14)" = ZONE            
+   TYPE             = PLENUM
+   DESIGN-HEAT-T    = 65
+   DESIGN-COOL-T    = 78
+   SIZING-OPTION    = ADJUST-LOADS
+   SPACE            = "EL1 West Perim Plnm (G.W14)"
+   ..
+"EL1 South Perim Pl Zn (G.S15)" = ZONE            
+   TYPE             = PLENUM
+   DESIGN-HEAT-T    = 65
+   DESIGN-COOL-T    = 78
+   SIZING-OPTION    = ADJUST-LOADS
+   SPACE            = "EL1 South Perim Plnm (G.S15)"
+   ..
+"EL1 South Perim Pl Zn (G.S16)" = ZONE            
+   TYPE             = PLENUM
+   DESIGN-HEAT-T    = 65
+   DESIGN-COOL-T    = 78
+   SIZING-OPTION    = ADJUST-LOADS
+   SPACE            = "EL1 South Perim Plnm (G.S16)"
+   ..
+"EL1 North Perim Pl Zn (G.N17)" = ZONE            
+   TYPE             = PLENUM
+   DESIGN-HEAT-T    = 65
+   DESIGN-COOL-T    = 78
+   SIZING-OPTION    = ADJUST-LOADS
+   SPACE            = "EL1 North Perim Plnm (G.N17)"
+   ..
+"EL1 North Perim Pl Zn (G.N18)" = ZONE            
+   TYPE             = PLENUM
+   DESIGN-HEAT-T    = 65
+   DESIGN-COOL-T    = 78
+   SIZING-OPTION    = ADJUST-LOADS
+   SPACE            = "EL1 North Perim Plnm (G.N18)"
+   ..
+"EL1 West Perim Pl Zn (G.W19)" = ZONE            
+   TYPE             = PLENUM
+   DESIGN-HEAT-T    = 65
+   DESIGN-COOL-T    = 78
+   SIZING-OPTION    = ADJUST-LOADS
+   SPACE            = "EL1 West Perim Plnm (G.W19)"
+   ..
+"EL1 Core Pl Zn (G.C20)" = ZONE            
+   TYPE             = PLENUM
+   DESIGN-HEAT-T    = 65
+   DESIGN-COOL-T    = 78
+   SIZING-OPTION    = ADJUST-LOADS
+   SPACE            = "EL1 Core Plnm (G.C20)"
+   ..
+"EL1 Sys1 (PVAVS) (T)" = SYSTEM          
+   TYPE             = PVAVS
+   HEAT-SOURCE      = NONE
+   ZONE-HEAT-SOURCE = ELECTRIC
+   BASEBOARD-SOURCE = NONE
+   SIZING-RATIO     = 1.15
+   RETURN-AIR-PATH  = PLENUM-ZONES
+   HUMIDIFIER-TYPE  = NONE
+   MAX-SUPPLY-T     = 95
+   MIN-SUPPLY-T     = 55
+   COOL-RESET-SCH   = "S1 EL1 Sys1 (PVAVS) (T) CRS"
+   COOL-CONTROL     = RESET
+   MAX-HUMIDITY     = 100
+   MIN-HUMIDITY     = 0
+   ENTHALPY-LIMIT   = 30
+   ECONO-LOCKOUT    = NO
+   ECONO-LOW-LIMIT  = 45
+   MIN-AIR-SCH      = "S1 Sys1 (PVAVS) MinOA Sch"
+   OA-CONTROL       = DUAL-ENTHALPY
+   FAN-SCHEDULE     = "S1 Sys1 (PVAVS) Fan Sch"
+   FAN-CONTROL      = FAN-EIR-FPLR
+   SUPPLY-STATIC    = 1.25
+   SUPPLY-EFF       = 0.53
+   RETURN-EFF       = 0.53
+   NIGHT-CYCLE-CTRL = CYCLE-ON-ANY
+   FAN-EIR-FPLR     = "Variable Speed Drive FPLR"
+   REHEAT-DELTA-T   = 30
+   COOLING-EIR      = 0.222283
+   CRANKCASE-HEAT   = 0
+   HUMIDIFIER-LOC   = IN-AIR-HANDLER
+   ..
+"EL1 South Perim Zn (T.S21)" = ZONE            
+   TYPE             = CONDITIONED
+   MIN-FLOW-RATIO   = 0.2
+   FLOW/AREA        = 0.3
+   OA-FLOW/PER      = 15.116
+   DESIGN-HEAT-T    = 68
+   HEAT-TEMP-SCH    = "S1 Sys1 (PVAVS) Heat Sch"
+   DESIGN-COOL-T    = 75
+   COOL-TEMP-SCH    = "S1 Sys1 (PVAVS) Cool Sch"
+   SIZING-OPTION    = ADJUST-LOADS
+   SPACE            = "EL1 South Perim Spc (T.S21)"
+   ..
+"EL1 East Perim Zn (T.E22)" = ZONE            
+   TYPE             = CONDITIONED
+   MIN-FLOW-RATIO   = 0.2
+   FLOW/AREA        = 0.3
+   OA-FLOW/PER      = 15.116
+   DESIGN-HEAT-T    = 68
+   HEAT-TEMP-SCH    = "S1 Sys1 (PVAVS) Heat Sch"
+   DESIGN-COOL-T    = 75
+   COOL-TEMP-SCH    = "S1 Sys1 (PVAVS) Cool Sch"
+   SIZING-OPTION    = ADJUST-LOADS
+   SPACE            = "EL1 East Perim Spc (T.E22)"
+   ..
+"EL1 North Perim Zn (T.N23)" = ZONE            
+   TYPE             = CONDITIONED
+   MIN-FLOW-RATIO   = 0.2
+   FLOW/AREA        = 0.3
+   OA-FLOW/PER      = 15.116
+   DESIGN-HEAT-T    = 68
+   HEAT-TEMP-SCH    = "S1 Sys1 (PVAVS) Heat Sch"
+   DESIGN-COOL-T    = 75
+   COOL-TEMP-SCH    = "S1 Sys1 (PVAVS) Cool Sch"
+   SIZING-OPTION    = ADJUST-LOADS
+   SPACE            = "EL1 North Perim Spc (T.N23)"
+   ..
+"EL1 West Perim Zn (T.W24)" = ZONE            
+   TYPE             = CONDITIONED
+   MIN-FLOW-RATIO   = 0.2
+   FLOW/AREA        = 0.3
+   OA-FLOW/PER      = 15.116
+   DESIGN-HEAT-T    = 68
+   HEAT-TEMP-SCH    = "S1 Sys1 (PVAVS) Heat Sch"
+   DESIGN-COOL-T    = 75
+   COOL-TEMP-SCH    = "S1 Sys1 (PVAVS) Cool Sch"
+   SIZING-OPTION    = ADJUST-LOADS
+   SPACE            = "EL1 West Perim Spc (T.W24)"
+   ..
+"EL1 South Perim Zn (T.S25)" = ZONE            
+   TYPE             = CONDITIONED
+   MIN-FLOW-RATIO   = 0.2
+   FLOW/AREA        = 0.3
+   OA-FLOW/PER      = 15.116
+   DESIGN-HEAT-T    = 68
+   HEAT-TEMP-SCH    = "S1 Sys1 (PVAVS) Heat Sch"
+   DESIGN-COOL-T    = 75
+   COOL-TEMP-SCH    = "S1 Sys1 (PVAVS) Cool Sch"
+   SIZING-OPTION    = ADJUST-LOADS
+   SPACE            = "EL1 South Perim Spc (T.S25)"
+   ..
+"EL1 South Perim Zn (T.S26)" = ZONE            
+   TYPE             = CONDITIONED
+   MIN-FLOW-RATIO   = 0.2
+   FLOW/AREA        = 0.3
+   OA-FLOW/PER      = 15.116
+   DESIGN-HEAT-T    = 68
+   HEAT-TEMP-SCH    = "S1 Sys1 (PVAVS) Heat Sch"
+   DESIGN-COOL-T    = 75
+   COOL-TEMP-SCH    = "S1 Sys1 (PVAVS) Cool Sch"
+   SIZING-OPTION    = ADJUST-LOADS
+   SPACE            = "EL1 South Perim Spc (T.S26)"
+   ..
+"EL1 North Perim Zn (T.N27)" = ZONE            
+   TYPE             = CONDITIONED
+   MIN-FLOW-RATIO   = 0.2
+   FLOW/AREA        = 0.3
+   OA-FLOW/PER      = 15.116
+   DESIGN-HEAT-T    = 68
+   HEAT-TEMP-SCH    = "S1 Sys1 (PVAVS) Heat Sch"
+   DESIGN-COOL-T    = 75
+   COOL-TEMP-SCH    = "S1 Sys1 (PVAVS) Cool Sch"
+   SIZING-OPTION    = ADJUST-LOADS
+   SPACE            = "EL1 North Perim Spc (T.N27)"
+   ..
+"EL1 North Perim Zn (T.N28)" = ZONE            
+   TYPE             = CONDITIONED
+   MIN-FLOW-RATIO   = 0.2
+   FLOW/AREA        = 0.3
+   OA-FLOW/PER      = 15.116
+   DESIGN-HEAT-T    = 68
+   HEAT-TEMP-SCH    = "S1 Sys1 (PVAVS) Heat Sch"
+   DESIGN-COOL-T    = 75
+   COOL-TEMP-SCH    = "S1 Sys1 (PVAVS) Cool Sch"
+   SIZING-OPTION    = ADJUST-LOADS
+   SPACE            = "EL1 North Perim Spc (T.N28)"
+   ..
+"EL1 West Perim Zn (T.W29)" = ZONE            
+   TYPE             = CONDITIONED
+   MIN-FLOW-RATIO   = 0.2
+   FLOW/AREA        = 0.3
+   OA-FLOW/PER      = 15.116
+   DESIGN-HEAT-T    = 68
+   HEAT-TEMP-SCH    = "S1 Sys1 (PVAVS) Heat Sch"
+   DESIGN-COOL-T    = 75
+   COOL-TEMP-SCH    = "S1 Sys1 (PVAVS) Cool Sch"
+   SIZING-OPTION    = ADJUST-LOADS
+   SPACE            = "EL1 West Perim Spc (T.W29)"
+   ..
+"EL1 Core Zn (T.C30)" = ZONE            
+   TYPE             = CONDITIONED
+   MIN-FLOW-RATIO   = 0.2
+   FLOW/AREA        = 0.3
+   OA-FLOW/PER      = 38.6913
+   DESIGN-HEAT-T    = 68
+   HEAT-TEMP-SCH    = "S1 Sys1 (PVAVS) Heat Sch"
+   DESIGN-COOL-T    = 75
+   COOL-TEMP-SCH    = "S1 Sys1 (PVAVS) Cool Sch"
+   SIZING-OPTION    = ADJUST-LOADS
+   SPACE            = "EL1 Core Spc (T.C30)"
+   ..
+"EL1 South Perim Pl Zn (T.S31)" = ZONE            
+   TYPE             = PLENUM
+   DESIGN-HEAT-T    = 65
+   DESIGN-COOL-T    = 78
+   SIZING-OPTION    = ADJUST-LOADS
+   SPACE            = "EL1 South Perim Plnm (T.S31)"
+   ..
+"EL1 East Perim Pl Zn (T.E32)" = ZONE            
+   TYPE             = PLENUM
+   DESIGN-HEAT-T    = 65
+   DESIGN-COOL-T    = 78
+   SIZING-OPTION    = ADJUST-LOADS
+   SPACE            = "EL1 East Perim Plnm (T.E32)"
+   ..
+"EL1 North Perim Pl Zn (T.N33)" = ZONE            
+   TYPE             = PLENUM
+   DESIGN-HEAT-T    = 65
+   DESIGN-COOL-T    = 78
+   SIZING-OPTION    = ADJUST-LOADS
+   SPACE            = "EL1 North Perim Plnm (T.N33)"
+   ..
+"EL1 West Perim Pl Zn (T.W34)" = ZONE            
+   TYPE             = PLENUM
+   DESIGN-HEAT-T    = 65
+   DESIGN-COOL-T    = 78
+   SIZING-OPTION    = ADJUST-LOADS
+   SPACE            = "EL1 West Perim Plnm (T.W34)"
+   ..
+"EL1 South Perim Pl Zn (T.S35)" = ZONE            
+   TYPE             = PLENUM
+   DESIGN-HEAT-T    = 65
+   DESIGN-COOL-T    = 78
+   SIZING-OPTION    = ADJUST-LOADS
+   SPACE            = "EL1 South Perim Plnm (T.S35)"
+   ..
+"EL1 South Perim Pl Zn (T.S36)" = ZONE            
+   TYPE             = PLENUM
+   DESIGN-HEAT-T    = 65
+   DESIGN-COOL-T    = 78
+   SIZING-OPTION    = ADJUST-LOADS
+   SPACE            = "EL1 South Perim Plnm (T.S36)"
+   ..
+"EL1 North Perim Pl Zn (T.N37)" = ZONE            
+   TYPE             = PLENUM
+   DESIGN-HEAT-T    = 65
+   DESIGN-COOL-T    = 78
+   SIZING-OPTION    = ADJUST-LOADS
+   SPACE            = "EL1 North Perim Plnm (T.N37)"
+   ..
+"EL1 North Perim Pl Zn (T.N38)" = ZONE            
+   TYPE             = PLENUM
+   DESIGN-HEAT-T    = 65
+   DESIGN-COOL-T    = 78
+   SIZING-OPTION    = ADJUST-LOADS
+   SPACE            = "EL1 North Perim Plnm (T.N38)"
+   ..
+"EL1 West Perim Pl Zn (T.W39)" = ZONE            
+   TYPE             = PLENUM
+   DESIGN-HEAT-T    = 65
+   DESIGN-COOL-T    = 78
+   SIZING-OPTION    = ADJUST-LOADS
+   SPACE            = "EL1 West Perim Plnm (T.W39)"
+   ..
+"EL1 Core Pl Zn (T.C40)" = ZONE            
+   TYPE             = PLENUM
+   DESIGN-HEAT-T    = 65
+   DESIGN-COOL-T    = 78
+   SIZING-OPTION    = ADJUST-LOADS
+   SPACE            = "EL1 Core Plnm (T.C40)"
+   ..
+
+
+$ *********************************************************
+$ **                                                     **
+$ **                Metering & Misc HVAC                 **
+$ **                                                     **
+$ *********************************************************
+
+$ ---------------------------------------------------------
+$              Equipment Controls
+$ ---------------------------------------------------------
+
+
+
+$ ---------------------------------------------------------
+$              Load Management
+$ ---------------------------------------------------------
+
+
+
+$ *********************************************************
+$ **                                                     **
+$ **                    Utility Rates                    **
+$ **                                                     **
+$ *********************************************************
+
+$ ---------------------------------------------------------
+$              Ratchets
+$ ---------------------------------------------------------
+
+
+
+$ ---------------------------------------------------------
+$              Block Charges
+$ ---------------------------------------------------------
+
+
+
+$ ---------------------------------------------------------
+$              Utility Rates
+$ ---------------------------------------------------------
+
+
+
+$ *********************************************************
+$ **                                                     **
+$ **                 Output Reporting                    **
+$ **                                                     **
+$ *********************************************************
+
+$ ---------------------------------------------------------
+$              Loads Non-Hourly Reporting
+$ ---------------------------------------------------------
+
+LOADS-REPORT    
+   VERIFICATION     = ( ALL-VERIFICATION )
+   SUMMARY          = ( ALL-SUMMARY )
+   ..
+
+
+$ ---------------------------------------------------------
+$              Systems Non-Hourly Reporting
+$ ---------------------------------------------------------
+
+SYSTEMS-REPORT  
+   VERIFICATION     = ( ALL-VERIFICATION )
+   SUMMARY          = ( ALL-SUMMARY )
+   ..
+
+
+$ ---------------------------------------------------------
+$              Plant Non-Hourly Reporting
+$ ---------------------------------------------------------
+
+PLANT-REPORT    
+   VERIFICATION     = ( ALL-VERIFICATION )
+   SUMMARY          = ( ALL-SUMMARY )
+   ..
+
+
+$ ---------------------------------------------------------
+$              Economics Non-Hourly Reporting
+$ ---------------------------------------------------------
+
+ECONOMICS-REPORT
+   VERIFICATION     = ( ALL-VERIFICATION )
+   SUMMARY          = ( ALL-SUMMARY )
+   ..
+
+
+$ ---------------------------------------------------------
+$              Hourly Reporting
+$ ---------------------------------------------------------
+
+
+"Hourly Report" = HOURLY-REPORT   
+   LIBRARY-ENTRY "Hourly Report"
+   ..
+
+
+$ ---------------------------------------------------------
+$              THE END
+$ ---------------------------------------------------------
+
+END ..
+COMPUTE ..
+STOP ..
