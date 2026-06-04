@@ -3,147 +3,155 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>eQUEST Energy Modeling Tutorial</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <title>eQUEST Energy Modeling Tutorial | RBGB</title>
+  <link rel="icon" type="image/png" href="../assets/images/android-chrome-512x512.png">
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-  <header>
-    <h1>eQUEST Energy Modeling Tutorial</h1>
-    <p>Create a basic building energy model and review simulation results.</p>
+  <header class="home-header inner-header">
+    <nav class="home-nav">
+      <a href="../index.html">Home</a>
+      <a href="../services.html">Services</a>
+      <a href="../projects.html">Projects</a>
+      <a href="../resources.html" class="active-nav">Resources</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+
+    <a href="../index.html" class="logo">
+      <img src="../assets/images/rbgb-logo.webp" alt="RBGB logo">
+    </a>
   </header>
 
-  <main>
-    <section>
-      <h2>Learning Objectives</h2>
-      <p>By the end of this tutorial, you will be able to set up a basic eQUEST model, assign building systems, run a simulation, and interpret key energy results.</p>
+
+  <main class="tutorial-page">
+
+    <section class="tutorial-hero">
+      <p class="section-kicker">Energy Modeling Tutorial</p>
+      <h1>How to Build a Basic Energy Model in eQUEST</h1>
+      <p>
+        This tutorial walks through the process of creating a simplified building energy model,
+        assigning envelope and system inputs, running a simulation, and reviewing energy results.
+      </p>
     </section>
 
-    <section>
-      <h2>Software Needed</h2>
+
+    <section class="tutorial-overview">
+      <div>
+        <h2>Learning Objectives</h2>
+      </div>
+
+      <div>
+        <ul>
+          <li>Start a new eQUEST project.</li>
+          <li>Select a project location and weather file.</li>
+          <li>Define basic building geometry.</li>
+          <li>Enter envelope, lighting, equipment, and occupancy assumptions.</li>
+          <li>Select a basic HVAC system.</li>
+          <li>Run the simulation and review results.</li>
+        </ul>
+      </div>
+    </section>
+
+
+    <section class="tutorial-step">
+      <div class="tutorial-step-image">
+        <img src="../assets/images/equest-step-01.png" alt="Starting a new eQUEST project">
+      </div>
+
+      <div class="tutorial-step-copy">
+        <p class="tutorial-step-label">Step 01</p>
+        <h2>Start a New Project</h2>
+        <p>
+          Open eQUEST and begin a new project using the schematic design wizard.
+          Enter the project name, building type, and basic project information.
+        </p>
+
+        <h3>Why this matters</h3>
+        <p>
+          The project setup establishes the foundation for the model and determines
+          the starting assumptions used in later wizard screens.
+        </p>
+      </div>
+    </section>
+
+
+    <section class="tutorial-step reverse">
+      <div class="tutorial-step-image">
+        <img src="../assets/images/equest-step-02.png" alt="Selecting location and weather file in eQUEST">
+      </div>
+
+      <div class="tutorial-step-copy">
+        <p class="tutorial-step-label">Step 02</p>
+        <h2>Select the Location and Weather File</h2>
+        <p>
+          Choose the project location and assign the appropriate weather file.
+          The weather file allows eQUEST to estimate heating and cooling loads
+          using local climate data.
+        </p>
+
+        <h3>Common mistake</h3>
+        <p>
+          Do not skip or guess the weather file. The climate file can strongly affect
+          annual energy use, peak loads, and system performance.
+        </p>
+      </div>
+    </section>
+
+
+    <section class="tutorial-step">
+      <div class="tutorial-step-image">
+        <img src="../assets/images/equest-step-03.png" alt="Reviewing eQUEST simulation results">
+      </div>
+
+      <div class="tutorial-step-copy">
+        <p class="tutorial-step-label">Step 03</p>
+        <h2>Run the Simulation and Review Results</h2>
+        <p>
+          After completing the input screens, save the project and run the simulation.
+          Review annual energy use, monthly consumption, peak demand, and end-use breakdowns.
+        </p>
+
+        <h3>What to check</h3>
+        <ul>
+          <li>Does the simulation run without fatal errors?</li>
+          <li>Are heating and cooling results reasonable?</li>
+          <li>Do lighting, equipment, and HVAC end uses look realistic?</li>
+          <li>Are there unusual spikes in monthly energy use?</li>
+        </ul>
+      </div>
+    </section>
+
+
+    <section class="tutorial-checklist">
+      <p class="section-kicker">Final Checklist</p>
+      <h2>Before submitting your model, confirm the following:</h2>
+
       <ul>
-        <li>eQUEST installed on your computer</li>
-        <li>Project description or assignment prompt</li>
-        <li>Building dimensions, schedules, and basic HVAC information</li>
-        <li>Weather/location information for the project site</li>
+        <li>The correct project location and weather file are selected.</li>
+        <li>The building area, number of floors, and orientation are accurate.</li>
+        <li>Envelope assumptions are documented.</li>
+        <li>Occupancy, lighting, and equipment loads are reasonable.</li>
+        <li>The HVAC system type matches the tutorial or assignment requirements.</li>
+        <li>The simulation runs successfully.</li>
+        <li>Annual energy results and end-use summaries are recorded.</li>
       </ul>
     </section>
 
-    <section>
-      <h2>Exercise Overview</h2>
-      <p>
-        In this exercise, you will create a simplified energy model for a building.
-        The model will include location data, building geometry, envelope properties,
-        internal loads, schedules, HVAC systems, and simulation results.
-      </p>
-    </section>
-
-    <section>
-      <h2>Step 1: Start a New Project</h2>
-      <p>
-        Open eQUEST and create a new project using the schematic design wizard.
-        Enter the project name, building type, and basic project information.
-      </p>
-      <img src="images/step-01-new-project.png" alt="Starting a new eQUEST project">
-    </section>
-
-    <section>
-      <h2>Step 2: Set the Location and Weather File</h2>
-      <p>
-        Choose the project location and assign the appropriate weather file.
-        This allows eQUEST to simulate the building using local climate conditions.
-      </p>
-      <img src="images/step-02-location-weather.png" alt="Selecting location and weather file in eQUEST">
-    </section>
-
-    <section>
-      <h2>Step 3: Define Building Geometry</h2>
-      <p>
-        Enter the building footprint, number of floors, floor-to-floor height,
-        zoning layout, and orientation. Keep the geometry simple for this exercise.
-      </p>
-      <img src="images/step-03-building-geometry.png" alt="Defining building geometry in eQUEST">
-    </section>
-
-    <section>
-      <h2>Step 4: Add Envelope Information</h2>
-      <p>
-        Define wall, roof, window, and floor assemblies. Include insulation values,
-        glazing type, window-to-wall ratio, and shading assumptions where required.
-      </p>
-      <img src="images/step-04-envelope.png" alt="Entering envelope properties in eQUEST">
-    </section>
-
-    <section>
-      <h2>Step 5: Define Occupancy, Lighting, and Equipment Loads</h2>
-      <p>
-        Enter internal load assumptions such as people density, lighting power density,
-        plug loads, and operating schedules.
-      </p>
-      <img src="images/step-05-internal-loads.png" alt="Internal loads and schedules in eQUEST">
-    </section>
-
-    <section>
-      <h2>Step 6: Select HVAC Systems</h2>
-      <p>
-        Choose an HVAC system type appropriate for the building. For a basic tutorial,
-        use a simple packaged rooftop unit, VAV system, or system type assigned by your instructor.
-      </p>
-      <img src="images/step-06-hvac.png" alt="Selecting HVAC systems in eQUEST">
-    </section>
-
-    <section>
-      <h2>Step 7: Run the Simulation</h2>
-      <p>
-        Save your project, check for input errors, and run the simulation.
-        If the model does not run, review the error messages and correct missing or conflicting inputs.
-      </p>
-      <img src="images/step-07-run-simulation.png" alt="Running the simulation in eQUEST">
-    </section>
-
-    <section>
-      <h2>Step 8: Review Results</h2>
-      <p>
-        Review annual energy use, monthly energy use, peak demand, and end-use breakdowns.
-        Compare the results with expected building behavior.
-      </p>
-      <img src="images/step-08-results.png" alt="Reviewing eQUEST simulation results">
-    </section>
-
-    <section>
-      <h2>Common Errors</h2>
-      <ul>
-        <li>Missing or incorrect weather file</li>
-        <li>Unrealistic building geometry</li>
-        <li>Schedules that are always on or always off by mistake</li>
-        <li>Incorrect HVAC system selection</li>
-        <li>Simulation errors caused by incomplete inputs</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Submission Checklist</h2>
-      <ul>
-        <li>Project file saved successfully</li>
-        <li>Simulation runs without fatal errors</li>
-        <li>Annual energy results are recorded</li>
-        <li>End-use breakdown is reviewed</li>
-        <li>Screenshots of key input screens are included</li>
-        <li>Short explanation of modeling assumptions is written</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Download Exercise Files</h2>
-      <p>
-        <a href="downloads/equest-exercise-files.zip">Download starter files</a>
-      </p>
-    </section>
   </main>
 
+
   <footer>
-    <p>eQUEST Energy Modeling Tutorial</p>
+    <p>© 2026 Ross-Bain Green Building, LLC. All rights reserved.</p>
   </footer>
 
+  <script src="../js/script.js"></script>
 </body>
 </html>
