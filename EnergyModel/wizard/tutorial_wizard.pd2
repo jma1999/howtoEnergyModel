@@ -1,22 +1,35 @@
-Proj   "tutorial"  
+Proj   "tutorial_wizard"  
    ProgramVersion = "eQUEST 3.65.7175"
    BDBaseVersion = 25
    ProductCode = "eQUEST"
    WeatherFile = "TMY2\ATLANTGA.bin"
    CreateDate = 1780516275
-   ModDate = 1780520071
+   ModDate = 1780599182
+   RunDate = 1780597882
    LibraryFile = "eQ_Lib.dat"
+   ActiveMode = 0
+   InputModule = 1
    ComplianceRules = "LEED-NC - v3.0 (LEED.bin)"
+   UseCameraData = 1
+   ClippingRange = ( 176.236, 766.375 )
+   FocalPoint = ( 117.5, 65, 15.8743 )
+   Position = ( 385.067, 383.874, 149.005 )
+   ViewUpVector = ( 0, 0, 1 )
+   ViewAngle = 28.0901
    InterfaceMode = 0
    AllowWizard = 1
+   NotProjFile = "tutorial_wizard"
    InputUnitsType = "English"
    OutputUnitsType = "English"
    ProjTreeType[1] = 0
+   ProjTreeType[2] = 1
    ProjTreeID[1] = 10000
-   ProjTreeLabel[1] = "Project:  'tutorial'"
+   ProjTreeID[2] = 10100010
+   ProjTreeLabel[1] = "Project:  'tutorial_wizard'"
+   ProjTreeLabel[2] = "EL1 North Wall (G.N6.E11)"
    ..
 
-MainWiz   "tutorial"  
+MainWiz   "tutorial_wizard"  
    ProductCode = "eQUEST"
    WizardType = "Design Development"
    DebugID = 0
@@ -35,11 +48,12 @@ MainWiz   "tutorial"
    HVACDefaulted = 1
    ..
 
-ShellWiz   "first-floor"  
-   ScreenIDArrIdx = 0
-   ScreenIDArrID = 15
-   GrossArea = 25000
-   FlrsAboveGrade = 2
+ShellWiz   "groundFloor"  
+   ScreenIDArrIdx = 13
+   ScreenIDArrID = 132
+   GrossArea = 21600
+   FlrsAboveGrade = 1
+   ShellPos_Dir = "North"
    ShellPos_Specify = 1
    BldgX = 0
    BldgY = 0
@@ -47,30 +61,47 @@ ShellWiz   "first-floor"
    Footprint = "- custom -"
    ZoningPattern = "- custom -"
    NumMCZnGrps = 0
-   DiagLink = "first-floor Diag Data"
+   DiagLink = "firstFloor Diag Data"
+   RoofBrdInsType = "5 in. polystyrene (R-25)"
+   RoofSecInsType = "- no batt or rad barrier -"
+   VertExtBrdInsType = "1 in. polystyrene (R-4)"
+   VertExtSecInsType = "R-13 batt"
+   VertExtFinish = "Brick"
+   VertIntConsType = "Frame"
+   VertIntInsType = "R-7  batt"
+   IntFlrInsType = "Vinyl Tile"
+   GrndFlrConsType = "6 in. Concrete"
+   GrndFlrSecInsType = "Vinyl Tile"
    ZoningCurrent = 1
-   NumFloorVertices = 10
-   FloorVertX[1] = 50
-   FloorVertX[2] = 230
-   FloorVertX[3] = 230
-   FloorVertX[4] = 185
-   FloorVertX[5] = 185
-   FloorVertX[6] = 35
-   FloorVertX[7] = 35
-   FloorVertX[8] = 125
-   FloorVertX[9] = 125
-   FloorVertX[10] = 50
-   FloorVertY[1] = 5
-   FloorVertY[2] = 5
+   NumFloorVertices = 8
+   FloorVertX[1] = 5
+   FloorVertX[2] = 5
+   FloorVertX[3] = 50
+   FloorVertX[4] = 50
+   FloorVertX[5] = 230
+   FloorVertX[6] = 230
+   FloorVertX[7] = 185
+   FloorVertX[8] = 185
+   FloorVertY[1] = 125
+   FloorVertY[2] = 50
    FloorVertY[3] = 50
-   FloorVertY[4] = 50
-   FloorVertY[5] = 125
-   FloorVertY[6] = 125
-   FloorVertY[7] = 95
-   FloorVertY[8] = 95
-   FloorVertY[9] = 50
-   FloorVertY[10] = 50
+   FloorVertY[4] = 5
+   FloorVertY[5] = 5
+   FloorVertY[6] = 50
+   FloorVertY[7] = 50
+   FloorVertY[8] = 125
    AdiabaticCurrent = 1
+   GroundZnGrp[1] = "reception"
+   GroundZnGrp[2] = "classroom"
+   GroundZnGrp[3] = "rec-space"
+   GroundZnGrp[4] = "classroom-upper"
+   GroundZnGrp[5] = "mep-room"
+   GroundZnGrp[6] = "restroom"
+   GroundZnGrp[7] = "restroom"
+   GroundZnGrp[8] = "lab"
+   GroundZnGrp[9] = "lab"
+   GroundZnGrp[10] = "corridor"
+   GroundZnGrp[11] = "atrium"
    ZoneGroupsOK = 1
    DfltZnGrpName[1] = "EL1 Underground Areas"
    DfltZnGrpName[2] = "EL1 Ground Floor Core"
@@ -82,12 +113,33 @@ ShellWiz   "first-floor"
    DfltZnGrpName[8] = "EL1 Data Center"
    CustomFootprint = 1
    CustomZoning = 1
-   ActiveZoneIndex = 9
+   ActiveZoneIndex = 11
    CustomRoofZoning = -1
    ActiveRoofZoneIdx = 1
-   FloorArea = 15300
-   FloorPerimLen = 780
-   LastFootprint = 0
+   FloorArea = 21600
+   FloorPerimLen = 690
+   LastFootprint = 1
+   OverhangOption = "None"
+   GTCCategory[1] = "- specify properties -"
+   GTCCategory[2] = "- select another -"
+   WindowHeight[1] = 5
+   WinAreaSpecMethod = "Percent of Gross Wall Area (floor to floor)"
+   PercentGlassI1[1] = 10
+   PercentGlassI2[1] = 10
+   PercentGlassI3[1] = 10
+   PercentGlassI4[1] = 10
+   DoorType[1] = "Opaque"
+   NumExtDoors1[1] = 1
+   NumExtDoors2[1] = 0
+   NumExtDoors3[1] = 1
+   NumExtDoors4[1] = 1
+   GP_ProductType[1] = "Fixed Window"
+   GP_NumPanes[1] = "Double"
+   GP_GasFill[1] = "Air"
+   GP_GlassTint[1] = "Tinted Glass"
+   GP_Ufactor[1] = 0.42
+   GP_SHGC[1] = 0.25
+   SkyltOption[1] = 0
    SkyZonesCurrent = 1
    SkyltZones[1] = 1
    SkyltZones[2] = 1
@@ -101,14 +153,7 @@ ShellWiz   "first-floor"
    SkyltZones[10] = 1
    SkyltZones[11] = 1
    SkyltZones[12] = 1
-   SkyltZones[13] = 1
-   SkyltZones[14] = 1
-   SkyltZones[15] = 1
-   SkyltZones[16] = 1
-   SkyltZones[17] = 1
-   SkyltZones[18] = 1
    SkyPosCurrent = 1
-   DayZonesCurrent[1] = 1
    DayZonesCurrent[3] = 1
    DayltZones[1] = 1
    DayltZones[2] = 1
@@ -119,15 +164,9 @@ ShellWiz   "first-floor"
    DayltZones[7] = 1
    DayltZones[8] = 1
    DayltZones[9] = 1
-   DayltZones[10] = 0
+   DayltZones[10] = 1
    DayltZones[11] = 1
    DayltZones[12] = 1
-   DayltZones[13] = 1
-   DayltZones[14] = 1
-   DayltZones[15] = 1
-   DayltZones[16] = 1
-   DayltZones[17] = 1
-   DayltZones[18] = 0
    DayltZones[201] = 1
    DayltZones[202] = 1
    DayltZones[203] = 1
@@ -142,15 +181,9 @@ ShellWiz   "first-floor"
    DayltZones[407] = 1
    DayltZones[408] = 1
    DayltZones[409] = 1
-   DayltZones[410] = 0
+   DayltZones[410] = 1
    DayltZones[411] = 1
    DayltZones[412] = 1
-   DayltZones[413] = 1
-   DayltZones[414] = 1
-   DayltZones[415] = 1
-   DayltZones[416] = 1
-   DayltZones[417] = 1
-   DayltZones[418] = 0
    WinDoorCurrent = 1
    DetailsCurrent = ( 1, 1, 1 )
    BDLNumDayltCtrls[1] = 0
@@ -165,12 +198,6 @@ ShellWiz   "first-floor"
    BDLNumDayltCtrls[10] = 0
    BDLNumDayltCtrls[11] = 0
    BDLNumDayltCtrls[12] = 0
-   BDLNumDayltCtrls[13] = 0
-   BDLNumDayltCtrls[14] = 0
-   BDLNumDayltCtrls[15] = 0
-   BDLNumDayltCtrls[16] = 0
-   BDLNumDayltCtrls[17] = 0
-   BDLNumDayltCtrls[18] = 0
    BDLNumDayltCtrls[201] = 0
    BDLNumDayltCtrls[202] = 0
    BDLNumDayltCtrls[203] = 0
@@ -188,12 +215,14 @@ ShellWiz   "first-floor"
    BDLNumDayltCtrls[410] = 0
    BDLNumDayltCtrls[411] = 0
    BDLNumDayltCtrls[412] = 0
-   BDLNumDayltCtrls[413] = 0
-   BDLNumDayltCtrls[414] = 0
-   BDLNumDayltCtrls[415] = 0
-   BDLNumDayltCtrls[416] = 0
-   BDLNumDayltCtrls[417] = 0
-   BDLNumDayltCtrls[418] = 0
+   ActAreaType[2] = "Classroom/Lecture"
+   ActAreaType[3] = "Library (Reading Areas)"
+   ActAreaType[4] = "Restrooms"
+   ActAreaType[5] = "Lobby (Office Reception/Waiting)"
+   ActAreaType[6] = "Office (General)"
+   ActAreaType[7] = "Mechanical/Electrical Room"
+   ActAreaType[8] = "Corridor"
+   PercentArea = ( 25, 11.7, 25, 4.9, 20, 4.2, 1, 8.2 )
    OccShape = ( "EL2 Occup Profile (S1)", "EL2 Occup Profile (S2)", 
                 "EL2 Occup Profile (S3)" )
    ILShape = ( "EL2 InsLtg Profile (S1)", "EL2 InsLtg Profile (S2)", 
@@ -233,7 +262,6 @@ ShellWiz   "first-floor"
    SCRShape = ( "EL2 S-C Refrig Profile (S1)", 
                 "EL2 S-C Refrig Profile (S2)", 
                 "EL2 S-C Refrig Profile (S3)" )
-   DaylitAreaCurrent[1] = 1
    DaylitAreaCurrent[3] = 1
    RoofZoneErrorCode = 4
    ..
@@ -373,47 +401,83 @@ ShapeWiz   "EL2 S-C Refrig Profile (S2)"
 ShapeWiz   "EL2 S-C Refrig Profile (S3)"  
    ..
 
-ZnGrpWiz   "EL1 Ground Floor Core"  
-   ShortName = "GndCor"
-   ..
-
-ZnGrpWiz   "EL1 Ground Floor Perimeter"  
-   ShortName = "GndPrm"
-   ..
-
-ZnGrpWiz   "EL1 Top Floor Core"  
-   ShortName = "TopCor"
-   ..
-
-ZnGrpWiz   "EL1 Top Floor Perimeter"  
-   ShortName = "TopPrm"
-   ..
-
 CustomZone   "Custom Zone 1"  
    NumVerts = 4
-   X[1] = 35
-   X[2] = 35
-   X[3] = 77
-   X[4] = 77
-   Y[1] = 125
-   Y[2] = 95
-   Y[3] = 95
-   Y[4] = 125
+   X[1] = 5
+   X[2] = 5
+   X[3] = 35
+   X[4] = 35
+   Y[1] = 80
+   Y[2] = 50
+   Y[3] = 50
+   Y[4] = 80
+   CustName_AbvGrd[1] = "Reception"
    ..
 
 CustomZone   "Custom Zone 2"  
    NumVerts = 4
-   X[1] = 77
-   X[2] = 77
-   X[3] = 119
-   X[4] = 119
-   Y[1] = 125
-   Y[2] = 95
-   Y[3] = 95
-   Y[4] = 125
+   X[1] = 50
+   X[2] = 50
+   X[3] = 110
+   X[4] = 110
+   Y[1] = 50
+   Y[2] = 5
+   Y[3] = 5
+   Y[4] = 50
+   CustName_AbvGrd[1] = "Classroom"
    ..
 
 CustomZone   "Custom Zone 3"  
+   NumVerts = 4
+   X[1] = 110
+   X[2] = 110
+   X[3] = 230
+   X[4] = 230
+   Y[1] = 50
+   Y[2] = 5
+   Y[3] = 5
+   Y[4] = 50
+   CustName_AbvGrd[1] = "Recreational Space"
+   ..
+
+CustomZone   "Custom Zone 4"  
+   NumVerts = 4
+   X[1] = 125
+   X[2] = 185
+   X[3] = 185
+   X[4] = 125
+   Y[1] = 50
+   Y[2] = 50
+   Y[3] = 95
+   Y[4] = 95
+   CustName_AbvGrd[1] = "Classroom"
+   ..
+
+CustomZone   "Custom Zone 5"  
+   NumVerts = 4
+   X[1] = 175
+   X[2] = 185
+   X[3] = 185
+   X[4] = 175
+   Y[1] = 103.7
+   Y[2] = 103.7
+   Y[3] = 125
+   Y[4] = 125
+   ..
+
+CustomZone   "Custom Zone 6"  
+   NumVerts = 4
+   X[1] = 175
+   X[2] = 150
+   X[3] = 150
+   X[4] = 175
+   Y[1] = 125
+   Y[2] = 125
+   Y[3] = 103.7
+   Y[4] = 103.7
+   ..
+
+CustomZone   "Custom Zone 7"  
    NumVerts = 4
    X[1] = 125
    X[2] = 125
@@ -425,67 +489,31 @@ CustomZone   "Custom Zone 3"
    Y[4] = 125
    ..
 
-CustomZone   "Custom Zone 4"  
+CustomZone   "Custom Zone 8"  
    NumVerts = 4
-   X[1] = 150
-   X[2] = 150
-   X[3] = 175
-   X[4] = 175
+   X[1] = 119
+   X[2] = 77
+   X[3] = 77
+   X[4] = 119
    Y[1] = 125
-   Y[2] = 103.7
-   Y[3] = 103.7
-   Y[4] = 125
-   ..
-
-CustomZone   "Custom Zone 5"  
-   NumVerts = 4
-   X[1] = 175
-   X[2] = 175
-   X[3] = 185
-   X[4] = 185
-   Y[1] = 125
-   Y[2] = 103.7
-   Y[3] = 103.7
-   Y[4] = 125
-   ..
-
-CustomZone   "Custom Zone 6"  
-   NumVerts = 4
-   X[1] = 125
-   X[2] = 125
-   X[3] = 185
-   X[4] = 185
-   Y[1] = 95
-   Y[2] = 50
-   Y[3] = 50
+   Y[2] = 125
+   Y[3] = 95
    Y[4] = 95
    ..
 
-CustomZone   "Custom Zone 7"  
-   NumVerts = 4
-   X[1] = 110
-   X[2] = 110
-   X[3] = 230
-   X[4] = 230
-   Y[1] = 50
-   Y[2] = 5
-   Y[3] = 5
-   Y[4] = 50
-   ..
-
-CustomZone   "Custom Zone 8"  
-   NumVerts = 4
-   X[1] = 50
-   X[2] = 50
-   X[3] = 110
-   X[4] = 110
-   Y[1] = 50
-   Y[2] = 5
-   Y[3] = 5
-   Y[4] = 50
-   ..
-
 CustomZone   "Custom Zone 9"  
+   NumVerts = 4
+   X[1] = 77
+   X[2] = 35
+   X[3] = 35
+   X[4] = 77
+   Y[1] = 125
+   Y[2] = 125
+   Y[3] = 95
+   Y[4] = 95
+   ..
+
+CustomZone   "Custom Zone 21"  
    NumVerts = 6
    X[1] = 119
    X[2] = 119
@@ -501,36 +529,194 @@ CustomZone   "Custom Zone 9"
    Y[6] = 125
    ..
 
-ShellWiz   "first-floor-atrium"  
-   ScreenIDArrIdx = 0
+CustomZone   "Custom Zone 22"  
+   NumVerts = 8
+   X[1] = 5
+   X[2] = 5
+   X[3] = 35
+   X[4] = 35
+   X[5] = 125
+   X[6] = 125
+   X[7] = 35
+   X[8] = 35
+   Y[1] = 125
+   Y[2] = 80
+   Y[3] = 80
+   Y[4] = 50
+   Y[5] = 50
+   Y[6] = 95
+   Y[7] = 95
+   Y[8] = 125
+   ..
+
+ZnGrpWiz   "classroom"  
+   ActAreaPct[1] = 100
+   ShortName = "GndPrm"
+   AssignedSystem = "HVAC System 1"
+   ..
+
+ZnGrpWiz   "rec-space"  
+   ActAreaPct[3] = 100
+   ShortName = "GndPrm"
+   ..
+
+ZnGrpWiz   "lab"  
+   ActAreaPct[2] = 100
+   ShortName = "GndPrm"
+   AssignedSystem = "HVAC System 2"
+   ..
+
+ZnGrpWiz   "restroom"  
+   ActAreaPct[4] = 100
+   ShortName = "GndPrm"
+   AssignedSystem = "HVAC System 2"
+   ..
+
+ZnGrpWiz   "mep-room"  
+   ActAreaPct[7] = 100
+   ShortName = "GndPrm"
+   AssignedSystem = "HVAC System 2"
+   ..
+
+ZnGrpWiz   "atrium"  
+   ActAreaPct[5] = 80
+   ActAreaPct[8] = 20
+   ShortName = "GndPrm"
+   AssignedSystem = "HVAC System 2"
+   ..
+
+ZnGrpWiz   "reception"  
+   ActAreaPct[6] = 100
+   ShortName = "GndPrm"
+   AssignedSystem = "HVAC System 2"
+   ..
+
+ZnGrpWiz   "corridor"  
+   ActAreaPct[8] = 100
+   ShortName = "GndPrm"
+   AssignedSystem = "HVAC System 2"
+   ..
+
+ZnGrpWiz   "classroom-upper"  
+   ActAreaPct[1] = 100
+   ShortName = "GndPrm"
+   AssignedSystem = "HVAC System 2"
+   ..
+
+ShellWiz   "firstFloor"  
+   ScreenIDArrIdx = 13
+   ScreenIDArrID = 132
+   GrossArea = 21600
+   FlrsAboveGrade = 1
+   ShellPos_Dir = "North"
+   ShellPos_Specify = 1
+   BldgX = 0
+   BldgY = 0
+   BldgZ = 13
+   BackgroundShell = "- none -"
+   Footprint = "- custom -"
+   ZoningPattern = "- custom -"
    NumMCZnGrps = 0
-   DiagLink = "first-floor-atrium Diag Data"
+   DiagLink = "EL2 firstFloor Diag Data"
+   RoofInsulLocation = "Roof Surface"
+   RoofBrdInsType = "5 in. polystyrene (R-25)"
+   VertExtBrdInsType = "1 in. polystyrene (R-4)"
+   VertExtSecInsType = "R-13 batt"
+   VertExtFinish = "Brick"
+   VertIntConsType = "Frame"
+   VertIntInsType = "R-7  batt"
+   GrndFlrExposure = "Over Conditioned Space (adiabatic)"
    ZoningCurrent = 1
+   NumFloorVertices = 8
+   FloorVertX[1] = 5
+   FloorVertX[2] = 5
+   FloorVertX[3] = 50
+   FloorVertX[4] = 50
+   FloorVertX[5] = 230
+   FloorVertX[6] = 230
+   FloorVertX[7] = 185
+   FloorVertX[8] = 185
+   FloorVertY[1] = 125
+   FloorVertY[2] = 50
+   FloorVertY[3] = 50
+   FloorVertY[4] = 5
+   FloorVertY[5] = 5
+   FloorVertY[6] = 50
+   FloorVertY[7] = 50
+   FloorVertY[8] = 125
    AdiabaticCurrent = 1
+   GroundZnGrp[1] = "classroom-first-floor"
+   GroundZnGrp[2] = "rec-space-first-floor"
+   GroundZnGrp[3] = "classroom-upper-first-floor"
+   GroundZnGrp[4] = "mep-first-floor"
+   GroundZnGrp[5] = "restroom-first-floor"
+   GroundZnGrp[6] = "restroom-first-floor"
+   GroundZnGrp[7] = "lab-first-floor"
+   GroundZnGrp[8] = "lab-first-floor"
+   GroundZnGrp[9] = "atrium-first-floor"
+   GroundZnGrp[10] = "corridor-first-floor"
    ZoneGroupsOK = 1
    DfltZnGrpName[1] = "EL2 Underground Areas"
-   DfltZnGrpName[2] = "EL2 Ground Floor Core"
-   DfltZnGrpName[3] = "EL2 Ground Floor Perimeter"
-   DfltZnGrpName[4] = "EL2 Typical Floor(s) Core"
-   DfltZnGrpName[5] = "EL2 Typical Floor(s) Perimeter"
-   DfltZnGrpName[6] = "EL2 Top Floor Core"
-   DfltZnGrpName[7] = "EL2 Top Floor Perimeter"
+   DfltZnGrpName[2] = "EL2 Ground Floor"
+   DfltZnGrpName[3] = "EL2 Ground Floor"
+   DfltZnGrpName[4] = "EL2 Typical Floor(s)"
+   DfltZnGrpName[5] = "EL2 Typical Floor(s)"
+   DfltZnGrpName[6] = "EL2 Top Floor"
+   DfltZnGrpName[7] = "EL2 Top Floor"
    DfltZnGrpName[8] = "EL2 Data Center"
+   CustomFootprint = 1
+   CustomZoning = 1
+   ActiveZoneIndex = 10
    CustomRoofZoning = -1
+   RoofZoneReviewed = 1
+   ActiveRoofZoneIdx = 1
+   FloorArea = 21600
+   FloorPerimLen = 690
    LastFootprint = 1
+   OverhangOption = "None"
+   GTCCategory[1] = "- specify properties -"
+   GTCCategory[2] = "- select another -"
+   WindowHeight[1] = 5
+   WinAreaSpecMethod = "Percent of Gross Wall Area (floor to floor)"
+   PercentGlassI1[1] = 10
+   PercentGlassI2[1] = 10
+   PercentGlassI3[1] = 10
+   PercentGlassI4[1] = 10
+   DoorType[1] = "- select another -"
+   NumExtDoors1[1] = 0
+   NumExtDoors2[1] = 0
+   NumExtDoors3[1] = 0
+   NumExtDoors4[1] = 0
+   GP_ProductType[1] = "Fixed Window"
+   GP_GasFill[1] = "Air"
+   GP_GlassTint[1] = "Tinted Glass"
+   GP_Ufactor[1] = 0.42
+   GP_SHGC[1] = 0.25
    SkyZonesCurrent = 1
    SkyltZones[1] = 1
    SkyltZones[2] = 1
    SkyltZones[3] = 1
    SkyltZones[4] = 1
    SkyltZones[5] = 1
+   SkyltZones[6] = 1
+   SkyltZones[7] = 1
+   SkyltZones[8] = 1
+   SkyltZones[9] = 1
+   SkyltZones[10] = 1
+   SkyltZones[11] = 1
    SkyPosCurrent = 1
-   DayZonesCurrent = ( 1, 1, 1 )
+   DayZonesCurrent[3] = 1
    DayltZones[1] = 1
    DayltZones[2] = 1
    DayltZones[3] = 1
    DayltZones[4] = 1
-   DayltZones[5] = 0
+   DayltZones[5] = 1
+   DayltZones[6] = 1
+   DayltZones[7] = 1
+   DayltZones[8] = 1
+   DayltZones[9] = 1
+   DayltZones[10] = 1
+   DayltZones[11] = 1
    DayltZones[201] = 1
    DayltZones[202] = 1
    DayltZones[203] = 1
@@ -540,7 +726,13 @@ ShellWiz   "first-floor-atrium"
    DayltZones[402] = 1
    DayltZones[403] = 1
    DayltZones[404] = 1
-   DayltZones[405] = 0
+   DayltZones[405] = 1
+   DayltZones[406] = 1
+   DayltZones[407] = 1
+   DayltZones[408] = 1
+   DayltZones[409] = 1
+   DayltZones[410] = 1
+   DayltZones[411] = 1
    WinDoorCurrent = 1
    DetailsCurrent = ( 1, 1, 1 )
    BDLNumDayltCtrls[1] = 0
@@ -548,6 +740,12 @@ ShellWiz   "first-floor-atrium"
    BDLNumDayltCtrls[3] = 0
    BDLNumDayltCtrls[4] = 0
    BDLNumDayltCtrls[5] = 0
+   BDLNumDayltCtrls[6] = 0
+   BDLNumDayltCtrls[7] = 0
+   BDLNumDayltCtrls[8] = 0
+   BDLNumDayltCtrls[9] = 0
+   BDLNumDayltCtrls[10] = 0
+   BDLNumDayltCtrls[11] = 0
    BDLNumDayltCtrls[201] = 0
    BDLNumDayltCtrls[202] = 0
    BDLNumDayltCtrls[203] = 0
@@ -558,208 +756,410 @@ ShellWiz   "first-floor-atrium"
    BDLNumDayltCtrls[403] = 0
    BDLNumDayltCtrls[404] = 0
    BDLNumDayltCtrls[405] = 0
-   OccShape = ( "EL2 Occup Profile (S1) 37", "EL2 Occup Profile (S2) 38", 
-                "EL2 Occup Profile (S3) 39" )
-   ILShape = ( "EL2 InsLtg Profile (S1) 22", 
-               "EL2 InsLtg Profile (S2) 23", 
-               "EL2 InsLtg Profile (S3) 24" )
-   ELDayShapes = ( "EL2 ExtLtg DayShape (Jan) 25", 
-                   "EL2 ExtLtg DayShape (Feb) 26", 
-                   "EL2 ExtLtg DayShape (Mar) 27", 
-                   "EL2 ExtLtg DayShape (Apr) 28", 
-                   "EL2 ExtLtg DayShape (May) 29", 
-                   "EL2 ExtLtg DayShape (Jun) 30", 
-                   "EL2 ExtLtg DayShape (Jul) 31", 
-                   "EL2 ExtLtg DayShape (Aug) 32", 
-                   "EL2 ExtLtg DayShape (Sep) 33", 
-                   "EL2 ExtLtg DayShape (Oct) 34", 
-                   "EL2 ExtLtg DayShape (Nov) 35", 
-                   "EL2 ExtLtg DayShape (Dec) 36" )
-   OEShape = ( "EL2 OffEq Profile (S1) 25", "EL2 OffEq Profile (S2) 26", 
-               "EL2 OffEq Profile (S3) 27" )
-   CEShape = ( "EL2 CookEq Profile (S1) 28", 
-               "EL2 CookEq Profile (S2) 29", 
-               "EL2 CookEq Profile (S3) 30" )
-   MiscShape = ( "EL2 Misc Profile (S1) 31", "EL2 Misc Profile (S2) 32", 
-                 "EL2 Misc Profile (S3) 33" )
-   RFDayShapes = ( "EL2 Refrig DayShape (Jan) 37", 
-                   "EL2 Refrig DayShape (Feb) 38", 
-                   "EL2 Refrig DayShape (Mar) 39", 
-                   "EL2 Refrig DayShape (Apr) 40", 
-                   "EL2 Refrig DayShape (May) 41", 
-                   "EL2 Refrig DayShape (Jun) 42", 
-                   "EL2 Refrig DayShape (Jul) 43", 
-                   "EL2 Refrig DayShape (Aug) 44", 
-                   "EL2 Refrig DayShape (Sep) 45", 
-                   "EL2 Refrig DayShape (Oct) 46", 
-                   "EL2 Refrig DayShape (Nov) 47", 
-                   "EL2 Refrig DayShape (Dec) 48" )
-   DHWShape = ( "EL2 DHW Profile (S1) 34", "EL2 DHW Profile (S2) 35", 
-                "EL2 DHW Profile (S3) 36" )
-   SCRShape = ( "EL2 S-C Refrig Profile (S1) 40", 
-                "EL2 S-C Refrig Profile (S2) 41", 
-                "EL2 S-C Refrig Profile (S3) 42" )
-   DaylitAreaCurrent = ( 1, 1, 1 )
+   BDLNumDayltCtrls[406] = 0
+   BDLNumDayltCtrls[407] = 0
+   BDLNumDayltCtrls[408] = 0
+   BDLNumDayltCtrls[409] = 0
+   BDLNumDayltCtrls[410] = 0
+   BDLNumDayltCtrls[411] = 0
+   ActAreaType[2] = "Classroom/Lecture"
+   ActAreaType[3] = "Library (Reading Areas)"
+   ActAreaType[4] = "Restrooms"
+   ActAreaType[5] = "Lobby (Office Reception/Waiting)"
+   ActAreaType[6] = "Office (General)"
+   ActAreaType[7] = "Mechanical/Electrical Room"
+   ActAreaType[8] = "Corridor"
+   PercentArea = ( 25, 11.7, 25, 4.9, 17.5, 5.8, 1, 9.1 )
+   OccShape = ( "EL2 Occup Profile (S1) (Copy)", 
+                "EL2 Occup Profile (S2) (Copy)", 
+                "EL2 Occup Profile (S3) (Copy)" )
+   ILShape = ( "EL2 InsLtg Profile (S1) (Copy)", 
+               "EL2 InsLtg Profile (S2) (Copy)", 
+               "EL2 InsLtg Profile (S3) (Copy)" )
+   ELDayShapes = ( "EL2 ExtLtg DayShape (Jan) (Copy)", 
+                   "EL2 ExtLtg DayShape (Feb) (Copy)", 
+                   "EL2 ExtLtg DayShape (Mar) (Copy)", 
+                   "EL2 ExtLtg DayShape (Apr) (Copy)", 
+                   "EL2 ExtLtg DayShape (May) (Copy)", 
+                   "EL2 ExtLtg DayShape (Jun) (Copy)", 
+                   "EL2 ExtLtg DayShape (Jul) (Copy)", 
+                   "EL2 ExtLtg DayShape (Aug) (Copy)", 
+                   "EL2 ExtLtg DayShape (Sep) (Copy)", 
+                   "EL2 ExtLtg DayShape (Oct) (Copy)", 
+                   "EL2 ExtLtg DayShape (Nov) (Copy)", 
+                   "EL2 ExtLtg DayShape (Dec) (Copy)" )
+   OEShape = ( "EL2 OffEq Profile (S1) (Copy)", 
+               "EL2 OffEq Profile (S2) (Copy)", 
+               "EL2 OffEq Profile (S3) (Copy)" )
+   CEShape = ( "EL2 CookEq Profile (S1) (Copy)", 
+               "EL2 CookEq Profile (S2) (Copy)", 
+               "EL2 CookEq Profile (S3) (Copy)" )
+   MiscShape = ( "EL2 Misc Profile (S1) (Copy)", 
+                 "EL2 Misc Profile (S2) (Copy)", 
+                 "EL2 Misc Profile (S3) (Copy)" )
+   RFDayShapes = ( "EL2 Refrig DayShape (Jan) (Copy)", 
+                   "EL2 Refrig DayShape (Feb) (Copy)", 
+                   "EL2 Refrig DayShape (Mar) (Copy)", 
+                   "EL2 Refrig DayShape (Apr) (Copy)", 
+                   "EL2 Refrig DayShape (May) (Copy)", 
+                   "EL2 Refrig DayShape (Jun) (Copy)", 
+                   "EL2 Refrig DayShape (Jul) (Copy)", 
+                   "EL2 Refrig DayShape (Aug) (Copy)", 
+                   "EL2 Refrig DayShape (Sep) (Copy)", 
+                   "EL2 Refrig DayShape (Oct) (Copy)", 
+                   "EL2 Refrig DayShape (Nov) (Copy)", 
+                   "EL2 Refrig DayShape (Dec) (Copy)" )
+   DHWShape = ( "EL2 DHW Profile (S1) (Copy)", 
+                "EL2 DHW Profile (S2) (Copy)", 
+                "EL2 DHW Profile (S3) (Copy)" )
+   SCRShape = ( "EL2 S-C Refrig Profile (S1) (Copy)", 
+                "EL2 S-C Refrig Profile (S2) (Copy)", 
+                "EL2 S-C Refrig Profile (S3) (Copy)" )
+   DaylitAreaCurrent[3] = 1
+   HasPitchedRoof = 0
    RoofZoneErrorCode = 4
+   RoofEndIsGable[1] = 1
+   RoofEndIsGable[3] = 1
    ..
 
-ZnGrpWiz   "EL2 Ground Floor Core"  
-   ShortName = "GndCor"
+ShapeWiz   "EL2 InsLtg Profile (S1) (Copy)"  
    ..
 
-ZnGrpWiz   "EL2 Ground Floor Perimeter"  
-   ShortName = "GndPrm"
+ShapeWiz   "EL2 InsLtg Profile (S2) (Copy)"  
    ..
 
-ZnGrpWiz   "EL2 Typical Floor(s) Core"  
-   ShortName = "TypCor"
+ShapeWiz   "EL2 InsLtg Profile (S3) (Copy)"  
    ..
 
-ZnGrpWiz   "EL2 Typical Floor(s) Perimeter"  
-   ShortName = "TypPrm"
+DayShape   "EL2 ExtLtg DayShape (Jan) (Copy)"  
    ..
 
-ZnGrpWiz   "EL2 Top Floor Core"  
-   ShortName = "TopCor"
+DayShape   "EL2 ExtLtg DayShape (Feb) (Copy)"  
    ..
 
-ZnGrpWiz   "EL2 Top Floor Perimeter"  
-   ShortName = "TopPrm"
+DayShape   "EL2 ExtLtg DayShape (Mar) (Copy)"  
    ..
 
-ShapeWiz   "EL2 InsLtg Profile (S1) 22"  
+DayShape   "EL2 ExtLtg DayShape (Apr) (Copy)"  
    ..
 
-ShapeWiz   "EL2 InsLtg Profile (S2) 23"  
+DayShape   "EL2 ExtLtg DayShape (May) (Copy)"  
    ..
 
-ShapeWiz   "EL2 InsLtg Profile (S3) 24"  
+DayShape   "EL2 ExtLtg DayShape (Jun) (Copy)"  
    ..
 
-DayShape   "EL2 ExtLtg DayShape (Jan) 25"  
+DayShape   "EL2 ExtLtg DayShape (Jul) (Copy)"  
    ..
 
-DayShape   "EL2 ExtLtg DayShape (Feb) 26"  
+DayShape   "EL2 ExtLtg DayShape (Aug) (Copy)"  
    ..
 
-DayShape   "EL2 ExtLtg DayShape (Mar) 27"  
+DayShape   "EL2 ExtLtg DayShape (Sep) (Copy)"  
    ..
 
-DayShape   "EL2 ExtLtg DayShape (Apr) 28"  
+DayShape   "EL2 ExtLtg DayShape (Oct) (Copy)"  
    ..
 
-DayShape   "EL2 ExtLtg DayShape (May) 29"  
+DayShape   "EL2 ExtLtg DayShape (Nov) (Copy)"  
    ..
 
-DayShape   "EL2 ExtLtg DayShape (Jun) 30"  
+DayShape   "EL2 ExtLtg DayShape (Dec) (Copy)"  
    ..
 
-DayShape   "EL2 ExtLtg DayShape (Jul) 31"  
+ShapeWiz   "EL2 OffEq Profile (S1) (Copy)"  
    ..
 
-DayShape   "EL2 ExtLtg DayShape (Aug) 32"  
+ShapeWiz   "EL2 OffEq Profile (S2) (Copy)"  
    ..
 
-DayShape   "EL2 ExtLtg DayShape (Sep) 33"  
+ShapeWiz   "EL2 OffEq Profile (S3) (Copy)"  
    ..
 
-DayShape   "EL2 ExtLtg DayShape (Oct) 34"  
+ShapeWiz   "EL2 CookEq Profile (S1) (Copy)"  
    ..
 
-DayShape   "EL2 ExtLtg DayShape (Nov) 35"  
+ShapeWiz   "EL2 CookEq Profile (S2) (Copy)"  
    ..
 
-DayShape   "EL2 ExtLtg DayShape (Dec) 36"  
+ShapeWiz   "EL2 CookEq Profile (S3) (Copy)"  
    ..
 
-ShapeWiz   "EL2 OffEq Profile (S1) 25"  
+DayShape   "EL2 Refrig DayShape (Jan) (Copy)"  
    ..
 
-ShapeWiz   "EL2 OffEq Profile (S2) 26"  
+DayShape   "EL2 Refrig DayShape (Feb) (Copy)"  
    ..
 
-ShapeWiz   "EL2 OffEq Profile (S3) 27"  
+DayShape   "EL2 Refrig DayShape (Mar) (Copy)"  
    ..
 
-ShapeWiz   "EL2 CookEq Profile (S1) 28"  
+DayShape   "EL2 Refrig DayShape (Apr) (Copy)"  
    ..
 
-ShapeWiz   "EL2 CookEq Profile (S2) 29"  
+DayShape   "EL2 Refrig DayShape (May) (Copy)"  
    ..
 
-ShapeWiz   "EL2 CookEq Profile (S3) 30"  
+DayShape   "EL2 Refrig DayShape (Jun) (Copy)"  
    ..
 
-DayShape   "EL2 Refrig DayShape (Jan) 37"  
+DayShape   "EL2 Refrig DayShape (Jul) (Copy)"  
    ..
 
-DayShape   "EL2 Refrig DayShape (Feb) 38"  
+DayShape   "EL2 Refrig DayShape (Aug) (Copy)"  
    ..
 
-DayShape   "EL2 Refrig DayShape (Mar) 39"  
+DayShape   "EL2 Refrig DayShape (Sep) (Copy)"  
    ..
 
-DayShape   "EL2 Refrig DayShape (Apr) 40"  
+DayShape   "EL2 Refrig DayShape (Oct) (Copy)"  
    ..
 
-DayShape   "EL2 Refrig DayShape (May) 41"  
+DayShape   "EL2 Refrig DayShape (Nov) (Copy)"  
    ..
 
-DayShape   "EL2 Refrig DayShape (Jun) 42"  
+DayShape   "EL2 Refrig DayShape (Dec) (Copy)"  
    ..
 
-DayShape   "EL2 Refrig DayShape (Jul) 43"  
+ShapeWiz   "EL2 Misc Profile (S1) (Copy)"  
    ..
 
-DayShape   "EL2 Refrig DayShape (Aug) 44"  
+ShapeWiz   "EL2 Misc Profile (S2) (Copy)"  
    ..
 
-DayShape   "EL2 Refrig DayShape (Sep) 45"  
+ShapeWiz   "EL2 Misc Profile (S3) (Copy)"  
    ..
 
-DayShape   "EL2 Refrig DayShape (Oct) 46"  
+ShapeWiz   "EL2 DHW Profile (S1) (Copy)"  
    ..
 
-DayShape   "EL2 Refrig DayShape (Nov) 47"  
+ShapeWiz   "EL2 DHW Profile (S2) (Copy)"  
    ..
 
-DayShape   "EL2 Refrig DayShape (Dec) 48"  
+ShapeWiz   "EL2 DHW Profile (S3) (Copy)"  
    ..
 
-ShapeWiz   "EL2 Misc Profile (S1) 31"  
+ShapeWiz   "EL2 Occup Profile (S1) (Copy)"  
    ..
 
-ShapeWiz   "EL2 Misc Profile (S2) 32"  
+ShapeWiz   "EL2 Occup Profile (S2) (Copy)"  
    ..
 
-ShapeWiz   "EL2 Misc Profile (S3) 33"  
+ShapeWiz   "EL2 Occup Profile (S3) (Copy)"  
    ..
 
-ShapeWiz   "EL2 DHW Profile (S1) 34"  
+ShapeWiz   "EL2 S-C Refrig Profile (S1) (Copy)"  
    ..
 
-ShapeWiz   "EL2 DHW Profile (S2) 35"  
+ShapeWiz   "EL2 S-C Refrig Profile (S2) (Copy)"  
    ..
 
-ShapeWiz   "EL2 DHW Profile (S3) 36"  
+ShapeWiz   "EL2 S-C Refrig Profile (S3) (Copy)"  
    ..
 
-ShapeWiz   "EL2 Occup Profile (S1) 37"  
+CustomZone   "EL2 Custom Zone 2"  
+   NumVerts = 4
+   X[1] = 50
+   X[2] = 50
+   X[3] = 110
+   X[4] = 110
+   Y[1] = 50
+   Y[2] = 5
+   Y[3] = 5
+   Y[4] = 50
    ..
 
-ShapeWiz   "EL2 Occup Profile (S2) 38"  
+CustomZone   "EL2 Custom Zone 3"  
+   NumVerts = 4
+   X[1] = 110
+   X[2] = 110
+   X[3] = 230
+   X[4] = 230
+   Y[1] = 50
+   Y[2] = 5
+   Y[3] = 5
+   Y[4] = 50
    ..
 
-ShapeWiz   "EL2 Occup Profile (S3) 39"  
+CustomZone   "EL2 Custom Zone 4"  
+   NumVerts = 4
+   X[1] = 125
+   X[2] = 185
+   X[3] = 185
+   X[4] = 125
+   Y[1] = 50
+   Y[2] = 50
+   Y[3] = 95
+   Y[4] = 95
    ..
 
-ShapeWiz   "EL2 S-C Refrig Profile (S1) 40"  
+CustomZone   "EL2 Custom Zone 5"  
+   NumVerts = 4
+   X[1] = 175
+   X[2] = 185
+   X[3] = 185
+   X[4] = 175
+   Y[1] = 103.7
+   Y[2] = 103.7
+   Y[3] = 125
+   Y[4] = 125
    ..
 
-ShapeWiz   "EL2 S-C Refrig Profile (S2) 41"  
+CustomZone   "EL2 Custom Zone 6"  
+   NumVerts = 4
+   X[1] = 175
+   X[2] = 150
+   X[3] = 150
+   X[4] = 175
+   Y[1] = 125
+   Y[2] = 125
+   Y[3] = 103.7
+   Y[4] = 103.7
    ..
 
-ShapeWiz   "EL2 S-C Refrig Profile (S3) 42"  
+CustomZone   "EL2 Custom Zone 7"  
+   NumVerts = 4
+   X[1] = 125
+   X[2] = 125
+   X[3] = 150
+   X[4] = 150
+   Y[1] = 125
+   Y[2] = 103.7
+   Y[3] = 103.7
+   Y[4] = 125
+   ..
+
+CustomZone   "EL2 Custom Zone 8"  
+   NumVerts = 4
+   X[1] = 119
+   X[2] = 77
+   X[3] = 77
+   X[4] = 119
+   Y[1] = 125
+   Y[2] = 125
+   Y[3] = 95
+   Y[4] = 95
+   ..
+
+CustomZone   "EL2 Custom Zone 9"  
+   NumVerts = 4
+   X[1] = 77
+   X[2] = 35
+   X[3] = 35
+   X[4] = 77
+   Y[1] = 125
+   Y[2] = 125
+   Y[3] = 95
+   Y[4] = 95
+   ..
+
+RoofZoneDup   "RoofZone Dup 1"  
+   NumVerts = 4
+   X[1] = 0
+   X[2] = 0
+   X[3] = 235
+   X[4] = 235
+   Y[1] = 130
+   Y[2] = 0
+   Y[3] = 0
+   Y[4] = 130
+   Volume = 205164
+   PeakHt = 27.9785
+   PolyArea = 21600
+   GableArea = 0
+   EdgeNumVerts = 8
+   EdgeX[1] = 5
+   EdgeX[2] = 5
+   EdgeX[3] = 50
+   EdgeX[4] = 50
+   EdgeX[5] = 230
+   EdgeX[6] = 230
+   EdgeX[7] = 185
+   EdgeX[8] = 185
+   EdgeY[1] = 125
+   EdgeY[2] = 50
+   EdgeY[3] = 50
+   EdgeY[4] = 5
+   EdgeY[5] = 5
+   EdgeY[6] = 50
+   EdgeY[7] = 50
+   EdgeY[8] = 125
+   ..
+
+CustomZone   "Custom Zone 20"  
+   NumVerts = 6
+   X[1] = 5
+   X[2] = 5
+   X[3] = 125
+   X[4] = 125
+   X[5] = 35
+   X[6] = 35
+   Y[1] = 125
+   Y[2] = 50
+   Y[3] = 50
+   Y[4] = 95
+   Y[5] = 95
+   Y[6] = 125
+   ..
+
+CustomZone   "Custom Zone 23"  
+   NumVerts = 6
+   X[1] = 119
+   X[2] = 119
+   X[3] = 185
+   X[4] = 185
+   X[5] = 125
+   X[6] = 125
+   Y[1] = 125
+   Y[2] = 95
+   Y[3] = 95
+   Y[4] = 103.7
+   Y[5] = 103.7
+   Y[6] = 125
+   ..
+
+ZnGrpWiz   "classroom-first-floor"  
+   ActAreaPct[1] = 100
+   ShortName = "GndFlr"
+   AssignedSystem = "HVAC System 1"
+   ..
+
+ZnGrpWiz   "rec-space-first-floor"  
+   ActAreaPct[3] = 100
+   ShortName = "GndFlr"
+   AssignedSystem = "HVAC System 1"
+   ..
+
+ZnGrpWiz   "lab-first-floor"  
+   ActAreaPct[2] = 100
+   ShortName = "GndFlr"
+   ..
+
+ZnGrpWiz   "restroom-first-floor"  
+   ActAreaPct[4] = 100
+   ShortName = "GndFlr"
+   ..
+
+ZnGrpWiz   "mep-first-floor"  
+   ActAreaPct[7] = 100
+   ShortName = "GndFlr"
+   ..
+
+ZnGrpWiz   "atrium-first-floor"  
+   ActAreaPct[5] = 60
+   ActAreaPct[6] = 20
+   ActAreaPct[8] = 20
+   ShortName = "GndFlr"
+   ..
+
+ZnGrpWiz   "corridor-first-floor"  
+   ActAreaPct[8] = 100
+   ShortName = "GndFlr"
+   ..
+
+ZnGrpWiz   "classroom-upper-first-floor"  
+   ActAreaPct[1] = 100
+   ShortName = "GndFlr"
    ..
 
 DiagData   "Bldg Envelope & Loads 1 Diag Data"  
@@ -780,9 +1180,33 @@ DiagData   "first-floor Diag Data"
 DiagData   "first-floor-atrium Diag Data"  
    ..
 
+DiagData   "firstFloor Diag Data"  
+   PolyWndShowGrid = 0
+   PolyWndGridRes = 2
+   PolyWndLwrLeftX = -12
+   PolyWndLwrLeftY = -3
+   PolyWndWidth = 259.667
+   PolyWndSnapOrder[3] = 0
+   ShowCADLayer[1] = 1
+   ShowCADLayer[2] = 1
+   CADFileComp = "firstFloor-Zoning - DWG 4"
+   ..
+
+DiagData   "EL2 firstFloor Diag Data"  
+   PolyWndShowGrid = 0
+   PolyWndGridRes = 2
+   PolyWndLwrLeftX = -12
+   PolyWndLwrLeftY = -3
+   PolyWndWidth = 259.667
+   PolyWndSnapOrder = ( 2, 1, 0 )
+   ShowCADLayer[1] = 1
+   ShowCADLayer[2] = 1
+   CADFileComp = "firstFloor-Zoning - DWG 4"
+   ..
+
 CADFile   "firstFloor-Zoning - DWG"  
-   FileName = "D:\RBGB\howtoEnergyModel\EnergyModel\baseDWG\firstFloor-Zoning.dwg"
-   FilePathOffset = 0
+   FileName = "baseDWG\firstFloor-Zoning.dwg"
+   FilePathOffset = 2
    ScaleUnits = 1
    ScaleValue = 1
    OriginX = 0
@@ -791,8 +1215,28 @@ CADFile   "firstFloor-Zoning - DWG"
    ..
 
 CADFile   "firstFloor-Zoning - DWG 2"  
-   FileName = "D:\RBGB\howtoEnergyModel\EnergyModel\baseDWG\firstFloor-Zoning.dwg"
-   FilePathOffset = 0
+   FileName = "baseDWG\firstFloor-Zoning.dwg"
+   FilePathOffset = 2
+   ScaleUnits = 1
+   ScaleValue = 1
+   OriginX = 0
+   OriginY = 0
+   Azimuth = 0
+   ..
+
+CADFile   "firstFloor-Zoning - DWG 3"  
+   FileName = "baseDWG\firstFloor-Zoning.dwg"
+   FilePathOffset = 2
+   ScaleUnits = 1
+   ScaleValue = 1
+   OriginX = 0
+   OriginY = 0
+   Azimuth = 0
+   ..
+
+CADFile   "firstFloor-Zoning - DWG 4"  
+   FileName = "baseDWG\firstFloor-Zoning.dwg"
+   FilePathOffset = 2
    ScaleUnits = 1
    ScaleValue = 1
    OriginX = 0
@@ -802,6 +1246,16 @@ CADFile   "firstFloor-Zoning - DWG 2"
 
 HVACWiz   "HVAC System 1"  
    ScreenIDArrIdx = 0
+   HeatSource[1] = "Electric Resistance"
+   HVACSysType[1] = "Packaged VAV with Elec Reheat"
+   SystemPerWhat[1] = "System per Zone"
+   ..
+
+HVACWiz   "HVAC System 2"  
+   ScreenIDArrIdx = 0
+   HeatSource[1] = "Electric Resistance"
+   HVACSysType[1] = "Packaged VAV with Elec Reheat"
+   SystemPerWhat[1] = "System per Site"
    ..
 
 DXCWWiz   "Water-Cooled DX System"  

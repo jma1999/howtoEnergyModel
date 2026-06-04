@@ -1,0 +1,88 @@
+
+Start DOESIM : Storage capacity =  75000000
+Starting LOADS   : SAVE-FILES is On , weather is Atlanta      GA TMY2
+Finished LOADS    BDL  7 : Memory (wds) =     97581, Time (sec) =    1.27
+Starting REPORT  
+Finished REPORT   BDL  7 : Memory (wds) =    207789, Time (sec) =    0.14
+Starting HVAC    : SAVE-FILES is On , weather is Atlanta      GA TMY2
+Finished HVAC     BDL  7 : Memory (wds) =    190924, Time (sec) =    0.87
+Starting REPORT  
+Finished REPORT   BDL  7 : Memory (wds) =    322066, Time (sec) =    0.18
+Starting HOURLY-R
+Finished HOURLY-R BDL  7 : Memory (wds) =    468793, Time (sec) =    0.34
+Starting ECONOMIC
+Finished ECONOMIC BDL  7 : Memory (wds) =      3398, Time (sec) =    0.39
+Starting REPORT  
+Finished REPORT   BDL  7 : Memory (wds) =      5025, Time (sec) =    0.03
+End   DOESIM : Total elapsed time of      3.2 seconds
+
+Start DOESIM : Storage capacity =  75000000
+Starting LOADS   : SAVE-FILES is On , weather is Atlanta      GA TMY2
+Finished LOADS    BDL 11 : Memory (wds) =     96978, Time (sec) =    1.00
+Starting REPORT  
+Finished REPORT   BDL 11 : Memory (wds) =    204481, Time (sec) =    0.13
+Starting HVAC    : SAVE-FILES is On , weather is Atlanta      GA TMY2
+Finished HVAC     BDL 11 : Memory (wds) =    188987, Time (sec) =    0.76
+Starting REPORT  
+Finished REPORT   BDL 11 : Memory (wds) =    320096, Time (sec) =    0.15
+Starting HOURLY-R
+Finished HOURLY-R BDL 11 : Memory (wds) =    466856, Time (sec) =    0.33
+Starting ECONOMIC
+Finished ECONOMIC BDL 11 : Memory (wds) =      3398, Time (sec) =    0.40
+Starting REPORT  
+Finished REPORT   BDL 11 : Memory (wds) =      5025, Time (sec) =    0.03
+End   DOESIM : Total elapsed time of      2.8 seconds
+
+Start DOESIM : Storage capacity =  75000000
+Starting LOADS   : SAVE-FILES is On , weather is Atlanta      GA TMY2
+Finished LOADS    BDL 13 : Memory (wds) =     80211, Time (sec) =    1.05
+Starting REPORT  
+Finished REPORT   BDL 13 : Memory (wds) =    166171, Time (sec) =    0.11
+Starting HVAC    : SAVE-FILES is On , weather is Atlanta      GA TMY2
+*** ERRORS or WARNINGS from HVAC     program. Examine output file for details.
+Finished HVAC     BDL 13 : Memory (wds) =    126026, Time (sec) =    0.62
+Starting REPORT  
+Finished REPORT   BDL 13 : Memory (wds) =    166580, Time (sec) =    0.06
+Starting HOURLY-R
+Finished HOURLY-R BDL 13 : Memory (wds) =    403895, Time (sec) =    0.32
+Starting ECONOMIC
+Finished ECONOMIC BDL 13 : Memory (wds) =      3398, Time (sec) =    0.41
+Starting REPORT  
+Finished REPORT   BDL 13 : Memory (wds) =      5025, Time (sec) =    0.03
+End   DOESIM : Total elapsed time of      2.6 seconds
+
+Start DOESIM : Storage capacity =  75000000
+Starting LOADS   : SAVE-FILES is On , weather is Atlanta      GA TMY2
+Finished LOADS    BDL 14 : Memory (wds) =     80211, Time (sec) =    0.91
+Starting REPORT  
+Finished REPORT   BDL 14 : Memory (wds) =    166171, Time (sec) =    0.13
+Starting HVAC    : SAVE-FILES is On , weather is Atlanta      GA TMY2
+*** ERRORS or WARNINGS from HVAC     program. Examine output file for details.
+Finished HVAC     BDL 14 : Memory (wds) =    126026, Time (sec) =    0.61
+Starting REPORT  
+Finished REPORT   BDL 14 : Memory (wds) =    166580, Time (sec) =    0.07
+Starting HOURLY-R
+Finished HOURLY-R BDL 14 : Memory (wds) =    403895, Time (sec) =    0.31
+Starting ECONOMIC
+Finished ECONOMIC BDL 14 : Memory (wds) =      3398, Time (sec) =    0.40
+Starting REPORT  
+Finished REPORT   BDL 14 : Memory (wds) =      5025, Time (sec) =    0.02
+End   DOESIM : Total elapsed time of      2.5 seconds
+
+Start DOESIM : Storage capacity =  75000000
+Starting LOADS   : SAVE-FILES is On , weather is Atlanta      GA TMY2
+Finished LOADS    BDL 15 : Memory (wds) =     86111, Time (sec) =    0.90
+Starting REPORT  
+Finished REPORT   BDL 15 : Memory (wds) =    189209, Time (sec) =    0.12
+Starting HVAC    : SAVE-FILES is On , weather is Atlanta      GA TMY2
+*** ERRORS or WARNINGS from HVAC     program. Examine output file for details.
+Finished HVAC     BDL 15 : Memory (wds) =    145952, Time (sec) =    0.69
+Starting REPORT  
+Finished REPORT   BDL 15 : Memory (wds) =    193703, Time (sec) =    0.08
+Starting HOURLY-R
+Finished HOURLY-R BDL 15 : Memory (wds) =    423821, Time (sec) =    0.31
+Starting ECONOMIC
+Finished ECONOMIC BDL 15 : Memory (wds) =      3648, Time (sec) =    0.38
+Starting REPORT  
+Finished REPORT   BDL 15 : Memory (wds) =      5275, Time (sec) =    0.03
+End   DOESIM : Total elapsed time of      2.5 seconds
