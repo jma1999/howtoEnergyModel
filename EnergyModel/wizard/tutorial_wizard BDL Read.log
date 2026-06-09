@@ -1,541 +1,400 @@
-Line    21:  Title
-Line    25:  Run Period:  Entire Year
-Line    35:  Holidays:  Standard US Holidays
-Line    44:  Compliance Data:  Compliance Data
-Line    60:  Site Parameters:  Site Data
-Line    68:  Building Parameters:  Building Data
-Line    74:  Project Data
-Line    82:  Material:  EL1 EWall Cons Mat 2 (11.7)
-Line    86:  Material:  EL1 Roof Cons Mat 4 (2.8)
-Line    90:  Material:  EL1 IWall Cons Mat 2 (4.5)
-Line    94:  Material:  EL2 UFlr Cons Mat 1 (10.47)
-Line    98:  Material:  EL1 UFMat (G.SW1.U2.M1)
-Line   102:  Material:  EL1 UFMat (G.SW2.U3.M1)
-Line   106:  Material:  EL1 UFMat (G.E4.U5.M1)
-Line   110:  Material:  EL1 UFMat (G.ENE5.U6.M1)
-Line   114:  Material:  EL1 UFMat (G.N6.U7.M1)
-Line   118:  Material:  EL1 UFMat (G.N8.U9.M1)
-Line   122:  Material:  EL1 UFMat (G.C10.U11.M1)
-Line   127:  Layers:  EL1 EWall Cons Layers
-Line   131:  Layers:  EL1 Roof Cons Layers
-Line   135:  Layers:  EL1 Ceilg Cons Layers
-Line   138:  Layers:  EL1 IWall Cons Layers
-Line   142:  Layers:  EL1 IFlr Cons Layers
-Line   145:  Layers:  EL2 IFlr Cons Layers
-Line   148:  Layers:  EL2 GFlr Cons Layers
-Line   152:  Layers:  EL1 UFLyrs (G.SW1.U2)
-Line   156:  Layers:  EL1 UFLyrs (G.SW2.U3)
-Line   160:  Layers:  EL1 UFLyrs (G.E4.U5)
-Line   164:  Layers:  EL1 UFLyrs (G.ENE5.U6)
-Line   168:  Layers:  EL1 UFLyrs (G.N6.U7)
-Line   172:  Layers:  EL1 UFLyrs (G.N8.U9)
-Line   176:  Layers:  EL1 UFLyrs (G.C10.U11)
-Line   181:  Construction:  EL1 EWall Construction
-Line   187:  Construction:  EL1 Roof Construction
-Line   193:  Construction:  EL1 Ceilg Construction
-Line   197:  Construction:  EL1 IWall Construction
-Line   201:  Construction:  EL1 IFlr Construction
-Line   205:  Construction:  EL1 IFlSP Construction
-Line   209:  Construction:  EL2 IFlr Construction
-Line   213:  Construction:  EL2 GFlr Construction
-Line   217:  Construction:  EL2 IFlSP Construction
-Line   221:  Construction:  EL2 GFlSP Construction
-Line   225:  Construction:  EL1 UFCons (G.SW1.U2)
-Line   229:  Construction:  EL1 UFCons (G.SW2.U3)
-Line   233:  Construction:  EL1 UFCons (G.E4.U5)
-Line   237:  Construction:  EL1 UFCons (G.ENE5.U6)
-Line   241:  Construction:  EL1 UFCons (G.N6.U7)
-Line   245:  Construction:  EL1 UFCons (G.N8.U9)
-Line   249:  Construction:  EL1 UFCons (G.C10.U11)
-Line   265:  Glass Type:  EL1 Window Type #1 GT
-Line   298:  Day Schedule:  EL1 Bldg Occup S1 All
-Line   303:  Day Schedule:  EL1 Bldg Occup S2 WD
-Line   309:  Day Schedule:  EL1 Bldg Occup S2 HDD
-Line   313:  Day Schedule:  EL1 Bldg InsLt S1 All
-Line   319:  Day Schedule:  EL1 Bldg InsLt S2 WD
-Line   325:  Day Schedule:  EL1 Bldg InsLt S2 HDD
-Line   329:  Day Schedule:  EL1 Bldg OffEq S1 All
-Line   333:  Day Schedule:  EL1 Bldg OffEq S2 WD
-Line   339:  Day Schedule:  EL1 Bldg OffEq S2 HDD
-Line   343:  Day Schedule:  EL1 Bldg SCRfg S1 All
-Line   349:  Day Schedule:  EL1 Bldg SCRfg S2 WD
-Line   355:  Day Schedule:  EL1 Bldg SCRfg S2 HDD
-Line   359:  Day Schedule:  EL1 Bldg Cook S1 All
-Line   365:  Day Schedule:  EL1 Bldg Cook S2 WD
-Line   371:  Day Schedule:  EL1 Bldg Cook S2 HDD
-Line   375:  Day Schedule:  EL1 Bldg Misc S1 All
-Line   380:  Day Schedule:  EL1 Bldg Misc S2 WD
-Line   386:  Day Schedule:  EL1 Bldg Misc S2 HDD
-Line   390:  Day Schedule:  DHW Eqp NRes W1 All
-Line   394:  Day Schedule:  DHW Eqp NRes W2 WD
-Line   400:  Day Schedule:  DHW Eqp NRes W2 HDD
-Line   404:  Day Schedule:  ZG0-S1 (PVAVS) P-Inf S1 All
-Line   408:  Day Schedule:  ZG0-S1 (PVAVS) P-Inf S2 WD
-Line   414:  Day Schedule:  ZG0-S1 (PVAVS) P-Inf S2 HDD
-Line   419:  Day Schedule:  ZG0-S1 (PVAVS) C-Inf S1 All
-Line   423:  Day Schedule:  ZG0-S1 (PVAVS) C-Inf S2 WD
-Line   428:  Day Schedule:  S1 Sys1 (PVAVS) Fan S1 All
-Line   432:  Day Schedule:  S1 Sys1 (PVAVS) Fan S2 WD
-Line   437:  Day Schedule:  S1 Sys1 (PVAVS) Cool S1 All
-Line   441:  Day Schedule:  S1 Sys1 (PVAVS) Cool S2 WD
-Line   446:  Day Schedule:  S1 Sys1 (PVAVS) Heat S1 All
-Line   450:  Day Schedule:  S1 Sys1 (PVAVS) Heat S2 WD
-Line   455:  Day Schedule:  S1EL1 Sys1 (PVAVS) (G.SW2) CRS-D
-Line   462:  Day Schedule:  SEL1 Sys1 (PVAVS) (G.SSE3) CRS-D
-Line   469:  Day Schedule:  S1EL2 Sys1 (PVAVS) (G.SW1) CRS-D
-Line   476:  Day Schedule:  SEL2 Sys1 (PVAVS) (G.SSE2) CRS-D
-Line   483:  Day Schedule:  S2 S2 Sys (PVAVS) CRS-D
-Line   490:  Day Schedule:  Cust 1 Elec Seas1 Day
-Line   499:  Week Schedule:  EL1 Bldg Occup S1 Wk
-Line   503:  Week Schedule:  EL1 Bldg Occup S2 Wk
-Line   508:  Week Schedule:  EL1 Bldg InsLt S1 Wk
-Line   512:  Week Schedule:  EL1 Bldg InsLt S2 Wk
-Line   517:  Week Schedule:  EL1 Bldg OffEq S1 Wk
-Line   521:  Week Schedule:  EL1 Bldg OffEq S2 Wk
-Line   526:  Week Schedule:  EL1 Bldg SCRfg S1 Wk
-Line   530:  Week Schedule:  EL1 Bldg SCRfg S2 Wk
-Line   535:  Week Schedule:  EL1 Bldg Cook S1 Wk
-Line   539:  Week Schedule:  EL1 Bldg Cook S2 Wk
-Line   544:  Week Schedule:  EL1 Bldg Misc S1 Wk
-Line   548:  Week Schedule:  EL1 Bldg Misc S2 Wk
-Line   553:  Week Schedule:  DHW Eqp NRes Wk1
-Line   557:  Week Schedule:  DHW Eqp NRes Wk2
-Line   562:  Week Schedule:  ZG0-S1 (PVAVS) P-Inf S1 Wk
-Line   566:  Week Schedule:  ZG0-S1 (PVAVS) P-Inf S2 Wk
-Line   572:  Week Schedule:  ZG0-S1 (PVAVS) C-Inf S1 Wk
-Line   576:  Week Schedule:  ZG0-S1 (PVAVS) C-Inf S2 Wk
-Line   581:  Week Schedule:  S1 Sys1 (PVAVS) Fan S1 Wk
-Line   585:  Week Schedule:  S1 Sys1 (PVAVS) Fan S2 Wk
-Line   590:  Week Schedule:  S1 Sys1 (PVAVS) Cool S1 Wk
-Line   594:  Week Schedule:  S1 Sys1 (PVAVS) Cool S2 Wk
-Line   599:  Week Schedule:  S1 Sys1 (PVAVS) Heat S1 Wk
-Line   603:  Week Schedule:  S1 Sys1 (PVAVS) Heat S2 Wk
-Line   608:  Week Schedule:  S1EL1 Sys1 (PVAVS) (G.SW2) CRS-W
-Line   612:  Week Schedule:  SEL1 Sys1 (PVAVS) (G.SSE3) CRS-W
-Line   616:  Week Schedule:  S1EL2 Sys1 (PVAVS) (G.SW1) CRS-W
-Line   620:  Week Schedule:  SEL2 Sys1 (PVAVS) (G.SSE2) CRS-W
-Line   624:  Week Schedule:  S2 S2 Sys (PVAVS) CRS-W
-Line   628:  Week Schedule:  Cust 1 Elec Seas1 Week
-Line   637:  Annual Schedule:  EL1 Bldg Occup Sch
-Line   647:  Annual Schedule:  EL1 Bldg InsLt Sch
-Line   657:  Annual Schedule:  EL1 Bldg OffEq Sch
-Line   667:  Annual Schedule:  EL1 Bldg SCRfg Sch
-Line   677:  Annual Schedule:  EL1 Bldg Cook Sch
-Line   686:  Annual Schedule:  EL1 Bldg Misc Sch
-Line   695:  Annual Schedule:  DHW Eqp NRes Sch
-Line   704:  Annual Schedule:  ZG0-S1 (PVAVS) P-Inf Sch
-Line   714:  Annual Schedule:  ZG0-S1 (PVAVS) C-Inf Sch
-Line   724:  Annual Schedule:  S1 Sys1 (PVAVS) Fan Sch
-Line   734:  Annual Schedule:  S1 Sys1 (PVAVS) Cool Sch
-Line   744:  Annual Schedule:  S1 Sys1 (PVAVS) Heat Sch
-Line   754:  Annual Schedule:  S1 EL1 Sys1 (PVAVS) (G.SW2) CRS
-Line   760:  Annual Schedule:  S1 EL1 Sys1 (PVAVS) (G.SSE3) CRS
-Line   766:  Annual Schedule:  S1 EL2 Sys1 (PVAVS) (G.SW1) CRS
-Line   772:  Annual Schedule:  S1 EL2 Sys1 (PVAVS) (G.SSE2) CRS
-Line   778:  Annual Schedule:  S2 S2 Sys (PVAVS) CRS
-Line   784:  Annual Schedule:  Cust 1 Elec Season Sched
-Line   796:  Polygon:  EL1 Floor Polygon
-Line   806:  Polygon:  EL1 Space Polygon 1
-Line   812:  Polygon:  EL1 Space Polygon 2
-Line   818:  Polygon:  EL1 Space Polygon 3
-Line   825:  Polygon:  EL1 Space Polygon 4
-Line   831:  Polygon:  EL1 Space Polygon 5
-Line   837:  Polygon:  EL1 Space Polygon 6
-Line   843:  Polygon:  EL1 Space Polygon 7
-Line   849:  Polygon:  EL1 Space Polygon 8
-Line   855:  Polygon:  EL1 Space Polygon 9
-Line   861:  Polygon:  EL1 Space Polygon 10
-Line   869:  Polygon:  EL1 Space Polygon 11
-Line   882:  Polygon:  EL2 Floor Polygon
-Line   892:  Polygon:  EL2 Space Polygon 1
-Line   898:  Polygon:  EL2 Space Polygon 2
-Line   905:  Polygon:  EL2 Space Polygon 3
-Line   911:  Polygon:  EL2 Space Polygon 4
-Line   917:  Polygon:  EL2 Space Polygon 5
-Line   923:  Polygon:  EL2 Space Polygon 6
-Line   929:  Polygon:  EL2 Space Polygon 7
-Line   935:  Polygon:  EL2 Space Polygon 8
-Line   941:  Polygon:  EL2 Space Polygon 9
-Line   952:  Polygon:  EL2 Space Polygon 10
-Line   960:  Polygon:  EL1 Space Polygon 1 - SMirro
-Line   966:  Polygon:  EL1 Space Polygon 2 - SMirro
-Line   972:  Polygon:  EL1 Space Polygon 3 - SMirro
-Line   979:  Polygon:  EL1 Space Polygon 5 - SMirro
-Line   985:  Polygon:  EL1 Space Polygon 8 - SMirro
-Line   991:  Polygon:  EL1 Space Polygon 10 - SMirro
-Line   999:  Polygon:  EL1 Space Polygon 11 - SMirro
-Line  1012:  Polygon:  EL2 Space Polygon 9 - SMirro
-Line  1044:  Baseline:  Baseline Data
-Line  1061:  Floor:  EL1 Ground Flr
-Line  1070:  Space:  EL1 SW Perim Spc (G.SW1)
-Line  1098:  Exterior Wall:  EL1 South Wall (G.SW1.E1)
-Line  1103:  Window:  EL1 South Win (G.SW1.E1.W1)
-Line  1116:  Exterior Wall:  EL1 West Wall (G.SW1.E2)
-Line  1121:  Window:  EL1 West Win (G.SW1.E2.W1)
-Line  1134:  Interior Wall:  EL1 Ceiling (G.SW1.I1)
-Line  1139:  Underground Wall:  EL1 Flr (G.SW1.U1)
-Line  1143:  Space:  EL1 SW Perim Spc (G.SW2)
-Line  1171:  Exterior Wall:  EL1 West Wall (G.SW2.E3)
-Line  1176:  Window:  EL1 West Win (G.SW2.E3.W1)
-Line  1189:  Window:  EL1 West Win (G.SW2.E3.W2)
-Line  1202:  Door:  EL1 West Door (G.SW2.E3.D1)
-Line  1208:  Exterior Wall:  EL1 South Wall (G.SW2.E4)
-Line  1213:  Window:  EL1 South Win (G.SW2.E4.W1)
-Line  1226:  Interior Wall:  EL1 North Wall (G.SW2.I2)
-Line  1231:  Interior Wall:  EL1 Ceiling (G.SW2.I3)
-Line  1236:  Underground Wall:  EL1 Flr (G.SW2.U2)
-Line  1240:  Space:  EL1 SSE Perim Spc (G.SSE3)
-Line  1268:  Exterior Wall:  EL1 East Wall (G.SSE3.E5)
-Line  1273:  Window:  EL1 East Win (G.SSE3.E5.W1)
-Line  1286:  Window:  EL1 East Win (G.SSE3.E5.W2)
-Line  1299:  Door:  EL1 East Door (G.SSE3.E5.D1)
-Line  1305:  Exterior Wall:  EL1 North Wall (G.SSE3.E6)
-Line  1310:  Window:  EL1 North Win (G.SSE3.E6.W1)
-Line  1323:  Exterior Wall:  EL1 South Wall (G.SSE3.E7)
-Line  1328:  Window:  EL1 South Win (G.SSE3.E7.W1)
-Line  1341:  Window:  EL1 South Win (G.SSE3.E7.W2)
-Line  1354:  Door:  EL1 South Door (G.SSE3.E7.D1)
-Line  1360:  Interior Wall:  EL1 West Wall (G.SSE3.I4)
-Line  1365:  Interior Wall:  EL1 Ceiling (G.SSE3.I5)
-Line  1370:  Underground Wall:  EL1 Flr (G.SSE3.U3)
-Line  1374:  Space:  EL1 East Perim Spc (G.E4)
-Line  1402:  Exterior Wall:  EL1 East Wall (G.E4.E8)
-Line  1407:  Window:  EL1 East Win (G.E4.E8.W1)
-Line  1420:  Interior Wall:  EL1 North Wall (G.E4.I6)
-Line  1425:  Interior Wall:  EL1 South Wall (G.E4.I7)
-Line  1430:  Interior Wall:  EL1 Ceiling (G.E4.I8)
-Line  1435:  Underground Wall:  EL1 Flr (G.E4.U4)
-Line  1439:  Space:  EL1 ENE Perim Spc (G.ENE5)
-Line  1467:  Exterior Wall:  EL1 North Wall (G.ENE5.E9)
-Line  1472:  Window:  EL1 North Win (G.ENE5.E9.W1)
-Line  1485:  Exterior Wall:  EL1 East Wall (G.ENE5.E10)
-Line  1490:  Window:  EL1 East Win (G.ENE5.E10.W1)
-Line  1503:  Interior Wall:  EL1 West Wall (G.ENE5.I9)
-Line  1508:  Interior Wall:  EL1 South Wall (G.ENE5.I10)
-Line  1513:  Interior Wall:  EL1 Ceiling (G.ENE5.I11)
-Line  1518:  Underground Wall:  EL1 Flr (G.ENE5.U5)
-Line  1522:  Space:  EL1 North Perim Spc (G.N6)
-Line  1552:  Exterior Wall:  EL1 North Wall (G.N6.E11)
-Line  1557:  Window:  EL1 North Win (G.N6.E11.W1)
-Line  1570:  Interior Wall:  EL1 West Wall (G.N6.I12)
-Line  1575:  Interior Wall:  EL1 South Wall (G.N6.I13)
-Line  1580:  Interior Wall:  EL1 Ceiling (G.N6.I14)
-Line  1585:  Underground Wall:  EL1 Flr (G.N6.U6)
-Line  1589:  Space:  EL1 North Perim Spc (G.N7)
-Line  1619:  Exterior Wall:  EL1 North Wall (G.N7.E12)
-Line  1624:  Window:  EL1 North Win (G.N7.E12.W1)
-Line  1637:  Interior Wall:  EL1 South Wall (G.N7.I15)
-Line  1642:  Interior Wall:  EL1 Ceiling (G.N7.I16)
-Line  1647:  Underground Wall:  EL1 Flr (G.N7.U7)
-Line  1651:  Space:  EL1 North Perim Spc (G.N8)
-Line  1681:  Exterior Wall:  EL1 North Wall (G.N8.E13)
-Line  1686:  Window:  EL1 North Win (G.N8.E13.W1)
-Line  1699:  Interior Wall:  EL1 West Wall (G.N8.I17)
-Line  1704:  Interior Wall:  EL1 South Wall (G.N8.I18)
-Line  1709:  Interior Wall:  EL1 Ceiling (G.N8.I19)
-Line  1714:  Underground Wall:  EL1 Flr (G.N8.U8)
-Line  1718:  Space:  EL1 North Perim Spc (G.N9)
-Line  1748:  Exterior Wall:  EL1 North Wall (G.N9.E14)
-Line  1753:  Window:  EL1 North Win (G.N9.E14.W1)
-Line  1766:  Interior Wall:  EL1 South Wall (G.N9.I20)
-Line  1771:  Interior Wall:  EL1 Ceiling (G.N9.I21)
-Line  1776:  Underground Wall:  EL1 Flr (G.N9.U9)
-Line  1780:  Space:  EL1 Core Spc (G.C10)
-Line  1806:  Exterior Wall:  EL1 East Wall (G.C10.E15)
-Line  1811:  Window:  EL1 East Win (G.C10.E15.W1)
-Line  1824:  Exterior Wall:  EL1 North Wall (G.C10.E16)
-Line  1829:  Window:  EL1 North Win (G.C10.E16.W1)
-Line  1842:  Interior Wall:  EL1 West Wall (G.C10.I22)
-Line  1847:  Interior Wall:  EL1 East Wall (G.C10.I23)
-Line  1852:  Interior Wall:  EL1 Ceiling (G.C10.I24)
-Line  1857:  Underground Wall:  EL1 Flr (G.C10.U10)
-Line  1861:  Space:  EL1 WNW Perim Spc (G.WNW11)
-Line  1889:  Exterior Wall:  EL1 West Wall (G.WNW11.E17)
-Line  1894:  Window:  EL1 West Win (G.WNW11.E17.W1)
-Line  1907:  Exterior Wall:  EL1 South Wall (G.WNW11.E18)
-Line  1912:  Window:  EL1 South Win (G.WNW11.E18.W1)
-Line  1925:  Exterior Wall:  EL1 North Wall (G.WNW11.E19)
-Line  1930:  Window:  EL1 North Win (G.WNW11.E19.W1)
-Line  1943:  Interior Wall:  EL1 South Wall (G.WNW11.I25)
-Line  1948:  Interior Wall:  EL1 West Wall (G.WNW11.I26)
-Line  1953:  Interior Wall:  EL1 South Wall (G.WNW11.I27)
-Line  1958:  Interior Wall:  EL1 East Wall (G.WNW11.I28)
-Line  1963:  Interior Wall:  EL1 North Wall (G.WNW11.I29)
-Line  1968:  Interior Wall:  EL1 East Wall (G.WNW11.I30)
-Line  1973:  Interior Wall:  EL1 Ceiling (G.WNW11.I31)
-Line  1978:  Underground Wall:  EL1 Flr (G.WNW11.U11)
-Line  1982:  Space:  EL1 SW Perim Plnm (G.SW12)
-Line  1994:  Exterior Wall:  EL1 South Wall (G.SW12.E20)
-Line  1999:  Exterior Wall:  EL1 West Wall (G.SW12.E21)
-Line  2004:  Exterior Wall:  EL1 Roof (G.SW12.E22)
-Line  2009:  Space:  EL1 SW Perim Plnm (G.SW13)
-Line  2021:  Exterior Wall:  EL1 West Wall (G.SW13.E23)
-Line  2026:  Exterior Wall:  EL1 South Wall (G.SW13.E24)
-Line  2031:  Exterior Wall:  EL1 Roof (G.SW13.E25)
-Line  2036:  Interior Wall:  EL1 North Wall (G.SW13.I32)
-Line  2041:  Space:  EL1 SSE Perim Plnm (G.SSE14)
-Line  2053:  Exterior Wall:  EL1 East Wall (G.SSE14.E26)
-Line  2058:  Exterior Wall:  EL1 North Wall (G.SSE14.E27)
-Line  2063:  Exterior Wall:  EL1 South Wall (G.SSE14.E28)
-Line  2068:  Exterior Wall:  EL1 Roof (G.SSE14.E29)
-Line  2073:  Interior Wall:  EL1 West Wall (G.SSE14.I33)
-Line  2078:  Space:  EL1 East Perim Plnm (G.E15)
-Line  2090:  Exterior Wall:  EL1 East Wall (G.E15.E30)
-Line  2095:  Exterior Wall:  EL1 Roof (G.E15.E31)
-Line  2100:  Interior Wall:  EL1 North Wall (G.E15.I34)
-Line  2105:  Interior Wall:  EL1 South Wall (G.E15.I35)
-Line  2110:  Space:  EL1 ENE Perim Plnm (G.ENE16)
-Line  2122:  Exterior Wall:  EL1 North Wall (G.ENE16.E32)
-Line  2127:  Exterior Wall:  EL1 East Wall (G.ENE16.E33)
-Line  2132:  Exterior Wall:  EL1 Roof (G.ENE16.E34)
-Line  2137:  Interior Wall:  EL1 West Wall (G.ENE16.I36)
-Line  2142:  Interior Wall:  EL1 South Wall (G.ENE16.I37)
-Line  2147:  Space:  EL1 North Perim Plnm (G.N17)
-Line  2161:  Exterior Wall:  EL1 North Wall (G.N17.E35)
-Line  2166:  Exterior Wall:  EL1 Roof (G.N17.E36)
-Line  2171:  Interior Wall:  EL1 West Wall (G.N17.I38)
-Line  2176:  Interior Wall:  EL1 South Wall (G.N17.I39)
-Line  2181:  Space:  EL1 North Perim Plnm (G.N18)
-Line  2195:  Exterior Wall:  EL1 North Wall (G.N18.E37)
-Line  2200:  Exterior Wall:  EL1 Roof (G.N18.E38)
-Line  2205:  Interior Wall:  EL1 South Wall (G.N18.I40)
-Line  2210:  Space:  EL1 North Perim Plnm (G.N19)
-Line  2224:  Exterior Wall:  EL1 North Wall (G.N19.E39)
-Line  2229:  Exterior Wall:  EL1 Roof (G.N19.E40)
-Line  2234:  Interior Wall:  EL1 West Wall (G.N19.I41)
-Line  2239:  Interior Wall:  EL1 South Wall (G.N19.I42)
-Line  2244:  Space:  EL1 North Perim Plnm (G.N20)
-Line  2258:  Exterior Wall:  EL1 North Wall (G.N20.E41)
-Line  2263:  Exterior Wall:  EL1 Roof (G.N20.E42)
-Line  2268:  Interior Wall:  EL1 South Wall (G.N20.I43)
-Line  2273:  Space:  EL1 Core Plnm (G.C21)
-Line  2287:  Exterior Wall:  EL1 East Wall (G.C21.E43)
-Line  2292:  Exterior Wall:  EL1 North Wall (G.C21.E44)
-Line  2297:  Exterior Wall:  EL1 Roof (G.C21.E45)
-Line  2302:  Interior Wall:  EL1 West Wall (G.C21.I44)
-Line  2307:  Interior Wall:  EL1 East Wall (G.C21.I45)
-Line  2312:  Space:  EL1 WNW Perim Plnm (G.WNW22)
-Line  2324:  Exterior Wall:  EL1 West Wall (G.WNW22.E46)
-Line  2329:  Exterior Wall:  EL1 South Wall (G.WNW22.E47)
-Line  2334:  Exterior Wall:  EL1 North Wall (G.WNW22.E48)
-Line  2339:  Exterior Wall:  EL1 Roof (G.WNW22.E49)
-Line  2344:  Interior Wall:  EL1 South Wall (G.WNW22.I46)
-Line  2349:  Interior Wall:  EL1 West Wall (G.WNW22.I47)
-Line  2354:  Interior Wall:  EL1 South Wall (G.WNW22.I48)
-Line  2359:  Interior Wall:  EL1 East Wall (G.WNW22.I49)
-Line  2364:  Interior Wall:  EL1 North Wall (G.WNW22.I50)
-Line  2369:  Interior Wall:  EL1 East Wall (G.WNW22.I51)
-Line  2374:  Floor:  EL2 Ground Flr
-Line  2384:  Space:  EL2 SW Perim Spc (G.SW1)
-Line  2412:  Exterior Wall:  EL2 West Wall (G.SW1.E1)
-Line  2417:  Window:  EL2 West Win (G.SW1.E1.W1)
-Line  2430:  Exterior Wall:  EL2 South Wall (G.SW1.E2)
-Line  2435:  Window:  EL2 South Win (G.SW1.E2.W1)
-Line  2448:  Interior Wall:  EL2 Flr (G.SW1.I1)
-Line  2453:  Interior Wall:  EL2 North Wall (G.SW1.I2)
-Line  2458:  Interior Wall:  EL2 Ceiling (G.SW1.I3)
-Line  2463:  Space:  EL2 SSE Perim Spc (G.SSE2)
-Line  2491:  Exterior Wall:  EL2 East Wall (G.SSE2.E3)
-Line  2496:  Window:  EL2 East Win (G.SSE2.E3.W1)
-Line  2509:  Exterior Wall:  EL2 North Wall (G.SSE2.E4)
-Line  2514:  Window:  EL2 North Win (G.SSE2.E4.W1)
-Line  2527:  Exterior Wall:  EL2 South Wall (G.SSE2.E5)
-Line  2532:  Window:  EL2 South Win (G.SSE2.E5.W1)
-Line  2545:  Interior Wall:  EL2 Flr (G.SSE2.I4)
-Line  2550:  Interior Wall:  EL2 West Wall (G.SSE2.I5)
-Line  2555:  Interior Wall:  EL2 Ceiling (G.SSE2.I6)
-Line  2560:  Space:  EL2 East Perim Spc (G.E3)
-Line  2588:  Exterior Wall:  EL2 East Wall (G.E3.E6)
-Line  2593:  Window:  EL2 East Win (G.E3.E6.W1)
-Line  2606:  Interior Wall:  EL2 Flr (G.E3.I7)
-Line  2611:  Interior Wall:  EL2 North Wall (G.E3.I8)
-Line  2616:  Interior Wall:  EL2 South Wall (G.E3.I9)
-Line  2621:  Interior Wall:  EL2 Ceiling (G.E3.I10)
-Line  2626:  Space:  EL2 ENE Perim Spc (G.ENE4)
-Line  2654:  Exterior Wall:  EL2 North Wall (G.ENE4.E7)
-Line  2659:  Window:  EL2 North Win (G.ENE4.E7.W1)
-Line  2672:  Exterior Wall:  EL2 East Wall (G.ENE4.E8)
-Line  2677:  Window:  EL2 East Win (G.ENE4.E8.W1)
-Line  2690:  Interior Wall:  EL2 Flr (G.ENE4.I11)
-Line  2695:  Interior Wall:  EL2 West Wall (G.ENE4.I12)
-Line  2700:  Interior Wall:  EL2 South Wall (G.ENE4.I13)
-Line  2705:  Interior Wall:  EL2 Ceiling (G.ENE4.I14)
-Line  2710:  Space:  EL2 North Perim Spc (G.N5)
-Line  2740:  Exterior Wall:  EL2 North Wall (G.N5.E9)
-Line  2745:  Window:  EL2 North Win (G.N5.E9.W1)
-Line  2758:  Interior Wall:  EL2 Flr (G.N5.I15)
-Line  2763:  Interior Wall:  EL2 West Wall (G.N5.I16)
-Line  2768:  Interior Wall:  EL2 South Wall (G.N5.I17)
-Line  2773:  Interior Wall:  EL2 Ceiling (G.N5.I18)
-Line  2778:  Space:  EL2 North Perim Spc (G.N6)
-Line  2808:  Exterior Wall:  EL2 North Wall (G.N6.E10)
-Line  2813:  Window:  EL2 North Win (G.N6.E10.W1)
-Line  2826:  Interior Wall:  EL2 Flr (G.N6.I19)
-Line  2831:  Interior Wall:  EL2 South Wall (G.N6.I20)
-Line  2836:  Interior Wall:  EL2 Ceiling (G.N6.I21)
-Line  2841:  Space:  EL2 North Perim Spc (G.N7)
-Line  2871:  Exterior Wall:  EL2 North Wall (G.N7.E11)
-Line  2876:  Window:  EL2 North Win (G.N7.E11.W1)
-Line  2889:  Interior Wall:  EL2 Flr (G.N7.I22)
-Line  2894:  Interior Wall:  EL2 West Wall (G.N7.I23)
-Line  2899:  Interior Wall:  EL2 South Wall (G.N7.I24)
-Line  2904:  Interior Wall:  EL2 Ceiling (G.N7.I25)
-Line  2909:  Space:  EL2 North Perim Spc (G.N8)
-Line  2939:  Exterior Wall:  EL2 North Wall (G.N8.E12)
-Line  2944:  Window:  EL2 North Win (G.N8.E12.W1)
-Line  2957:  Interior Wall:  EL2 Flr (G.N8.I26)
-Line  2962:  Interior Wall:  EL2 South Wall (G.N8.I27)
-Line  2967:  Interior Wall:  EL2 Ceiling (G.N8.I28)
-Line  2972:  Space:  EL2 WSW Perim Spc (G.WSW9)
-Line  3000:  Exterior Wall:  EL2 West Wall (G.WSW9.E13)
-Line  3005:  Window:  EL2 West Win (G.WSW9.E13.W1)
-Line  3018:  Exterior Wall:  EL2 South Wall (G.WSW9.E14)
-Line  3023:  Window:  EL2 South Win (G.WSW9.E14.W1)
-Line  3036:  Exterior Wall:  EL2 North Wall (G.WSW9.E15)
-Line  3041:  Window:  EL2 North Win (G.WSW9.E15.W1)
-Line  3054:  Interior Wall:  EL2 Flr (G.WSW9.I29)
-Line  3059:  Interior Wall:  EL2 South Wall (G.WSW9.I30)
-Line  3064:  Interior Wall:  EL2 East Wall (G.WSW9.I31)
-Line  3069:  Interior Wall:  EL2 North Wall (G.WSW9.I32)
-Line  3074:  Interior Wall:  EL2 East Wall (G.WSW9.I33)
-Line  3079:  Interior Wall:  EL2 Ceiling (G.WSW9.I34)
-Line  3084:  Space:  EL2 Core Spc (G.C10)
-Line  3110:  Exterior Wall:  EL2 East Wall (G.C10.E16)
-Line  3115:  Window:  EL2 East Win (G.C10.E16.W1)
-Line  3128:  Exterior Wall:  EL2 North Wall (G.C10.E17)
-Line  3133:  Window:  EL2 North Win (G.C10.E17.W1)
-Line  3146:  Interior Wall:  EL2 Flr (G.C10.I35)
-Line  3151:  Interior Wall:  EL2 West Wall (G.C10.I36)
-Line  3156:  Interior Wall:  EL2 East Wall (G.C10.I37)
-Line  3161:  Interior Wall:  EL2 Ceiling (G.C10.I38)
-Line  3166:  Space:  EL2 SW Perim Plnm (G.SW11)
-Line  3178:  Exterior Wall:  EL2 West Wall (G.SW11.E18)
-Line  3183:  Exterior Wall:  EL2 South Wall (G.SW11.E19)
-Line  3188:  Exterior Wall:  EL2 Roof (G.SW11.E20)
-Line  3193:  Interior Wall:  EL2 North Wall (G.SW11.I39)
-Line  3198:  Space:  EL2 SSE Perim Plnm (G.SSE12)
-Line  3210:  Exterior Wall:  EL2 East Wall (G.SSE12.E21)
-Line  3215:  Exterior Wall:  EL2 North Wall (G.SSE12.E22)
-Line  3220:  Exterior Wall:  EL2 South Wall (G.SSE12.E23)
-Line  3225:  Exterior Wall:  EL2 Roof (G.SSE12.E24)
-Line  3230:  Interior Wall:  EL2 West Wall (G.SSE12.I40)
-Line  3235:  Space:  EL2 East Perim Plnm (G.E13)
-Line  3247:  Exterior Wall:  EL2 East Wall (G.E13.E25)
-Line  3252:  Exterior Wall:  EL2 Roof (G.E13.E26)
-Line  3257:  Interior Wall:  EL2 North Wall (G.E13.I41)
-Line  3262:  Interior Wall:  EL2 South Wall (G.E13.I42)
-Line  3267:  Space:  EL2 ENE Perim Plnm (G.ENE14)
-Line  3279:  Exterior Wall:  EL2 North Wall (G.ENE14.E27)
-Line  3284:  Exterior Wall:  EL2 East Wall (G.ENE14.E28)
-Line  3289:  Exterior Wall:  EL2 Roof (G.ENE14.E29)
-Line  3294:  Interior Wall:  EL2 West Wall (G.ENE14.I43)
-Line  3299:  Interior Wall:  EL2 South Wall (G.ENE14.I44)
-Line  3304:  Space:  EL2 North Perim Plnm (G.N15)
-Line  3318:  Exterior Wall:  EL2 North Wall (G.N15.E30)
-Line  3323:  Exterior Wall:  EL2 Roof (G.N15.E31)
-Line  3328:  Interior Wall:  EL2 West Wall (G.N15.I45)
-Line  3333:  Interior Wall:  EL2 South Wall (G.N15.I46)
-Line  3338:  Space:  EL2 North Perim Plnm (G.N16)
-Line  3352:  Exterior Wall:  EL2 North Wall (G.N16.E32)
-Line  3357:  Exterior Wall:  EL2 Roof (G.N16.E33)
-Line  3362:  Interior Wall:  EL2 South Wall (G.N16.I47)
-Line  3367:  Space:  EL2 North Perim Plnm (G.N17)
-Line  3381:  Exterior Wall:  EL2 North Wall (G.N17.E34)
-Line  3386:  Exterior Wall:  EL2 Roof (G.N17.E35)
-Line  3391:  Interior Wall:  EL2 West Wall (G.N17.I48)
-Line  3396:  Interior Wall:  EL2 South Wall (G.N17.I49)
-Line  3401:  Space:  EL2 North Perim Plnm (G.N18)
-Line  3415:  Exterior Wall:  EL2 North Wall (G.N18.E36)
-Line  3420:  Exterior Wall:  EL2 Roof (G.N18.E37)
-Line  3425:  Interior Wall:  EL2 South Wall (G.N18.I50)
-Line  3430:  Space:  EL2 WSW Perim Plnm (G.WSW19)
-Line  3442:  Exterior Wall:  EL2 West Wall (G.WSW19.E38)
-Line  3447:  Exterior Wall:  EL2 South Wall (G.WSW19.E39)
-Line  3452:  Exterior Wall:  EL2 North Wall (G.WSW19.E40)
-Line  3457:  Exterior Wall:  EL2 Roof (G.WSW19.E41)
-Line  3462:  Interior Wall:  EL2 South Wall (G.WSW19.I51)
-Line  3467:  Interior Wall:  EL2 East Wall (G.WSW19.I52)
-Line  3472:  Interior Wall:  EL2 North Wall (G.WSW19.I53)
-Line  3477:  Interior Wall:  EL2 East Wall (G.WSW19.I54)
-Line  3482:  Space:  EL2 Core Plnm (G.C20)
-Line  3496:  Exterior Wall:  EL2 East Wall (G.C20.E42)
-Line  3501:  Exterior Wall:  EL2 North Wall (G.C20.E43)
-Line  3506:  Exterior Wall:  EL2 Roof (G.C20.E44)
-Line  3511:  Interior Wall:  EL2 West Wall (G.C20.I55)
-Line  3516:  Interior Wall:  EL2 East Wall (G.C20.I56)
-Line  3545:  Master Meters:  MASTER-METERS 1
-Line  3573:  Circulation Loop:  DHW Plant 1 Loop (1)
-Line  3598:  DW Heater:  DHW Plant 1 Wtr Htr (1)
-Line  3681:  HVAC System:  EL1 Sys1 (PVAVS) (G.SW2)
-Line  3719:  Thermal Zone:  EL1 SW Perim Zn (G.SW2)
-Line  3731:  Thermal Zone:  EL1 SW Perim Pl Zn (G.SW13)
-Line  3738:  HVAC System:  EL1 Sys1 (PVAVS) (G.SSE3)
-Line  3776:  Thermal Zone:  EL1 SSE Perim Zn (G.SSE3)
-Line  3788:  Thermal Zone:  EL1 SSE Perim Pl Zn (G.SSE14)
-Line  3795:  HVAC System:  EL2 Sys1 (PVAVS) (G.SW1)
-Line  3833:  Thermal Zone:  EL2 SW Perim Zn (G.SW1)
-Line  3845:  Thermal Zone:  EL2 SW Perim Pl Zn (G.SW11)
-Line  3852:  HVAC System:  EL2 Sys1 (PVAVS) (G.SSE2)
-Line  3890:  Thermal Zone:  EL2 SSE Perim Zn (G.SSE2)
-Line  3902:  Thermal Zone:  EL2 SSE Perim Pl Zn (G.SSE12)
-Line  3909:  HVAC System:  S2 Sys (PVAVS)
-Line  3947:  Thermal Zone:  EL1 SW Perim Zn (G.SW1)
-Line  3959:  Thermal Zone:  EL1 East Perim Zn (G.E4)
-Line  3971:  Thermal Zone:  EL1 ENE Perim Zn (G.ENE5)
-Line  3983:  Thermal Zone:  EL1 North Perim Zn (G.N6)
-Line  3995:  Thermal Zone:  EL1 North Perim Zn (G.N7)
-Line  4007:  Thermal Zone:  EL1 North Perim Zn (G.N8)
-Line  4019:  Thermal Zone:  EL1 North Perim Zn (G.N9)
-Line  4031:  Thermal Zone:  EL1 Core Zn (G.C10)
-Line  4043:  Thermal Zone:  EL1 WNW Perim Zn (G.WNW11)
-Line  4055:  Thermal Zone:  EL1 SW Perim Pl Zn (G.SW12)
-Line  4062:  Thermal Zone:  EL1 East Perim Pl Zn (G.E15)
-Line  4069:  Thermal Zone:  EL1 ENE Perim Pl Zn (G.ENE16)
-Line  4076:  Thermal Zone:  EL1 North Perim Pl Zn (G.N17)
-Line  4083:  Thermal Zone:  EL1 North Perim Pl Zn (G.N18)
-Line  4090:  Thermal Zone:  EL1 North Perim Pl Zn (G.N19)
-Line  4097:  Thermal Zone:  EL1 North Perim Pl Zn (G.N20)
-Line  4104:  Thermal Zone:  EL1 Core Pl Zn (G.C21)
-Line  4111:  Thermal Zone:  EL1 WNW Perim Pl Zn (G.WNW22)
-Line  4118:  Thermal Zone:  EL2 East Perim Zn (G.E3)
-Line  4130:  Thermal Zone:  EL2 ENE Perim Zn (G.ENE4)
-Line  4142:  Thermal Zone:  EL2 North Perim Zn (G.N5)
-Line  4154:  Thermal Zone:  EL2 North Perim Zn (G.N6)
-Line  4166:  Thermal Zone:  EL2 North Perim Zn (G.N7)
-Line  4178:  Thermal Zone:  EL2 North Perim Zn (G.N8)
-Line  4190:  Thermal Zone:  EL2 WSW Perim Zn (G.WSW9)
-Line  4202:  Thermal Zone:  EL2 Core Zn (G.C10)
-Line  4214:  Thermal Zone:  EL2 East Perim Pl Zn (G.E13)
-Line  4221:  Thermal Zone:  EL2 ENE Perim Pl Zn (G.ENE14)
-Line  4228:  Thermal Zone:  EL2 North Perim Pl Zn (G.N15)
-Line  4235:  Thermal Zone:  EL2 North Perim Pl Zn (G.N16)
-Line  4242:  Thermal Zone:  EL2 North Perim Pl Zn (G.N17)
-Line  4249:  Thermal Zone:  EL2 North Perim Pl Zn (G.N18)
-Line  4256:  Thermal Zone:  EL2 WSW Perim Pl Zn (G.WSW19)
-Line  4263:  Thermal Zone:  EL2 Core Pl Zn (G.C20)
-Line  4306:  Block Charge:  Cust 1 Elec Uniform Blk1
-Line  4319:  Utility Rate:  Custom Elec Rate
-Line  4335:  Loads Report
-Line  4345:  Systems Report
-Line  4355:  Plant Report
-Line  4365:  Economics Report
-Line  4376:  Hourly Report:  Hourly Report
-Line  4385:  End
+Line     2:  Diagnostic
+Line     4:  Title
+Line     8:  Run Period:  Entire Year
+Line    17:  Holidays:  Standard US Holidays
+Line    21:  Compliance Data:  Compliance Data
+Line    31:  Site Parameters:  Site Data
+Line    39:  Building Parameters:  Building Data
+Line    43:  Baseline:  Baseline Data
+Line    50:  Glass Type:  EL1 Window Type #1 GT
+Line    68:  Material:  EL1 EWall Cons Mat 2 (11.7)
+Line    73:  Layers:  EL1 EWall Cons Layers
+Line    78:  Construction:  EL1 EWall Construction
+Line    85:  Material:  EL1 Roof Cons Mat 4 (2.8)
+Line    90:  Layers:  EL1 Roof Cons Layers
+Line    95:  Construction:  EL1 Roof Construction
+Line   102:  Layers:  EL1 Ceilg Cons Layers
+Line   106:  Construction:  EL1 Ceilg Construction
+Line   111:  Material:  EL1 IWall Cons Mat 2 (4.5)
+Line   116:  Layers:  EL1 IWall Cons Layers
+Line   121:  Construction:  EL1 IWall Construction
+Line   126:  Layers:  EL1 IFlr Cons Layers
+Line   130:  Construction:  EL1 IFlr Construction
+Line   135:  Construction:  EL1 IFlSP Construction
+Line   144:  Layers:  EL2 IFlr Cons Layers
+Line   148:  Construction:  EL2 IFlr Construction
+Line   153:  Material:  EL2 UFlr Cons Mat 1 (10.47)
+Line   158:  Layers:  EL2 GFlr Cons Layers
+Line   163:  Construction:  EL2 GFlr Construction
+Line   168:  Construction:  EL2 IFlSP Construction
+Line   173:  Construction:  EL2 GFlSP Construction
+Line   182:  Polygon:  EL1 Floor Polygon
+Line   193:  Polygon:  EL1 Space Polygon 1
+Line   200:  Polygon:  EL1 Space Polygon 2
+Line   207:  Polygon:  EL1 Space Polygon 3
+Line   215:  Polygon:  EL1 Space Polygon 4
+Line   222:  Polygon:  EL1 Space Polygon 5
+Line   229:  Polygon:  EL1 Space Polygon 6
+Line   236:  Polygon:  EL1 Space Polygon 7
+Line   243:  Polygon:  EL1 Space Polygon 8
+Line   250:  Polygon:  EL1 Space Polygon 9
+Line   257:  Polygon:  EL1 Space Polygon 10
+Line   266:  Polygon:  EL1 Space Polygon 11
+Line   284:  Polygon:  EL2 Floor Polygon
+Line   295:  Polygon:  EL2 Space Polygon 1
+Line   302:  Polygon:  EL2 Space Polygon 2
+Line   310:  Polygon:  EL2 Space Polygon 3
+Line   317:  Polygon:  EL2 Space Polygon 4
+Line   324:  Polygon:  EL2 Space Polygon 5
+Line   331:  Polygon:  EL2 Space Polygon 6
+Line   338:  Polygon:  EL2 Space Polygon 7
+Line   345:  Polygon:  EL2 Space Polygon 8
+Line   352:  Polygon:  EL2 Space Polygon 9
+Line   364:  Polygon:  EL2 Space Polygon 10
+Line   378:  Day Schedule:  EL1 Bldg Occup S1 All
+Line   385:  Week Schedule:  EL1 Bldg Occup S1 Wk
+Line   391:  Day Schedule:  EL1 Bldg Occup S2 WD
+Line   398:  Day Schedule:  EL1 Bldg Occup S2 HDD
+Line   404:  Week Schedule:  EL1 Bldg Occup S2 Wk
+Line   411:  Annual Schedule:  EL1 Bldg Occup Sch
+Line   422:  Day Schedule:  EL1 Bldg InsLt S1 All
+Line   429:  Week Schedule:  EL1 Bldg InsLt S1 Wk
+Line   435:  Day Schedule:  EL1 Bldg InsLt S2 WD
+Line   442:  Day Schedule:  EL1 Bldg InsLt S2 HDD
+Line   448:  Week Schedule:  EL1 Bldg InsLt S2 Wk
+Line   455:  Annual Schedule:  EL1 Bldg InsLt Sch
+Line   466:  Day Schedule:  EL1 Bldg OffEq S1 All
+Line   472:  Week Schedule:  EL1 Bldg OffEq S1 Wk
+Line   478:  Day Schedule:  EL1 Bldg OffEq S2 WD
+Line   485:  Day Schedule:  EL1 Bldg OffEq S2 HDD
+Line   491:  Week Schedule:  EL1 Bldg OffEq S2 Wk
+Line   498:  Annual Schedule:  EL1 Bldg OffEq Sch
+Line   509:  Day Schedule:  EL1 Bldg SCRfg S1 All
+Line   517:  Week Schedule:  EL1 Bldg SCRfg S1 Wk
+Line   523:  Day Schedule:  EL1 Bldg SCRfg S2 WD
+Line   530:  Day Schedule:  EL1 Bldg SCRfg S2 HDD
+Line   536:  Week Schedule:  EL1 Bldg SCRfg S2 Wk
+Line   543:  Annual Schedule:  EL1 Bldg SCRfg Sch
+Line   554:  Day Schedule:  EL1 Bldg Cook S1 All
+Line   561:  Week Schedule:  EL1 Bldg Cook S1 Wk
+Line   567:  Day Schedule:  EL1 Bldg Cook S2 WD
+Line   575:  Day Schedule:  EL1 Bldg Cook S2 HDD
+Line   581:  Week Schedule:  EL1 Bldg Cook S2 Wk
+Line   588:  Annual Schedule:  EL1 Bldg Cook Sch
+Line   599:  Day Schedule:  EL1 Bldg Misc S1 All
+Line   606:  Week Schedule:  EL1 Bldg Misc S1 Wk
+Line   612:  Day Schedule:  EL1 Bldg Misc S2 WD
+Line   619:  Day Schedule:  EL1 Bldg Misc S2 HDD
+Line   625:  Week Schedule:  EL1 Bldg Misc S2 Wk
+Line   632:  Annual Schedule:  EL1 Bldg Misc Sch
+Line   647:  Day Schedule:  DHW Eqp NRes W1 All
+Line   653:  Week Schedule:  DHW Eqp NRes Wk1
+Line   659:  Day Schedule:  DHW Eqp NRes W2 WD
+Line   666:  Day Schedule:  DHW Eqp NRes W2 HDD
+Line   672:  Week Schedule:  DHW Eqp NRes Wk2
+Line   679:  Annual Schedule:  DHW Eqp NRes Sch
+Line   694:  Day Schedule:  ZG0-S1 (PSZ) P-Inf S1 All
+Line   700:  Week Schedule:  ZG0-S1 (PSZ) P-Inf S1 Wk
+Line   706:  Day Schedule:  ZG0-S1 (PSZ) P-Inf S2 WD
+Line   713:  Day Schedule:  ZG0-S1 (PSZ) P-Inf S2 HDD
+Line   719:  Week Schedule:  ZG0-S1 (PSZ) P-Inf S2 Wk
+Line   726:  Annual Schedule:  ZG0-S1 (PSZ) P-Inf Sch
+Line   741:  Day Schedule:  ZG0-S1 (PSZ) C-Inf S1 All
+Line   747:  Week Schedule:  ZG0-S1 (PSZ) C-Inf S1 Wk
+Line   753:  Day Schedule:  ZG0-S1 (PSZ) C-Inf S2 WD
+Line   759:  Week Schedule:  ZG0-S1 (PSZ) C-Inf S2 Wk
+Line   765:  Annual Schedule:  ZG0-S1 (PSZ) C-Inf Sch
+Line   780:  Day Schedule:  S1 Sys1 (PSZ) Fan S1 All
+Line   786:  Week Schedule:  S1 Sys1 (PSZ) Fan S1 Wk
+Line   792:  Day Schedule:  S1 Sys1 (PSZ) Fan S2 WD
+Line   798:  Week Schedule:  S1 Sys1 (PSZ) Fan S2 Wk
+Line   804:  Annual Schedule:  S1 Sys1 (PSZ) Fan Sch
+Line   815:  Day Schedule:  S1 Sys1 (PSZ) Cool S1 All
+Line   821:  Week Schedule:  S1 Sys1 (PSZ) Cool S1 Wk
+Line   827:  Day Schedule:  S1 Sys1 (PSZ) Cool S2 WD
+Line   833:  Week Schedule:  S1 Sys1 (PSZ) Cool S2 Wk
+Line   839:  Annual Schedule:  S1 Sys1 (PSZ) Cool Sch
+Line   854:  Day Schedule:  S1 Sys1 (PSZ) Heat S1 All
+Line   860:  Week Schedule:  S1 Sys1 (PSZ) Heat S1 Wk
+Line   866:  Day Schedule:  S1 Sys1 (PSZ) Heat S2 WD
+Line   872:  Week Schedule:  S1 Sys1 (PSZ) Heat S2 Wk
+Line   878:  Annual Schedule:  S1 Sys1 (PSZ) Heat Sch
+Line   897:  Floor:  EL1 Ground Flr
+Line   914:  Space:  EL1 SW Perim Spc (G.SW1)
+Line   943:  Material:  EL1 UFMat (G.SW1.U2.M1)
+Line   948:  Layers:  EL1 UFLyrs (G.SW1.U2)
+Line   953:  Construction:  EL1 UFCons (G.SW1.U2)
+Line   958:  Underground Wall:  EL1 Flr (G.SW1.U1)
+Line   963:  Exterior Wall:  EL1 South Wall (G.SW1.E1)
+Line   969:  Window:  EL1 South Win (G.SW1.E1.W1)
+Line   983:  Exterior Wall:  EL1 West Wall (G.SW1.E2)
+Line   989:  Window:  EL1 West Win (G.SW1.E2.W1)
+Line  1003:  Interior Wall:  EL1 Ceiling (G.SW1.I1)
+Line  1016:  Space:  EL1 SW Perim Spc (G.SW2)
+Line  1045:  Material:  EL1 UFMat (G.SW2.U3.M1)
+Line  1050:  Layers:  EL1 UFLyrs (G.SW2.U3)
+Line  1055:  Construction:  EL1 UFCons (G.SW2.U3)
+Line  1060:  Underground Wall:  EL1 Flr (G.SW2.U2)
+Line  1065:  Exterior Wall:  EL1 West Wall (G.SW2.E3)
+Line  1071:  Window:  EL1 West Win (G.SW2.E3.W1)
+Line  1085:  Window:  EL1 West Win (G.SW2.E3.W2)
+Line  1099:  Door:  EL1 West Door (G.SW2.E3.D1)
+Line  1106:  Exterior Wall:  EL1 South Wall (G.SW2.E4)
+Line  1112:  Window:  EL1 South Win (G.SW2.E4.W1)
+Line  1126:  Interior Wall:  EL1 North Wall (G.SW2.I2)
+Line  1132:  Interior Wall:  EL1 Ceiling (G.SW2.I3)
+Line  1145:  Space:  EL1 SSE Perim Spc (G.SSE3)
+Line  1174:  Underground Wall:  EL1 Flr (G.SSE3.U3)
+Line  1179:  Exterior Wall:  EL1 East Wall (G.SSE3.E5)
+Line  1185:  Window:  EL1 East Win (G.SSE3.E5.W1)
+Line  1199:  Window:  EL1 East Win (G.SSE3.E5.W2)
+Line  1213:  Door:  EL1 East Door (G.SSE3.E5.D1)
+Line  1220:  Exterior Wall:  EL1 North Wall (G.SSE3.E6)
+Line  1226:  Window:  EL1 North Win (G.SSE3.E6.W1)
+Line  1240:  Interior Wall:  EL1 West Wall (G.SSE3.I4)
+Line  1246:  Exterior Wall:  EL1 South Wall (G.SSE3.E7)
+Line  1252:  Window:  EL1 South Win (G.SSE3.E7.W1)
+Line  1266:  Window:  EL1 South Win (G.SSE3.E7.W2)
+Line  1280:  Door:  EL1 South Door (G.SSE3.E7.D1)
+Line  1287:  Interior Wall:  EL1 Ceiling (G.SSE3.I5)
+Line  1300:  Space:  EL1 East Perim Spc (G.E4)
+Line  1329:  Material:  EL1 UFMat (G.E4.U5.M1)
+Line  1334:  Layers:  EL1 UFLyrs (G.E4.U5)
+Line  1339:  Construction:  EL1 UFCons (G.E4.U5)
+Line  1344:  Underground Wall:  EL1 Flr (G.E4.U4)
+Line  1349:  Exterior Wall:  EL1 East Wall (G.E4.E8)
+Line  1355:  Window:  EL1 East Win (G.E4.E8.W1)
+Line  1369:  Interior Wall:  EL1 North Wall (G.E4.I6)
+Line  1375:  Interior Wall:  EL1 South Wall (G.E4.I7)
+Line  1381:  Interior Wall:  EL1 Ceiling (G.E4.I8)
+Line  1394:  Space:  EL1 ENE Perim Spc (G.ENE5)
+Line  1423:  Material:  EL1 UFMat (G.ENE5.U6.M1)
+Line  1428:  Layers:  EL1 UFLyrs (G.ENE5.U6)
+Line  1433:  Construction:  EL1 UFCons (G.ENE5.U6)
+Line  1438:  Underground Wall:  EL1 Flr (G.ENE5.U5)
+Line  1443:  Exterior Wall:  EL1 North Wall (G.ENE5.E9)
+Line  1449:  Window:  EL1 North Win (G.ENE5.E9.W1)
+Line  1463:  Interior Wall:  EL1 West Wall (G.ENE5.I9)
+Line  1469:  Interior Wall:  EL1 South Wall (G.ENE5.I10)
+Line  1475:  Exterior Wall:  EL1 East Wall (G.ENE5.E10)
+Line  1481:  Window:  EL1 East Win (G.ENE5.E10.W1)
+Line  1495:  Interior Wall:  EL1 Ceiling (G.ENE5.I11)
+Line  1508:  Space:  EL1 North Perim Spc (G.N6)
+Line  1539:  Material:  EL1 UFMat (G.N6.U7.M1)
+Line  1544:  Layers:  EL1 UFLyrs (G.N6.U7)
+Line  1549:  Construction:  EL1 UFCons (G.N6.U7)
+Line  1554:  Underground Wall:  EL1 Flr (G.N6.U6)
+Line  1559:  Exterior Wall:  EL1 North Wall (G.N6.E11)
+Line  1565:  Window:  EL1 North Win (G.N6.E11.W1)
+Line  1579:  Interior Wall:  EL1 West Wall (G.N6.I12)
+Line  1585:  Interior Wall:  EL1 South Wall (G.N6.I13)
+Line  1591:  Interior Wall:  EL1 Ceiling (G.N6.I14)
+Line  1604:  Space:  EL1 North Perim Spc (G.N7)
+Line  1635:  Underground Wall:  EL1 Flr (G.N7.U7)
+Line  1640:  Interior Wall:  EL1 South Wall (G.N7.I15)
+Line  1646:  Exterior Wall:  EL1 North Wall (G.N7.E12)
+Line  1652:  Window:  EL1 North Win (G.N7.E12.W1)
+Line  1666:  Interior Wall:  EL1 Ceiling (G.N7.I16)
+Line  1679:  Space:  EL1 North Perim Spc (G.N8)
+Line  1710:  Material:  EL1 UFMat (G.N8.U9.M1)
+Line  1715:  Layers:  EL1 UFLyrs (G.N8.U9)
+Line  1720:  Construction:  EL1 UFCons (G.N8.U9)
+Line  1725:  Underground Wall:  EL1 Flr (G.N8.U8)
+Line  1730:  Exterior Wall:  EL1 North Wall (G.N8.E13)
+Line  1736:  Window:  EL1 North Win (G.N8.E13.W1)
+Line  1750:  Interior Wall:  EL1 West Wall (G.N8.I17)
+Line  1756:  Interior Wall:  EL1 South Wall (G.N8.I18)
+Line  1762:  Interior Wall:  EL1 Ceiling (G.N8.I19)
+Line  1775:  Space:  EL1 North Perim Spc (G.N9)
+Line  1806:  Underground Wall:  EL1 Flr (G.N9.U9)
+Line  1811:  Exterior Wall:  EL1 North Wall (G.N9.E14)
+Line  1817:  Window:  EL1 North Win (G.N9.E14.W1)
+Line  1831:  Interior Wall:  EL1 South Wall (G.N9.I20)
+Line  1837:  Interior Wall:  EL1 Ceiling (G.N9.I21)
+Line  1850:  Space:  EL1 Core Spc (G.C10)
+Line  1877:  Material:  EL1 UFMat (G.C10.U11.M1)
+Line  1882:  Layers:  EL1 UFLyrs (G.C10.U11)
+Line  1887:  Construction:  EL1 UFCons (G.C10.U11)
+Line  1892:  Underground Wall:  EL1 Flr (G.C10.U10)
+Line  1897:  Interior Wall:  EL1 West Wall (G.C10.I22)
+Line  1903:  Exterior Wall:  EL1 East Wall (G.C10.E15)
+Line  1909:  Window:  EL1 East Win (G.C10.E15.W1)
+Line  1923:  Interior Wall:  EL1 East Wall (G.C10.I23)
+Line  1929:  Exterior Wall:  EL1 North Wall (G.C10.E16)
+Line  1935:  Window:  EL1 North Win (G.C10.E16.W1)
+Line  1949:  Interior Wall:  EL1 Ceiling (G.C10.I24)
+Line  1964:  Space:  EL1 WNW Perim Spc (G.WNW11)
+Line  1993:  Underground Wall:  EL1 Flr (G.WNW11.U11)
+Line  1998:  Exterior Wall:  EL1 West Wall (G.WNW11.E17)
+Line  2004:  Window:  EL1 West Win (G.WNW11.E17.W1)
+Line  2018:  Interior Wall:  EL1 South Wall (G.WNW11.I25)
+Line  2024:  Interior Wall:  EL1 West Wall (G.WNW11.I26)
+Line  2030:  Exterior Wall:  EL1 South Wall (G.WNW11.E18)
+Line  2036:  Window:  EL1 South Win (G.WNW11.E18.W1)
+Line  2050:  Interior Wall:  EL1 South Wall (G.WNW11.I27)
+Line  2056:  Interior Wall:  EL1 East Wall (G.WNW11.I28)
+Line  2062:  Interior Wall:  EL1 North Wall (G.WNW11.I29)
+Line  2068:  Interior Wall:  EL1 East Wall (G.WNW11.I30)
+Line  2074:  Exterior Wall:  EL1 North Wall (G.WNW11.E19)
+Line  2080:  Window:  EL1 North Win (G.WNW11.E19.W1)
+Line  2094:  Interior Wall:  EL1 Ceiling (G.WNW11.I31)
+Line  2100:  Space:  EL1 Plnm (G.12)
+Line  2112:  Exterior Wall:  EL1 West Wall (G.12.E20)
+Line  2118:  Exterior Wall:  EL1 South Wall (G.12.E21)
+Line  2124:  Exterior Wall:  EL1 West Wall (G.12.E22)
+Line  2130:  Exterior Wall:  EL1 South Wall (G.12.E23)
+Line  2136:  Exterior Wall:  EL1 East Wall (G.12.E24)
+Line  2142:  Exterior Wall:  EL1 North Wall (G.12.E25)
+Line  2148:  Exterior Wall:  EL1 East Wall (G.12.E26)
+Line  2154:  Exterior Wall:  EL1 North Wall (G.12.E27)
+Line  2160:  Exterior Wall:  EL1 Roof (G.12.E28)
+Line  2182:  Floor:  EL2 Ground Flr
+Line  2200:  Space:  EL2 SW Perim Spc (G.SW1)
+Line  2229:  Interior Wall:  EL2 Flr (G.SW1.I1)
+Line  2235:  Exterior Wall:  EL2 West Wall (G.SW1.E1)
+Line  2241:  Window:  EL2 West Win (G.SW1.E1.W1)
+Line  2255:  Exterior Wall:  EL2 South Wall (G.SW1.E2)
+Line  2261:  Window:  EL2 South Win (G.SW1.E2.W1)
+Line  2275:  Interior Wall:  EL2 North Wall (G.SW1.I2)
+Line  2281:  Interior Wall:  EL2 Ceiling (G.SW1.I3)
+Line  2294:  Space:  EL2 SSE Perim Spc (G.SSE2)
+Line  2323:  Interior Wall:  EL2 Flr (G.SSE2.I4)
+Line  2329:  Exterior Wall:  EL2 East Wall (G.SSE2.E3)
+Line  2335:  Window:  EL2 East Win (G.SSE2.E3.W1)
+Line  2349:  Exterior Wall:  EL2 North Wall (G.SSE2.E4)
+Line  2355:  Window:  EL2 North Win (G.SSE2.E4.W1)
+Line  2369:  Interior Wall:  EL2 West Wall (G.SSE2.I5)
+Line  2375:  Exterior Wall:  EL2 South Wall (G.SSE2.E5)
+Line  2381:  Window:  EL2 South Win (G.SSE2.E5.W1)
+Line  2395:  Interior Wall:  EL2 Ceiling (G.SSE2.I6)
+Line  2408:  Space:  EL2 East Perim Spc (G.E3)
+Line  2437:  Interior Wall:  EL2 Flr (G.E3.I7)
+Line  2443:  Exterior Wall:  EL2 East Wall (G.E3.E6)
+Line  2449:  Window:  EL2 East Win (G.E3.E6.W1)
+Line  2463:  Interior Wall:  EL2 North Wall (G.E3.I8)
+Line  2469:  Interior Wall:  EL2 South Wall (G.E3.I9)
+Line  2475:  Interior Wall:  EL2 Ceiling (G.E3.I10)
+Line  2488:  Space:  EL2 ENE Perim Spc (G.ENE4)
+Line  2517:  Interior Wall:  EL2 Flr (G.ENE4.I11)
+Line  2523:  Exterior Wall:  EL2 North Wall (G.ENE4.E7)
+Line  2529:  Window:  EL2 North Win (G.ENE4.E7.W1)
+Line  2543:  Interior Wall:  EL2 West Wall (G.ENE4.I12)
+Line  2549:  Interior Wall:  EL2 South Wall (G.ENE4.I13)
+Line  2555:  Exterior Wall:  EL2 East Wall (G.ENE4.E8)
+Line  2561:  Window:  EL2 East Win (G.ENE4.E8.W1)
+Line  2575:  Interior Wall:  EL2 Ceiling (G.ENE4.I14)
+Line  2588:  Space:  EL2 North Perim Spc (G.N5)
+Line  2619:  Interior Wall:  EL2 Flr (G.N5.I15)
+Line  2625:  Exterior Wall:  EL2 North Wall (G.N5.E9)
+Line  2631:  Window:  EL2 North Win (G.N5.E9.W1)
+Line  2645:  Interior Wall:  EL2 West Wall (G.N5.I16)
+Line  2651:  Interior Wall:  EL2 South Wall (G.N5.I17)
+Line  2657:  Interior Wall:  EL2 Ceiling (G.N5.I18)
+Line  2670:  Space:  EL2 North Perim Spc (G.N6)
+Line  2701:  Interior Wall:  EL2 Flr (G.N6.I19)
+Line  2707:  Interior Wall:  EL2 South Wall (G.N6.I20)
+Line  2713:  Exterior Wall:  EL2 North Wall (G.N6.E10)
+Line  2719:  Window:  EL2 North Win (G.N6.E10.W1)
+Line  2733:  Interior Wall:  EL2 Ceiling (G.N6.I21)
+Line  2746:  Space:  EL2 North Perim Spc (G.N7)
+Line  2777:  Interior Wall:  EL2 Flr (G.N7.I22)
+Line  2783:  Exterior Wall:  EL2 North Wall (G.N7.E11)
+Line  2789:  Window:  EL2 North Win (G.N7.E11.W1)
+Line  2803:  Interior Wall:  EL2 West Wall (G.N7.I23)
+Line  2809:  Interior Wall:  EL2 South Wall (G.N7.I24)
+Line  2815:  Interior Wall:  EL2 Ceiling (G.N7.I25)
+Line  2828:  Space:  EL2 North Perim Spc (G.N8)
+Line  2859:  Interior Wall:  EL2 Flr (G.N8.I26)
+Line  2865:  Exterior Wall:  EL2 North Wall (G.N8.E12)
+Line  2871:  Window:  EL2 North Win (G.N8.E12.W1)
+Line  2885:  Interior Wall:  EL2 South Wall (G.N8.I27)
+Line  2891:  Interior Wall:  EL2 Ceiling (G.N8.I28)
+Line  2908:  Space:  EL2 WSW Perim Spc (G.WSW9)
+Line  2937:  Interior Wall:  EL2 Flr (G.WSW9.I29)
+Line  2943:  Exterior Wall:  EL2 West Wall (G.WSW9.E13)
+Line  2949:  Window:  EL2 West Win (G.WSW9.E13.W1)
+Line  2963:  Exterior Wall:  EL2 South Wall (G.WSW9.E14)
+Line  2969:  Window:  EL2 South Win (G.WSW9.E14.W1)
+Line  2983:  Interior Wall:  EL2 South Wall (G.WSW9.I30)
+Line  2989:  Interior Wall:  EL2 East Wall (G.WSW9.I31)
+Line  2995:  Interior Wall:  EL2 North Wall (G.WSW9.I32)
+Line  3001:  Interior Wall:  EL2 East Wall (G.WSW9.I33)
+Line  3007:  Exterior Wall:  EL2 North Wall (G.WSW9.E15)
+Line  3013:  Window:  EL2 North Win (G.WSW9.E15.W1)
+Line  3027:  Interior Wall:  EL2 Ceiling (G.WSW9.I34)
+Line  3040:  Space:  EL2 Core Spc (G.C10)
+Line  3067:  Interior Wall:  EL2 Flr (G.C10.I35)
+Line  3073:  Interior Wall:  EL2 West Wall (G.C10.I36)
+Line  3079:  Exterior Wall:  EL2 East Wall (G.C10.E16)
+Line  3085:  Window:  EL2 East Win (G.C10.E16.W1)
+Line  3099:  Interior Wall:  EL2 East Wall (G.C10.I37)
+Line  3105:  Exterior Wall:  EL2 North Wall (G.C10.E17)
+Line  3111:  Window:  EL2 North Win (G.C10.E17.W1)
+Line  3125:  Interior Wall:  EL2 Ceiling (G.C10.I38)
+Line  3131:  Space:  EL2 Plnm (G.11)
+Line  3143:  Exterior Wall:  EL2 West Wall (G.11.E18)
+Line  3149:  Exterior Wall:  EL2 South Wall (G.11.E19)
+Line  3155:  Exterior Wall:  EL2 West Wall (G.11.E20)
+Line  3161:  Exterior Wall:  EL2 South Wall (G.11.E21)
+Line  3167:  Exterior Wall:  EL2 East Wall (G.11.E22)
+Line  3173:  Exterior Wall:  EL2 North Wall (G.11.E23)
+Line  3179:  Exterior Wall:  EL2 East Wall (G.11.E24)
+Line  3185:  Exterior Wall:  EL2 North Wall (G.11.E25)
+Line  3191:  Exterior Wall:  EL2 Roof (G.11.E26)
+Line  3209:  Master Meters:  MASTER-METERS 1
+Line  3215:  Circulation Loop:  DHW Plant 1 Loop (1)
+Line  3223:  HVAC System:  EL1 Sys1 (PSZ)
+Line  3257:  Thermal Zone:  EL1 SW Perim Zn (G.SW1)
+Line  3269:  Thermal Zone:  EL1 SW Perim Zn (G.SW2)
+Line  3281:  Thermal Zone:  EL1 SSE Perim Zn (G.SSE3)
+Line  3293:  Thermal Zone:  EL1 East Perim Zn (G.E4)
+Line  3305:  Thermal Zone:  EL1 ENE Perim Zn (G.ENE5)
+Line  3317:  Thermal Zone:  EL1 North Perim Zn (G.N6)
+Line  3329:  Thermal Zone:  EL1 North Perim Zn (G.N7)
+Line  3341:  Thermal Zone:  EL1 North Perim Zn (G.N8)
+Line  3353:  Thermal Zone:  EL1 North Perim Zn (G.N9)
+Line  3365:  Thermal Zone:  EL1 Core Zn (G.C10)
+Line  3377:  Thermal Zone:  EL1 WNW Perim Zn (G.WNW11)
+Line  3389:  Thermal Zone:  EL1 Pl Zn (G.12)
+Line  3397:  HVAC System:  EL2 Sys1 (PSZ)
+Line  3431:  Thermal Zone:  EL2 SW Perim Zn (G.SW1)
+Line  3443:  Thermal Zone:  EL2 SSE Perim Zn (G.SSE2)
+Line  3455:  Thermal Zone:  EL2 East Perim Zn (G.E3)
+Line  3467:  Thermal Zone:  EL2 ENE Perim Zn (G.ENE4)
+Line  3479:  Thermal Zone:  EL2 North Perim Zn (G.N5)
+Line  3491:  Thermal Zone:  EL2 North Perim Zn (G.N6)
+Line  3503:  Thermal Zone:  EL2 North Perim Zn (G.N7)
+Line  3515:  Thermal Zone:  EL2 North Perim Zn (G.N8)
+Line  3527:  Thermal Zone:  EL2 WSW Perim Zn (G.WSW9)
+Line  3539:  Thermal Zone:  EL2 Core Zn (G.C10)
+Line  3551:  Thermal Zone:  EL2 Pl Zn (G.11)
+Line  3559:  DW Heater:  DHW Plant 1 Wtr Htr (1)
+Line  3575:  Day Schedule:  Cust 1 Elec Seas1 Day
+Line  3580:  Week Schedule:  Cust 1 Elec Seas1 Week
+Line  3585:  Annual Schedule:  Cust 1 Elec Season Sched
+Line  3592:  Block Charge:  Cust 1 Elec Uniform Blk1
+Line  3600:  Utility Rate:  Custom Elec Rate
+Line  3605:  Loads Report
+Line  3609:  Systems Report
+Line  3613:  Plant Report
+Line  3617:  Economics Report
+Line  3622:  Hourly Report:  Hourly Report
+Line  3626:  End
 
 
 
 Counts of BDL Components:
 -------------------------
-     20 - Annual Schedule
-     32 - Week Schedule
-     41 - Day Schedule
+     15 - Annual Schedule
+     27 - Week Schedule
+     36 - Day Schedule
       1 - Site Parameters
      18 - Construction
       1 - Glass Type
-     42 - Space
-     93 - Exterior Wall
+     23 - Space
+     54 - Exterior Wall
      39 - Window
-    107 - Interior Wall
+     69 - Interior Wall
      11 - Underground Wall
     229 - Set Default
       1 - Loads Report
@@ -545,20 +404,20 @@ Counts of BDL Components:
       1 - Hourly Report
       1 - Title
       1 - Run Period
-      1 - Diagnostic
+      2 - Diagnostic
       3 - End
       1 - Project Data
       1 - BDL Tables
       3 - Door
-     42 - Weighting Factor
+     23 - Weighting Factor
       1 - Holidays
      31 - Polygon
       2 - Floor
       1 - Building Parameters
-      5 - HVAC System
-     42 - Thermal Zone
+      2 - HVAC System
+     23 - Thermal Zone
       1 - Systems Report
-     10 - Curve Fit
+      9 - Curve Fit
       1 - Circulation Loop
       1 - DW Heater
       1 - Electric Meter

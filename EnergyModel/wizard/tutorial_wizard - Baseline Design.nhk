@@ -44,24 +44,15 @@ KEYOBJ,  2006,  "Block Charge",  1
 KEYOBJ,  2007,  "Ratchet",  0
 
 
-KEYOBJ,  2010,  "System",  5
-      "EL1 Sys1 (PVAVS) (G.SW2)",  21
-      "EL1 Sys1 (PVAVS) (G.SSE3)",  21
-      "EL2 Sys1 (PVAVS) (G.SW1)",  21
-      "EL2 Sys1 (PVAVS) (G.SSE2)",  21
-      "S2 Sys (PVAVS)",  21
+KEYOBJ,  2010,  "System",  2
+      "EL1 Sys1 (PSZ)",  19
+      "EL2 Sys1 (PSZ)",  19
 
 
-KEYOBJ,  2019,  "Zone",  42
-      "EL1 SW Perim Zn (G.SW2)",  1
-      "EL1 SW Perim Pl Zn (G.SW13)",  2
-      "EL1 SSE Perim Zn (G.SSE3)",  1
-      "EL1 SSE Perim Pl Zn (G.SSE14)",  2
-      "EL2 SW Perim Zn (G.SW1)",  1
-      "EL2 SW Perim Pl Zn (G.SW11)",  2
-      "EL2 SSE Perim Zn (G.SSE2)",  1
-      "EL2 SSE Perim Pl Zn (G.SSE12)",  2
+KEYOBJ,  2019,  "Zone",  23
       "EL1 SW Perim Zn (G.SW1)",  1
+      "EL1 SW Perim Zn (G.SW2)",  1
+      "EL1 SSE Perim Zn (G.SSE3)",  1
       "EL1 East Perim Zn (G.E4)",  1
       "EL1 ENE Perim Zn (G.ENE5)",  1
       "EL1 North Perim Zn (G.N6)",  1
@@ -70,15 +61,9 @@ KEYOBJ,  2019,  "Zone",  42
       "EL1 North Perim Zn (G.N9)",  1
       "EL1 Core Zn (G.C10)",  1
       "EL1 WNW Perim Zn (G.WNW11)",  1
-      "EL1 SW Perim Pl Zn (G.SW12)",  2
-      "EL1 East Perim Pl Zn (G.E15)",  2
-      "EL1 ENE Perim Pl Zn (G.ENE16)",  2
-      "EL1 North Perim Pl Zn (G.N17)",  2
-      "EL1 North Perim Pl Zn (G.N18)",  2
-      "EL1 North Perim Pl Zn (G.N19)",  2
-      "EL1 North Perim Pl Zn (G.N20)",  2
-      "EL1 Core Pl Zn (G.C21)",  2
-      "EL1 WNW Perim Pl Zn (G.WNW22)",  2
+      "EL1 Pl Zn (G.12)",  2
+      "EL2 SW Perim Zn (G.SW1)",  1
+      "EL2 SSE Perim Zn (G.SSE2)",  1
       "EL2 East Perim Zn (G.E3)",  1
       "EL2 ENE Perim Zn (G.ENE4)",  1
       "EL2 North Perim Zn (G.N5)",  1
@@ -87,17 +72,10 @@ KEYOBJ,  2019,  "Zone",  42
       "EL2 North Perim Zn (G.N8)",  1
       "EL2 WSW Perim Zn (G.WSW9)",  1
       "EL2 Core Zn (G.C10)",  1
-      "EL2 East Perim Pl Zn (G.E13)",  2
-      "EL2 ENE Perim Pl Zn (G.ENE14)",  2
-      "EL2 North Perim Pl Zn (G.N15)",  2
-      "EL2 North Perim Pl Zn (G.N16)",  2
-      "EL2 North Perim Pl Zn (G.N17)",  2
-      "EL2 North Perim Pl Zn (G.N18)",  2
-      "EL2 WSW Perim Pl Zn (G.WSW19)",  2
-      "EL2 Core Pl Zn (G.C20)",  2
+      "EL2 Pl Zn (G.11)",  2
 
 
-KEYOBJ,  2020,  "Exterior Wall",  93
+KEYOBJ,  2020,  "Exterior Wall",  54
       "EL1 South Wall (G.SW1.E1)",  -1
       "EL1 West Wall (G.SW1.E2)",  -1
       "EL1 West Wall (G.SW2.E3)",  -1
@@ -117,36 +95,15 @@ KEYOBJ,  2020,  "Exterior Wall",  93
       "EL1 West Wall (G.WNW11.E17)",  -1
       "EL1 South Wall (G.WNW11.E18)",  -1
       "EL1 North Wall (G.WNW11.E19)",  -1
-      "EL1 South Wall (G.SW12.E20)",  -1
-      "EL1 West Wall (G.SW12.E21)",  -1
-      "EL1 Roof (G.SW12.E22)",  -1
-      "EL1 West Wall (G.SW13.E23)",  -1
-      "EL1 South Wall (G.SW13.E24)",  -1
-      "EL1 Roof (G.SW13.E25)",  -1
-      "EL1 East Wall (G.SSE14.E26)",  -1
-      "EL1 North Wall (G.SSE14.E27)",  -1
-      "EL1 South Wall (G.SSE14.E28)",  -1
-      "EL1 Roof (G.SSE14.E29)",  -1
-      "EL1 East Wall (G.E15.E30)",  -1
-      "EL1 Roof (G.E15.E31)",  -1
-      "EL1 North Wall (G.ENE16.E32)",  -1
-      "EL1 East Wall (G.ENE16.E33)",  -1
-      "EL1 Roof (G.ENE16.E34)",  -1
-      "EL1 North Wall (G.N17.E35)",  -1
-      "EL1 Roof (G.N17.E36)",  -1
-      "EL1 North Wall (G.N18.E37)",  -1
-      "EL1 Roof (G.N18.E38)",  -1
-      "EL1 North Wall (G.N19.E39)",  -1
-      "EL1 Roof (G.N19.E40)",  -1
-      "EL1 North Wall (G.N20.E41)",  -1
-      "EL1 Roof (G.N20.E42)",  -1
-      "EL1 East Wall (G.C21.E43)",  -1
-      "EL1 North Wall (G.C21.E44)",  -1
-      "EL1 Roof (G.C21.E45)",  -1
-      "EL1 West Wall (G.WNW22.E46)",  -1
-      "EL1 South Wall (G.WNW22.E47)",  -1
-      "EL1 North Wall (G.WNW22.E48)",  -1
-      "EL1 Roof (G.WNW22.E49)",  -1
+      "EL1 West Wall (G.12.E20)",  -1
+      "EL1 South Wall (G.12.E21)",  -1
+      "EL1 West Wall (G.12.E22)",  -1
+      "EL1 South Wall (G.12.E23)",  -1
+      "EL1 East Wall (G.12.E24)",  -1
+      "EL1 North Wall (G.12.E25)",  -1
+      "EL1 East Wall (G.12.E26)",  -1
+      "EL1 North Wall (G.12.E27)",  -1
+      "EL1 Roof (G.12.E28)",  -1
       "EL2 West Wall (G.SW1.E1)",  -1
       "EL2 South Wall (G.SW1.E2)",  -1
       "EL2 East Wall (G.SSE2.E3)",  -1
@@ -164,33 +121,15 @@ KEYOBJ,  2020,  "Exterior Wall",  93
       "EL2 North Wall (G.WSW9.E15)",  -1
       "EL2 East Wall (G.C10.E16)",  -1
       "EL2 North Wall (G.C10.E17)",  -1
-      "EL2 West Wall (G.SW11.E18)",  -1
-      "EL2 South Wall (G.SW11.E19)",  -1
-      "EL2 Roof (G.SW11.E20)",  -1
-      "EL2 East Wall (G.SSE12.E21)",  -1
-      "EL2 North Wall (G.SSE12.E22)",  -1
-      "EL2 South Wall (G.SSE12.E23)",  -1
-      "EL2 Roof (G.SSE12.E24)",  -1
-      "EL2 East Wall (G.E13.E25)",  -1
-      "EL2 Roof (G.E13.E26)",  -1
-      "EL2 North Wall (G.ENE14.E27)",  -1
-      "EL2 East Wall (G.ENE14.E28)",  -1
-      "EL2 Roof (G.ENE14.E29)",  -1
-      "EL2 North Wall (G.N15.E30)",  -1
-      "EL2 Roof (G.N15.E31)",  -1
-      "EL2 North Wall (G.N16.E32)",  -1
-      "EL2 Roof (G.N16.E33)",  -1
-      "EL2 North Wall (G.N17.E34)",  -1
-      "EL2 Roof (G.N17.E35)",  -1
-      "EL2 North Wall (G.N18.E36)",  -1
-      "EL2 Roof (G.N18.E37)",  -1
-      "EL2 West Wall (G.WSW19.E38)",  -1
-      "EL2 South Wall (G.WSW19.E39)",  -1
-      "EL2 North Wall (G.WSW19.E40)",  -1
-      "EL2 Roof (G.WSW19.E41)",  -1
-      "EL2 East Wall (G.C20.E42)",  -1
-      "EL2 North Wall (G.C20.E43)",  -1
-      "EL2 Roof (G.C20.E44)",  -1
+      "EL2 West Wall (G.11.E18)",  -1
+      "EL2 South Wall (G.11.E19)",  -1
+      "EL2 West Wall (G.11.E20)",  -1
+      "EL2 South Wall (G.11.E21)",  -1
+      "EL2 East Wall (G.11.E22)",  -1
+      "EL2 North Wall (G.11.E23)",  -1
+      "EL2 East Wall (G.11.E24)",  -1
+      "EL2 North Wall (G.11.E25)",  -1
+      "EL2 Roof (G.11.E26)",  -1
 
 
 KEYOBJ,  2040,  "Underground Wall",  11
@@ -207,7 +146,7 @@ KEYOBJ,  2040,  "Underground Wall",  11
       "EL1 Flr (G.WNW11.U11)",  -1
 
 
-KEYOBJ,  2046,  "Interior Wall",  107
+KEYOBJ,  2046,  "Interior Wall",  69
       "EL1 Ceiling (G.SW1.I1)",  -1
       "EL1 North Wall (G.SW2.I2)",  -1
       "EL1 Ceiling (G.SW2.I3)",  -1
@@ -239,26 +178,6 @@ KEYOBJ,  2046,  "Interior Wall",  107
       "EL1 North Wall (G.WNW11.I29)",  -1
       "EL1 East Wall (G.WNW11.I30)",  -1
       "EL1 Ceiling (G.WNW11.I31)",  -1
-      "EL1 North Wall (G.SW13.I32)",  -1
-      "EL1 West Wall (G.SSE14.I33)",  -1
-      "EL1 North Wall (G.E15.I34)",  -1
-      "EL1 South Wall (G.E15.I35)",  -1
-      "EL1 West Wall (G.ENE16.I36)",  -1
-      "EL1 South Wall (G.ENE16.I37)",  -1
-      "EL1 West Wall (G.N17.I38)",  -1
-      "EL1 South Wall (G.N17.I39)",  -1
-      "EL1 South Wall (G.N18.I40)",  -1
-      "EL1 West Wall (G.N19.I41)",  -1
-      "EL1 South Wall (G.N19.I42)",  -1
-      "EL1 South Wall (G.N20.I43)",  -1
-      "EL1 West Wall (G.C21.I44)",  -1
-      "EL1 East Wall (G.C21.I45)",  -1
-      "EL1 South Wall (G.WNW22.I46)",  -1
-      "EL1 West Wall (G.WNW22.I47)",  -1
-      "EL1 South Wall (G.WNW22.I48)",  -1
-      "EL1 East Wall (G.WNW22.I49)",  -1
-      "EL1 North Wall (G.WNW22.I50)",  -1
-      "EL1 East Wall (G.WNW22.I51)",  -1
       "EL2 Flr (G.SW1.I1)",  -1
       "EL2 North Wall (G.SW1.I2)",  -1
       "EL2 Ceiling (G.SW1.I3)",  -1
@@ -297,24 +216,6 @@ KEYOBJ,  2046,  "Interior Wall",  107
       "EL2 West Wall (G.C10.I36)",  -1
       "EL2 East Wall (G.C10.I37)",  -1
       "EL2 Ceiling (G.C10.I38)",  -1
-      "EL2 North Wall (G.SW11.I39)",  -1
-      "EL2 West Wall (G.SSE12.I40)",  -1
-      "EL2 North Wall (G.E13.I41)",  -1
-      "EL2 South Wall (G.E13.I42)",  -1
-      "EL2 West Wall (G.ENE14.I43)",  -1
-      "EL2 South Wall (G.ENE14.I44)",  -1
-      "EL2 West Wall (G.N15.I45)",  -1
-      "EL2 South Wall (G.N15.I46)",  -1
-      "EL2 South Wall (G.N16.I47)",  -1
-      "EL2 West Wall (G.N17.I48)",  -1
-      "EL2 South Wall (G.N17.I49)",  -1
-      "EL2 South Wall (G.N18.I50)",  -1
-      "EL2 South Wall (G.WSW19.I51)",  -1
-      "EL2 East Wall (G.WSW19.I52)",  -1
-      "EL2 North Wall (G.WSW19.I53)",  -1
-      "EL2 East Wall (G.WSW19.I54)",  -1
-      "EL2 West Wall (G.C20.I55)",  -1
-      "EL2 East Wall (G.C20.I56)",  -1
 
 
 KEYOBJ,  2050,  "Window",  39
@@ -391,7 +292,7 @@ KEYOBJ,  2068,  "Elec Generator",  0
 KEYOBJ,  2069,  "Thermal Storage",  0
 
 
-KEYOBJ,  2070,  "Space",  42
+KEYOBJ,  2070,  "Space",  23
       "EL1 SW Perim Spc (G.SW1)",  -1
       "EL1 SW Perim Spc (G.SW2)",  -1
       "EL1 SSE Perim Spc (G.SSE3)",  -1
@@ -403,17 +304,7 @@ KEYOBJ,  2070,  "Space",  42
       "EL1 North Perim Spc (G.N9)",  -1
       "EL1 Core Spc (G.C10)",  -1
       "EL1 WNW Perim Spc (G.WNW11)",  -1
-      "EL1 SW Perim Plnm (G.SW12)",  -1
-      "EL1 SW Perim Plnm (G.SW13)",  -1
-      "EL1 SSE Perim Plnm (G.SSE14)",  -1
-      "EL1 East Perim Plnm (G.E15)",  -1
-      "EL1 ENE Perim Plnm (G.ENE16)",  -1
-      "EL1 North Perim Plnm (G.N17)",  -1
-      "EL1 North Perim Plnm (G.N18)",  -1
-      "EL1 North Perim Plnm (G.N19)",  -1
-      "EL1 North Perim Plnm (G.N20)",  -1
-      "EL1 Core Plnm (G.C21)",  -1
-      "EL1 WNW Perim Plnm (G.WNW22)",  -1
+      "EL1 Plnm (G.12)",  -1
       "EL2 SW Perim Spc (G.SW1)",  -1
       "EL2 SSE Perim Spc (G.SSE2)",  -1
       "EL2 East Perim Spc (G.E3)",  -1
@@ -424,16 +315,7 @@ KEYOBJ,  2070,  "Space",  42
       "EL2 North Perim Spc (G.N8)",  -1
       "EL2 WSW Perim Spc (G.WSW9)",  -1
       "EL2 Core Spc (G.C10)",  -1
-      "EL2 SW Perim Plnm (G.SW11)",  -1
-      "EL2 SSE Perim Plnm (G.SSE12)",  -1
-      "EL2 East Perim Plnm (G.E13)",  -1
-      "EL2 ENE Perim Plnm (G.ENE14)",  -1
-      "EL2 North Perim Plnm (G.N15)",  -1
-      "EL2 North Perim Plnm (G.N16)",  -1
-      "EL2 North Perim Plnm (G.N17)",  -1
-      "EL2 North Perim Plnm (G.N18)",  -1
-      "EL2 WSW Perim Plnm (G.WSW19)",  -1
-      "EL2 Core Plnm (G.C20)",  -1
+      "EL2 Plnm (G.11)",  -1
 
 
 KEYOBJ,  2085,  "Elec Meter",  1

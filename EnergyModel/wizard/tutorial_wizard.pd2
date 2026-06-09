@@ -4,8 +4,8 @@ Proj   "tutorial_wizard"
    ProductCode = "eQUEST"
    WeatherFile = "TMY2\ATLANTGA.bin"
    CreateDate = 1780516275
-   ModDate = 1780599182
-   RunDate = 1780597882
+   ModDate = 1780608866
+   RunDate = 1780608712
    LibraryFile = "eQ_Lib.dat"
    ActiveMode = 0
    InputModule = 1
@@ -24,9 +24,9 @@ Proj   "tutorial_wizard"
    ProjTreeType[1] = 0
    ProjTreeType[2] = 1
    ProjTreeID[1] = 10000
-   ProjTreeID[2] = 10100010
+   ProjTreeID[2] = 10060000
    ProjTreeLabel[1] = "Project:  'tutorial_wizard'"
-   ProjTreeLabel[2] = "EL1 North Wall (G.N6.E11)"
+   ProjTreeLabel[2] = "EL1 EWall Construction"
    ..
 
 MainWiz   "tutorial_wizard"  
@@ -563,44 +563,37 @@ ZnGrpWiz   "rec-space"
 ZnGrpWiz   "lab"  
    ActAreaPct[2] = 100
    ShortName = "GndPrm"
-   AssignedSystem = "HVAC System 2"
    ..
 
 ZnGrpWiz   "restroom"  
    ActAreaPct[4] = 100
    ShortName = "GndPrm"
-   AssignedSystem = "HVAC System 2"
    ..
 
 ZnGrpWiz   "mep-room"  
    ActAreaPct[7] = 100
    ShortName = "GndPrm"
-   AssignedSystem = "HVAC System 2"
    ..
 
 ZnGrpWiz   "atrium"  
    ActAreaPct[5] = 80
    ActAreaPct[8] = 20
    ShortName = "GndPrm"
-   AssignedSystem = "HVAC System 2"
    ..
 
 ZnGrpWiz   "reception"  
    ActAreaPct[6] = 100
    ShortName = "GndPrm"
-   AssignedSystem = "HVAC System 2"
    ..
 
 ZnGrpWiz   "corridor"  
    ActAreaPct[8] = 100
    ShortName = "GndPrm"
-   AssignedSystem = "HVAC System 2"
    ..
 
 ZnGrpWiz   "classroom-upper"  
    ActAreaPct[1] = 100
    ShortName = "GndPrm"
-   AssignedSystem = "HVAC System 2"
    ..
 
 ShellWiz   "firstFloor"  
@@ -1247,15 +1240,8 @@ CADFile   "firstFloor-Zoning - DWG 4"
 HVACWiz   "HVAC System 1"  
    ScreenIDArrIdx = 0
    HeatSource[1] = "Electric Resistance"
-   HVACSysType[1] = "Packaged VAV with Elec Reheat"
-   SystemPerWhat[1] = "System per Zone"
-   ..
-
-HVACWiz   "HVAC System 2"  
-   ScreenIDArrIdx = 0
-   HeatSource[1] = "Electric Resistance"
-   HVACSysType[1] = "Packaged VAV with Elec Reheat"
-   SystemPerWhat[1] = "System per Site"
+   HVACSysType[1] = "Packaged Single Zone DX with Elec Heat"
+   SystemPerWhat[1] = "System per Shell"
    ..
 
 DXCWWiz   "Water-Cooled DX System"  
